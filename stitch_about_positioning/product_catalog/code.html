@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f4faff",
+              "on-primary-fixed-variant": "#1a4a6e",
+              "on-surface-variant": "#42474d",
+              "on-error": "#ffffff",
+              "inverse-surface": "#263238",
+              "surface-container": "#e3f0f8",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#a0cbf5",
+              "tertiary-container": "#481c00",
+              "primary": "#001628",
+              "tertiary-fixed-dim": "#ffb68f",
+              "primary-fixed": "#cee5ff",
+              "inverse-on-surface": "#e6f3fb",
+              "secondary-fixed-dim": "#afcbd8",
+              "surface-dim": "#cfdce4",
+              "on-tertiary": "#ffffff",
+              "outline": "#73777e",
+              "on-secondary-fixed-variant": "#304a55",
+              "background": "#f4faff",
+              "on-secondary-fixed": "#021f29",
+              "secondary-container": "#cbe7f5",
+              "primary-fixed-dim": "#a0cbf5",
+              "on-background": "#111d23",
+              "on-primary-fixed": "#001d32",
+              "on-secondary-container": "#4e6874",
+              "surface-bright": "#f4faff",
+              "tertiary-fixed": "#ffdbca",
+              "secondary": "#48626e",
+              "surface-tint": "#366287",
+              "on-primary-container": "#6a94bc",
+              "primary-container": "#002b47",
+              "on-tertiary-fixed": "#331200",
+              "outline-variant": "#c3c7ce",
+              "tertiary": "#280c00",
+              "on-tertiary-container": "#eb6a00",
+              "error": "#ba1a1a",
+              "surface-container-low": "#e9f6fd",
+              "error-container": "#ffdad6",
+              "on-surface": "#111d23",
+              "surface-container-high": "#ddeaf2",
+              "secondary-fixed": "#cbe7f5",
+              "on-error-container": "#93000a",
+              "surface-variant": "#d7e4ec",
+              "on-tertiary-fixed-variant": "#773200",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#d7e4ec",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-background antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-8xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-blue-900 uppercase">
+                Marine Consultants
+            </div>
+<nav class="hidden lg:flex items-center space-x-8">
+<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">Home</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">About</a>
+<a class="text-blue-900 font-bold border-b-2 border-orange-600 pb-1 text-sm" href="#">Products</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">Services</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">Industries</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">News</a>
+</nav>
+<div class="flex items-center space-x-4">
+<div class="relative hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none text-sm rounded-lg focus:ring-2 focus:ring-primary-container w-64" placeholder="Search catalog..." type="text"/>
+</div>
+<button class="bg-tertiary-container text-on-tertiary-container px-6 py-2 rounded text-sm font-bold uppercase tracking-wider hover:opacity-90 transition-opacity">
+                    Contact
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Catalog Hero -->
+<section class="relative h-[614px] flex items-center overflow-hidden bg-primary-container">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 mix-blend-overlay" data-alt="dramatic wide shot of a massive cargo ship in a modern deep-water port with giant cranes and industrial lighting at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4Bbfn8YnQR6nIUyjgAIH-zkV_qLGEdwVmKYHKe6j_od7IbDAHhLumHQoASKkg8xo-YHeFXU6Os3_UOErL80oar7sm_TPdWWc034ymwfER9RJbPU3xa8smGewRy1vV3UM9I-UArf762ubMTxkGu5_bW9CHuOyn9BPHjEpNn41sbsQ1aADK1AUOwZ-b538MU4IcxvR7JoWEjhjTRm5bnS_WXdvlbiDZjunbJfwqdVoiX-nSzyDHZi2AVP06QFfRfbCf98xf5w8ewO9H"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="inline-block bg-on-tertiary-container/10 text-on-tertiary-container px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] mb-4">Precision Components</span>
+<h1 class="text-5xl lg:text-7xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+                        The Technical <br/>Blueprint.
+                    </h1>
+<p class="text-on-primary-container text-lg max-w-lg mb-8 leading-relaxed">
+                        Access our comprehensive inventory of marine engineering components and industrial equipment, engineered for extreme maritime environments.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-tertiary-container text-on-tertiary-container px-8 py-4 font-bold rounded flex items-center gap-2 group">
+                            Explore Catalog
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="border border-white/20 text-white px-8 py-4 font-bold rounded hover:bg-white/5 transition-colors">
+                            Technical Data
+                        </button>
+</div>
+</div>
+<div class="hidden lg:block">
+<div class="bg-surface-container-high/10 backdrop-blur-md p-8 rounded-xl border border-white/10">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded bg-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-container">analytics</span>
+</div>
+<div>
+<h3 class="text-white font-bold">Catalog Statistics</h3>
+<p class="text-on-primary-container text-xs">Updated 2 hours ago</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-on-primary-container text-xs uppercase tracking-widest">Active SKUs</span>
+<span class="text-white font-mono text-2xl">42,850+</span>
+</div>
+<div class="h-1 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-on-tertiary-container w-[85%]"></div>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="bg-primary/40 p-3 rounded">
+<p class="text-on-primary-container text-[10px] uppercase">Compliance</p>
+<p class="text-white font-bold">ISO 9001</p>
+</div>
+<div class="bg-primary/40 p-3 rounded">
+<p class="text-on-primary-container text-[10px] uppercase">Global Ship</p>
+<p class="text-white font-bold">24-48h</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Browse by Category -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex justify-between items-end mb-16">
+<div class="max-w-2xl">
+<h2 class="text-3xl font-extrabold text-on-background mb-4 tracking-tight">Browse by Sector</h2>
+<p class="text-on-surface-variant leading-relaxed">Specialized equipment categorized by industrial application and operational requirements.</p>
+</div>
+<button class="text-primary font-bold text-sm uppercase tracking-widest flex items-center gap-2">
+                        View All Sectors <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Categories -->
+<div class="group relative aspect-square bg-surface-container-low overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-60" data-alt="close-up of industrial marine engine components with oily metallic textures and precision bolts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4w_F4uHIK57DYn5_XcvTTwQ7970Zic3MElIfgqEoYJe_-nXdiN3ll6RN0bI-7TUcDjkph9cqeQvs_KDzUnxQ7-GR4TAOBzuacBpl_S4u37CvYlUZKZSRhAuTnhGL-QfLePGBgJhHFI_LcU5pPCfDiHpU1g581cfIictWnBdjA9gmjMKQYNUPjMqg07OsfzrUp7eOTPNDG7hsK685XHe4iRW9uIAiXXlEoU1LR0GEFncibd0HIMQ-XhkqKt3iBIgGuStfQy2M5jdyy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest mb-2 block">Sector 01</span>
+<h3 class="text-white text-xl font-bold">Marine</h3>
+</div>
+</div>
+<div class="group relative aspect-square bg-surface-container-low overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-60" data-alt="offshore oil rig in the middle of a deep blue ocean during golden hour with industrial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl4zjtEqnzPeFMQ-yU0DVkCV0_9q1pAOew8JBHiYux-HK23HK0H_V76K7-LSLsdJfFUUNGKxeJOdvma1f7aamEzHyFYq6VxXW-joPH1cEifQrwoxuIMWyzgSsUOxDqE8iZP4CSbHGH1cqFFw1AqQDNiezLmdIrZybrPYp4uaHh8_wT5PG-0ovlmEP7FP_mGiNyaxNym9oqzU_gcfOZKb7GeRziVxXKUMo7YCoY2meEAMpd_YqVu4F8JbphPv1zgaEjzQgy7srdHrxi"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest mb-2 block">Sector 02</span>
+<h3 class="text-white text-xl font-bold">Offshore</h3>
+</div>
+</div>
+<div class="group relative aspect-square bg-surface-container-low overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-60" data-alt="industrial factory interior with glowing molten metal and heavy machinery with sparks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe0faX_br68oPHDFdAPEf4YDV31kob7IdoHmKyUs5jgtJBH5XP4scWgLRPCgAA9GDg8Bu_RNZqKu9Agav8n1-5wnZuOii5rwavQNA7zmc5EaQAVvyWa9-PlezSSjzCJLTPWHmVyUuH_YK8u9V8U2GBNa-dWIq4BdFGQboAhAeqJfSaeRdeMmfGLuRzy-V4vdJnlN1Lywv9Rq0EOSUm6_C9B2JrBhqCQr-u6xshz3vzt-PO4i5cREMwkDTKpHxB7jyXOSryRlL2zQvv"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest mb-2 block">Sector 03</span>
+<h3 class="text-white text-xl font-bold">Industrial</h3>
+</div>
+</div>
+<div class="group relative aspect-square bg-surface-container-low overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-60" data-alt="renewable energy wind turbines and solar panels in a vast landscape at sunrise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmxPUkwKUqFK3mp8TVteiob0_aBqirebmEQCUhW8eZZ7MZOMxcdrpBH7niS2q96xjT5B2sSdRISww8Gy6koPJ0xdHa-TFmXHKXUlJubN6qwvOWNIbVgdkFVRgdaLwDCKJY0DEfwG1LgjUSfkMMJdXWBx8PqOIMYQwkysciUsEGucTxM_zsH51k1tpxryBgnTUyVwir2J4EG8FhgKyAagxpct6svg3M08OP_-b-JBoV4VdUGwgOR1jnciojxyuLROWrgy7k_UrIW8aq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest mb-2 block">Sector 04</span>
+<h3 class="text-white text-xl font-bold">Energy</h3>
+</div>
+</div>
+<div class="group relative aspect-square bg-surface-container-low overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-60" data-alt="massive container ship being loaded at a busy commercial port with towering yellow cranes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEwev5cRFCVa3s6z8F-JXmmZ5pve7yRCOldWq2rBs50eO1seubVMMij-zlssU7Xm0xTFVDivGVlRz--k3k9JISDnnWDT_c-WKie9RlHAi5aVtELnY84hHG0xgLjzrJlJjiftX4YNQjuVjK14xvrcNx8wIbfDtHhSrhyLxh4IuPN4SmKDhypfvpyXXJsowcCcYs3NyAJbq9qQahPSNQ-KmvMqEZhUvuCykf_BxXKruCnFwiDFGXXA_eXpCvM9qW-shNqyal5zExR_5D"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest mb-2 block">Sector 05</span>
+<h3 class="text-white text-xl font-bold">Commercial Shipping</h3>
+</div>
+</div>
+<div class="group relative aspect-square bg-surface-container-low overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-60" data-alt="aerial view of a logistics hub with neat rows of shipping containers and trucks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSmDnrlaqDlfEtrRN27wPsPxhKATyM-vgPYYoSnJ0b__Y_IiTCzAWDr9dO3IpRr3s_N5HC90cvlq71JuAHSSomRMZ5zQcu4U5PHAHbhAG9MiNyHYwJ8iLc_L9Fe9oe5ueEV-3Fh_HQRU7_h-mVaiOGfYpwevwb0BY-LR29q7igVYZFn0l-s7KYdJFeY8JdZDkl5prfLwCmpbiApg6zmuK_xMIQyDO67i9CBjKGevIKqRPZyITcno_-2265JMGzBSS5aMTy7uCO5yxO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest mb-2 block">Sector 06</span>
+<h3 class="text-white text-xl font-bold">Ports &amp; Logistics</h3>
+</div>
+</div>
+<div class="group relative aspect-square bg-surface-container-low overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-60" data-alt="massive bridge construction site with steel girders and concrete pillars against a bright sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPmYlNbRhS_-Iqb4Z7wMnPqY5TesfjlS0jByl5tnFo1KOKreM4w5pUk85yjdGXJY7y0t-ZFw6GsOpx65H7g8h5iPIOqPzkCZb6jbDs670lyQZSE-aEr9vkZFXPTpzFyba9xmkfXizBRzKjqBMNS0B0osWwp1AssdpC1B6kIWiu5yceJlvzPOcZrby5LSjNz0bWnqcSfjCzflfC44H8WJXYIEAQnnway-Z8XZyekArwrl0QsFxhOH9j7N9u1takEDPK7qlN3_d2ZSX-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest mb-2 block">Sector 07</span>
+<h3 class="text-white text-xl font-bold">Infrastructure</h3>
+</div>
+</div>
+<div class="group relative aspect-square bg-surface-container-low overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-60" data-alt="automated manufacturing line with robotic arms assembling precise mechanical parts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4bpRkF0SidHfQt6erCHUntyoNJ2-5ScHb_UVn0trgu6hzw0mWxd7pG5YoaRNGa91qmYE7d7mi6ARUEK1r24nBS0UrW0s_mq8t-I4WLCEag-DTk5urLWrLhz6JeHtB8VYZO7wQUvxZuF905nYoYuoMNU9BcOwhX-Soy5R0K8Ao26oTYZse8Gc_-h144hCzvepi5gAaCR3jLB5Sm_qnN603utJ_ebzPd-HNW_aV_XYicoZAlWLBT1FuRPwxK7OsmkErN_AjIgioFgk1"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest mb-2 block">Sector 08</span>
+<h3 class="text-white text-xl font-bold">Manufacturing</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Catalog Explorer -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-8xl mx-auto px-6">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Filters Sidebar -->
+<aside class="w-full lg:w-72 flex-shrink-0 space-y-8">
+<div class="bg-surface-container-lowest p-6 rounded-lg">
+<h3 class="font-bold text-on-background mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">tune</span> Filters
+                            </h3>
+<div class="space-y-6">
+<div>
+<label class="text-[10px] font-bold uppercase tracking-widest text-outline mb-3 block">Compliance</label>
+<div class="space-y-2">
+<label class="flex items-center gap-2 text-sm text-on-surface-variant cursor-pointer">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/> ISO Certified
+                                        </label>
+<label class="flex items-center gap-2 text-sm text-on-surface-variant cursor-pointer">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/> ATEX Rated
+                                        </label>
+<label class="flex items-center gap-2 text-sm text-on-surface-variant cursor-pointer">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/> Marine Grade
+                                        </label>
+</div>
+</div>
+<div>
+<label class="text-[10px] font-bold uppercase tracking-widest text-outline mb-3 block">Lead Time</label>
+<div class="space-y-2">
+<label class="flex items-center gap-2 text-sm text-on-surface-variant cursor-pointer">
+<input class="text-primary focus:ring-primary" name="lead" type="radio"/> Immediate (Stock)
+                                        </label>
+<label class="flex items-center gap-2 text-sm text-on-surface-variant cursor-pointer">
+<input class="text-primary focus:ring-primary" name="lead" type="radio"/> &lt; 2 Weeks
+                                        </label>
+<label class="flex items-center gap-2 text-sm text-on-surface-variant cursor-pointer">
+<input class="text-primary focus:ring-primary" name="lead" type="radio"/> 4+ Weeks
+                                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary-container p-6 rounded-lg text-white">
+<h4 class="font-bold mb-2">Need a Bulk Quote?</h4>
+<p class="text-xs text-on-primary-container mb-4">Volume discounts available for fleet operators and port authorities.</p>
+<button class="w-full bg-tertiary-container text-on-tertiary-container py-2 text-xs font-bold uppercase tracking-widest rounded">Request Pricing</button>
+</div>
+</aside>
+<!-- Catalog Results Grid -->
+<div class="flex-grow">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
+<div class="flex items-center gap-4 text-sm">
+<span class="text-outline">Showing 1–12 of 2,480 products</span>
+<div class="h-4 w-[1px] bg-outline-variant"></div>
+<select class="bg-transparent border-none text-on-background font-bold focus:ring-0 cursor-pointer">
+<option>Sort by: Newest</option>
+<option>Popularity</option>
+<option>Lead Time</option>
+</select>
+</div>
+<div class="flex gap-2">
+<button class="p-2 bg-surface-container-high rounded"><span class="material-symbols-outlined">grid_view</span></button>
+<button class="p-2 text-outline"><span class="material-symbols-outlined">view_list</span></button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Product Cards -->
+<div class="bg-surface-container-lowest p-5 rounded group hover:shadow-xl transition-all duration-300">
+<div class="aspect-square bg-surface-container mb-4 overflow-hidden rounded-sm relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="high-precision hydraulic pump for marine applications, stainless steel finish on a technical white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuwExOudlT73bulM69DIL3VsFRGA8Rb3vp4pjt-Jlc-cv8roGb9szBd_wUbZw9YC5pjT-k44u0C0J-EVoZSery_AKF7OiupgSiTzEuYfDM3W1J-Z2SgUMPMuk80wKwkYJDUGfjCXOLKRIg-MTQM0clyXVPIsuF6hP4eFcgMZSjDc0Nn5v7A0-51-Hs9eb2MjLOCm_tyN2xDP0sDbyCB28slqJwY4zRmWWnqnQm7lHJnZd_yVmIvvund8UWdo6ZU27OFhFA8Ch_cKYl"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase">In Stock</div>
+</div>
+<span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest">Hydraulics</span>
+<h4 class="text-on-background font-bold mt-1 mb-2 group-hover:text-primary transition-colors">MC-7400 Marine Propulsion Pump</h4>
+<div class="flex justify-between items-center mt-4 pt-4 border-t border-surface-container">
+<span class="text-sm font-bold text-on-background">Technical Spec Sheet</span>
+<button class="bg-surface-container-high p-2 rounded hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded group hover:shadow-xl transition-all duration-300">
+<div class="aspect-square bg-surface-container mb-4 overflow-hidden rounded-sm relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="industrial heavy-duty electric motor with cooling fins and copper wiring visible in a cutaway view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd-PvMqbIW9CrpH1YdzL-LSrdx4ciC9qM3qUhf6eLeYiFOlEMKtzJ4sTtaVMMcyUt5ysgd1r7Go2p9lobk5EuzbYrN8HueeEssecKCCTgBJqxVLM5H-CIp37Oq2EeKrTQLrCdbNiYEx94BsIqDBBamfdCPPpmgS-j8DuTpxGc4zREIOutUPvuMmZn22lT6-Bv0ya52IxUlIera17mGN1KeYqRYLgtlGbupha9wiAHu0-z5Mao6JueN1DnXole6tJdtfpyU9eksxgtU"/>
+<div class="absolute top-2 right-2 bg-secondary text-white text-[10px] font-bold px-2 py-1 uppercase">Custom Build</div>
+</div>
+<span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest">Power Systems</span>
+<h4 class="text-on-background font-bold mt-1 mb-2 group-hover:text-primary transition-colors">Delta-X Series 500kW Industrial Motor</h4>
+<div class="flex justify-between items-center mt-4 pt-4 border-t border-surface-container">
+<span class="text-sm font-bold text-on-background">Technical Spec Sheet</span>
+<button class="bg-surface-container-high p-2 rounded hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded group hover:shadow-xl transition-all duration-300">
+<div class="aspect-square bg-surface-container mb-4 overflow-hidden rounded-sm relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="professional marine navigation radar console with high-definition screens and physical control knobs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwuh7c1CeMLEzFDkrHW6t33wfNuD7MkpA0iKBBUECVP1DcXW7iTGli1ZUxnNxBvuUedEakPe_yFOMwaxnStnuHwLgzH4JYe5oXeZfyoAjGCTN-mTTtDum8LqSRgEFbsM2jBfKBGIDJgwDEsDO6teNrG7ZjdB6c8eVpZe2X4Am3CXijmAG8sSAOPnLoA3EM8nrL6UdJMD-YC2v8DR5Ph6gw22Wfa7CvSDzr2iLRidX6XwceCxqVd6Q_i7ve6IoTETiTvUDd1Bb2BvKb"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase">In Stock</div>
+</div>
+<span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest">Navigation</span>
+<h4 class="text-on-background font-bold mt-1 mb-2 group-hover:text-primary transition-colors">Vector-9 Radar Positioning System</h4>
+<div class="flex justify-between items-center mt-4 pt-4 border-t border-surface-container">
+<span class="text-sm font-bold text-on-background">Technical Spec Sheet</span>
+<button class="bg-surface-container-high p-2 rounded hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded group hover:shadow-xl transition-all duration-300">
+<div class="aspect-square bg-surface-container mb-4 overflow-hidden rounded-sm relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="heavy-duty steel anchor chain links for large cargo vessels on a dark industrial background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCne8Jg0-hjJ-L5lbFONC8lTyTALiUWRL1GG8sBPy72Krp14H0HFe_Esmw_nU5DlromfNu2xMQGqudZIjc06IOgW6fA_fNfV3anDnrXcA3kYE63bWV_FAyvJq7PSlKVe8XCvi-GNM-n2MS1QkaHMUN9LhU9KzcxxT5oaQdOeLSZJeQlEUfzV255YirshVv95OEWcj-YxUiyDmuvHbkb_xZuxkWhTpPTHAT_9KxWH5NeEvWYlMRCy2qvd9ePquf6WqimkuyqeWG7wYms"/>
+</div>
+<span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest">Deck Hardware</span>
+<h4 class="text-on-background font-bold mt-1 mb-2 group-hover:text-primary transition-colors">Titan-Grade Anchor Chains (300mm)</h4>
+<div class="flex justify-between items-center mt-4 pt-4 border-t border-surface-container">
+<span class="text-sm font-bold text-on-background">Technical Spec Sheet</span>
+<button class="bg-surface-container-high p-2 rounded hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded group hover:shadow-xl transition-all duration-300">
+<div class="aspect-square bg-surface-container mb-4 overflow-hidden rounded-sm relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="industrial grade high-pressure valves and pipe fittings in a complex manifold assembly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1lhQzCSS-mpCqICRmwakYlCqT5ZhCFfOBpM2UjmqcK0SddTcybjl7JvyNJOOcS8VFI9gsGr4OOQRY6SPN5EYtqJPuxgjud0QA9khDMGjD9ahPL8LRPQVcWJKjs7sb78IjpJDsrX92JsMrUgFo_V8Zg-o6WCX3z3Q00i0pn6CNvWf0rUPjRh3AFLUA9O68HIcz1DL3ZYhzv0PfYZ9ScWrBYxl2CvFr8986pGb-hsHN3ijeyk8ij_Iq6XafCpAhKZHVDc1CbF3sKGJY"/>
+</div>
+<span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest">Piping</span>
+<h4 class="text-on-background font-bold mt-1 mb-2 group-hover:text-primary transition-colors">High-Pressure Valve Manifold Assembly</h4>
+<div class="flex justify-between items-center mt-4 pt-4 border-t border-surface-container">
+<span class="text-sm font-bold text-on-background">Technical Spec Sheet</span>
+<button class="bg-surface-container-high p-2 rounded hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded group hover:shadow-xl transition-all duration-300">
+<div class="aspect-square bg-surface-container mb-4 overflow-hidden rounded-sm relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="underwater remotely operated vehicle (ROV) with bright yellow casing and technical cameras" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeLuf1WWmUFSNjvIc0BrJpM94mfi3P5l2-bqB-j_YrN-M4Sy6dXMotJtfucgbQ6FCSjGWv8TmxVll6kJdyY-Fgq1MkGT2tZWan-U0U5SBtwZTHCDbYL45PF1xr9EThs1n_6t4kPJFdzBydCrqjOUkQCyzqlT5GREd5a6JFHZ67owOzHfPHAnz1OuuwHJqkdvULrZkicij5cyDUMrkM9Bslw7lZErL_3NoAQNl4vW6gU4pExHQEzEKb3xFu_c_IE5UfMAKLtt7ogVFg"/>
+<div class="absolute top-2 right-2 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold px-2 py-1 uppercase">Limited</div>
+</div>
+<span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest">Subsea</span>
+<h4 class="text-on-background font-bold mt-1 mb-2 group-hover:text-primary transition-colors">DeepScan Subsea ROV Unit 04</h4>
+<div class="flex justify-between items-center mt-4 pt-4 border-t border-surface-container">
+<span class="text-sm font-bold text-on-background">Technical Spec Sheet</span>
+<button class="bg-surface-container-high p-2 rounded hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex justify-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center bg-surface-container-lowest text-on-background rounded font-bold hover:bg-surface-container-high">2</button>
+<button class="w-10 h-10 flex items-center justify-center bg-surface-container-lowest text-on-background rounded font-bold hover:bg-surface-container-high">3</button>
+<button class="w-10 h-10 flex items-center justify-center bg-surface-container-lowest text-on-background rounded font-bold hover:bg-surface-container-high">...</button>
+<button class="w-10 h-10 flex items-center justify-center bg-surface-container-lowest text-on-background rounded font-bold hover:bg-surface-container-high">24</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Supply Capability Summary -->
+<section class="py-24 bg-primary text-white overflow-hidden relative">
+<div class="absolute top-0 right-0 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[400px]" style="font-variation-settings: 'wght' 100;">local_shipping</span>
+</div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-4xl font-extrabold mb-8 tracking-tight">Supply Capability &amp; Global Logistics</h2>
+<p class="text-on-primary-container text-lg mb-12 leading-relaxed">
+                            Marine Consultants Limited operates a direct-from-manufacturer supply chain, ensuring that critical components reach their destination within 48 hours for stock items.
+                        </p>
+<div class="space-y-6">
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded border border-white/20 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-container">public</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">Global Fulfillment</h4>
+<p class="text-on-primary-container text-sm">6 Logistics hubs strategically located near major international ports.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded border border-white/20 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-container">verified</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">Rigorous QA</h4>
+<p class="text-on-primary-container text-sm">Every shipment undergoes a 12-point quality inspection before departure.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded border border-white/20 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-container">electric_bolt</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">AOG Response</h4>
+<p class="text-on-primary-container text-sm">Critical failure response teams available 24/7 for emergency parts dispatch.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="bg-surface-container-lowest/5 backdrop-blur-xl p-8 rounded border border-white/10 relative z-20">
+<h3 class="font-bold text-2xl mb-8">Service Metrics</h3>
+<div class="space-y-10">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-xs font-bold uppercase tracking-widest">Inventory Availability</span>
+<span class="text-xs font-mono">98.4%</span>
+</div>
+<div class="h-1 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-on-tertiary-container w-[98.4%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-xs font-bold uppercase tracking-widest">On-Time Delivery</span>
+<span class="text-xs font-mono">99.1%</span>
+</div>
+<div class="h-1 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-on-tertiary-container w-[99.1%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-xs font-bold uppercase tracking-widest">Client Satisfaction</span>
+<span class="text-xs font-mono">4.9/5.0</span>
+</div>
+<div class="h-1 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-on-tertiary-container w-[95%]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute -top-10 -left-10 w-32 h-32 bg-on-tertiary-container/20 rounded-full blur-3xl z-10"></div>
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-primary-container/40 rounded-full blur-3xl z-10"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTAs & Downloads -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container p-10 rounded-xl relative overflow-hidden group border border-transparent hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">description</span>
+<h3 class="text-2xl font-extrabold text-on-background mb-4">Request a Quote</h3>
+<p class="text-on-surface-variant text-sm mb-8">Looking for specialized pricing or large quantities? Our procurement team responds within 12 hours.</p>
+<button class="flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all uppercase tracking-widest text-xs">
+                        Start Quote <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="bg-surface-container p-10 rounded-xl relative overflow-hidden group border border-transparent hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">engineering</span>
+<h3 class="text-2xl font-extrabold text-on-background mb-4">Service Support</h3>
+<p class="text-on-surface-variant text-sm mb-8">Technical installation and maintenance support for all products in our catalog.</p>
+<button class="flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all uppercase tracking-widest text-xs">
+                        View Services <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="bg-primary-container p-10 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-white/10 text-9xl">download</span>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container text-5xl mb-6">book</span>
+<h3 class="text-2xl font-extrabold text-white mb-4">Master Catalog</h3>
+<p class="text-on-primary-container text-sm mb-8">Download our complete 2024 Product Catalog with full technical specifications (PDF, 42MB).</p>
+<button class="flex items-center gap-2 font-bold text-on-tertiary-container group-hover:gap-4 transition-all uppercase tracking-widest text-xs">
+                        Download PDF <span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="py-24 bg-surface-container-low border-t border-outline-variant/10">
+<div class="max-w-4xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-extrabold text-on-background mb-4">Procurement &amp; Sourcing FAQ</h2>
+<p class="text-on-surface-variant">Answers to common technical and administrative sourcing questions.</p>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-lowest p-6 rounded group cursor-pointer hover:bg-white transition-colors">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-on-background">What are your standard shipping terms for international orders?</h4>
+<span class="material-symbols-outlined text-outline group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded group cursor-pointer hover:bg-white transition-colors">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-on-background">Do you provide Type Approval Certificates for all marine equipment?</h4>
+<span class="material-symbols-outlined text-outline group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded group cursor-pointer hover:bg-white transition-colors">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-on-background">Can we integrate your catalog with our SAP/ERP procurement system?</h4>
+<span class="material-symbols-outlined text-outline group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded group cursor-pointer hover:bg-white transition-colors">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-on-background">What is the warranty period for offshore-rated components?</h4>
+<span class="material-symbols-outlined text-outline group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-blue-950 text-white w-full pt-16 pb-8 border-t border-blue-900">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 px-6 max-w-8xl mx-auto">
+<div class="col-span-2 lg:col-span-1">
+<div class="text-2xl font-black text-white mb-6 uppercase tracking-tighter">Marine Consultants</div>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">Precision engineering and global procurement for the world's most demanding maritime environments.</p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full border border-blue-800 flex items-center justify-center hover:bg-white/10 transition-colors" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+<a class="w-8 h-8 rounded-full border border-blue-800 flex items-center justify-center hover:bg-white/10 transition-colors" href="#"><span class="material-symbols-outlined text-sm">mail</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-[10px] font-bold uppercase tracking-widest text-orange-500 mb-6">Explore</h5>
+<ul class="space-y-4">
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Home</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">About</a></li>
+<li><a class="text-sm text-orange-500 font-bold" href="#">Products</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Services</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-[10px] font-bold uppercase tracking-widest text-orange-500 mb-6">Industries</h5>
+<ul class="space-y-4">
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Offshore</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Commercial</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Ports</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Manufacturing</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-[10px] font-bold uppercase tracking-widest text-orange-500 mb-6">Support</h5>
+<ul class="space-y-4">
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Support</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-2 lg:col-span-1">
+<h5 class="text-[10px] font-bold uppercase tracking-widest text-orange-500 mb-6">Headquarters</h5>
+<p class="text-sm text-slate-400 mb-2">102 Maritime Plaza, Docklands</p>
+<p class="text-sm text-slate-400 mb-4">London, E14 9GE, United Kingdom</p>
+<div class="bg-blue-900/40 p-4 rounded border border-blue-800">
+<p class="text-[10px] text-orange-500 font-bold uppercase mb-1">Global 24/7 Hotline</p>
+<p class="text-lg font-mono">+44 (0) 20 7946 0123</p>
+</div>
+</div>
+</div>
+<div class="max-w-8xl mx-auto px-6 pt-16 mt-16 border-t border-blue-900 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">© 2024 Marine Consultants Limited. Precision Engineering.</p>
+<div class="flex gap-8">
+<span class="text-[10px] text-slate-500 uppercase tracking-widest">ISO 9001:2015</span>
+<span class="text-[10px] text-slate-500 uppercase tracking-widest">DNV Certified</span>
+</div>
+</div>
+</footer>
+</body></html>
