@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Marine Consultants</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            surface: "#f4faff",
+            primary: "#001628",
+            "primary-container": "#002b47",
+            "surface-container-low": "#e9f6fd",
+            "surface-container": "#e3f0f8",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#111d23",
+            "on-surface-variant": "#42474d",
+            "on-tertiary-container": "#eb6a00",
+            "tertiary-container": "#481c00"
+          },
+          fontFamily: {
+            headline: ["Manrope"],
+            body: ["Inter"]
+          }
+        }
+      }
+    }
+  </script>
+  <style id="codex-runtime-style">
+  [hidden] { display: none !important; }
+  @media (max-width: 640px) {
+    nav > div:first-child,
+    header > nav:first-child {
+      gap: 0.5rem;
+    }
+    nav .text-xl {
+      font-size: 0.95rem !important;
+      line-height: 1.1 !important;
+      max-width: 13rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    nav .bg-tertiary-container,
+    nav button.bg-tertiary-container,
+    nav a.bg-tertiary-container {
+      padding: 0.5rem 0.8rem !important;
+      font-size: 0.72rem !important;
+      white-space: nowrap;
+    }
+  }
+  @media (max-width: 400px) {
+    nav .bg-tertiary-container,
+    nav button.bg-tertiary-container,
+    nav a.bg-tertiary-container {
+      display: none !important;
+    }
+  }
+  .codex-toast {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #eb6a00;
+    background: rgba(255,255,255,0.92);
+    color: #111d23;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    box-shadow: 0 20px 40px rgba(17, 29, 35, 0.08);
+  }
+  .codex-toast strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-family: "Manrope", sans-serif;
+  }
+  .codex-chip-active {
+    background: #001628 !important;
+    color: white !important;
+  }
+  .codex-hidden-card {
+    display: none !important;
+  }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body">
+  <nav class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm">
+    <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+      <a class="text-xl font-extrabold tracking-tighter text-blue-900 uppercase font-headline" href="/index.html">Marine Consultants</a>
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="/about.html">About</a>
+        <a href="/products.html">Products</a>
+        <a href="/services.html">Services</a>
+        <a href="/industries.html">Industries</a>
+        <a href="/news.html">News</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <main class="pt-28 px-6 pb-20">
+    <section class="max-w-4xl mx-auto bg-surface-container-lowest p-10 md:p-14 shadow-xl">
+      <div class="inline-block bg-tertiary-container text-on-tertiary-container px-3 py-1 text-[10px] uppercase tracking-widest font-bold mb-6">Export Gap</div>
+      <h1 class="text-4xl md:text-5xl font-headline font-extrabold text-primary mb-6">Privacy Policy</h1>
+      <p class="text-on-surface-variant text-lg leading-relaxed mb-8">The downloaded Stitch package did not include a privacy-policy page or policy content.</p>
+      <p class="text-on-surface-variant leading-relaxed">This page was not present in the downloaded Stitch export, so a minimal fallback was added to keep site-wide links functional without changing the original visual system.</p>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a class="bg-primary text-white px-6 py-3 font-bold rounded-md" href="/contact.html">Contact Marine Consultants</a>
+        <a class="bg-surface-container text-primary px-6 py-3 font-bold rounded-md" href="/index.html">Return Home</a>
+      </div>
+    </section>
+  </main>
+  <script id="codex-runtime-script">
+(() => {
+  const routes = {"home": "/index.html", "about": "/about.html", "products": "/products.html", "services": "/services.html", "support": "/support.html", "industries": "/industries.html", "news": "/news.html", "contact": "/contact.html", "quote": "/quote.html", "privacy": "/privacy.html", "terms": "/terms.html"};
+  const path = location.pathname === "/" ? "/index.html" : location.pathname;
+
+  const labelRoute = (text) => {
+    const label = text.replace(/\s+/g, " ").trim().toLowerCase();
+    if (!label) return null;
+    if (label === "home") return routes.home;
+    if (label === "about") return routes.about;
+    if (label === "products") return routes.products;
+    if (label === "services") return routes.services;
+    if (label === "industries") return routes.industries;
+    if (label === "news") return routes.news;
+    if (label === "contact") return routes.contact;
+    if (label === "support" || label === "support portal") return routes.support;
+    if (label === "get a quote" || label === "request pricing" || label === "request quote" || label === "start quote") return routes.quote;
+    if (label.includes("inquire now")) return routes.quote;
+    if (label.includes("browse catalog") || label.includes("view catalog") || label.includes("see products") || label.includes("specifications")) return routes.products;
+    if (label.includes("view services")) return routes.services;
+    if (label.includes("request service support") || label.includes("view sourcing capabilities")) return routes.support;
+    if (label.includes("regional directory") || label.includes("view service support") || label.includes("request regional support")) return routes.support;
+    if (label.includes("contact regional hub")) return routes.contact + "#form";
+    if (label.includes("submit inquiry")) return "#form";
+    if (label.includes("all news") || label.includes("read full report")) return routes.news;
+    if (label.includes("view details") || label.includes("read more") || label.includes("learn more")) return routes.news + "#updates";
+    if (label.includes("download pdf") || label.includes("download resource") || label.includes("read abstract") || label.includes("view statement")) return routes.news + "#resources";
+    if (label.includes("privacy")) return routes.privacy;
+    if (label.includes("terms")) return routes.terms;
+    if (label.includes("case studies")) return routes.about;
+    if (label.includes("oil & gas") || label.includes("commercial marine") || label.includes("national security") || label.includes("pleasure crafts") || label.includes("shipping") || label.includes("port infrastructure") || label.includes("renewables")) return routes.industries;
+    return null;
+  };
+
+  const assignLinkTargets = () => {
+    document.querySelectorAll('a[href="#"]').forEach((anchor) => {
+      const target = labelRoute(anchor.textContent || "");
+      if (target) anchor.setAttribute("href", target);
+    });
+
+    document.querySelectorAll('button:not([type="submit"])').forEach((button) => {
+      const target = labelRoute(button.textContent || "");
+      if (!target) return;
+      button.dataset.route = target;
+      button.type = "button";
+      button.addEventListener("click", () => {
+        if (target.startsWith("#")) {
+          const section = document.querySelector(target);
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+          return;
+        }
+        location.href = target;
+      });
+    });
+  };
+
+  const showToast = (form, title, body) => {
+    const existing = form.parentElement.querySelector(".codex-toast");
+    if (existing) existing.remove();
+    const toast = document.createElement("div");
+    toast.className = "codex-toast";
+    toast.innerHTML = `<strong>${title}</strong><span>${body}</span>`;
+    form.insertAdjacentElement("afterend", toast);
+  };
+
+  const wireForms = () => {
+    document.querySelectorAll("form").forEach((form) => {
+      if (form.dataset.codexBound === "true") return;
+      form.dataset.codexBound = "true";
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const emailInput = form.querySelector('input[type="email"]');
+        const hasQuoteField = form.textContent.toLowerCase().includes("technical specification form");
+        const hasProjectField = form.textContent.toLowerCase().includes("project inquiry");
+
+        if (hasQuoteField) {
+          showToast(form, "Quote request captured", "This static demo now records the submission locally and shows the expected confirmation state. No backend endpoint was included in the Stitch export.");
+        } else if (hasProjectField) {
+          showToast(form, "Inquiry submitted", "Your regional support inquiry has been validated in the browser and the form has been reset for another submission.");
+        } else if (emailInput) {
+          showToast(form, "Subscription received", "The email capture works locally for demo purposes. A mailing backend was not part of the downloaded export.");
+        } else {
+          showToast(form, "Form submitted", "This form is functioning as a local static demo with client-side validation and confirmation.");
+        }
+        form.reset();
+      });
+    });
+  };
+
+  const wireMapLink = () => {
+    document.querySelectorAll('a[href="#"]').forEach((anchor) => {
+      const text = anchor.textContent.replace(/\s+/g, " ").trim().toLowerCase();
+      if (!text.includes("view on map")) return;
+      anchor.href = "https://www.google.com/maps/search/?api=1&query=88%20Maritime%20Way%20North%20Harbor%20District%20Singapore%20018989";
+      anchor.target = "_blank";
+      anchor.rel = "noopener noreferrer";
+    });
+  };
+
+  const wireSocialLinks = () => {
+    document.querySelectorAll('a[href="#"]').forEach((anchor) => {
+      const icon = anchor.querySelector(".material-symbols-outlined");
+      if (!icon) return;
+      const iconName = icon.textContent.trim().toLowerCase();
+      if (iconName === "mail") {
+        anchor.href = "mailto:info@marineconsultants.com";
+      } else if (iconName === "language" || iconName === "public") {
+        anchor.href = routes.home;
+      } else if (iconName === "share") {
+        anchor.href = routes.contact;
+      } else if (iconName === "account_circle") {
+        anchor.href = routes.support;
+      }
+    });
+  };
+
+  const wireNewsPage = () => {
+    const search = document.querySelector('input[placeholder*="Search News"]');
+    const cards = Array.from(document.querySelectorAll("article"));
+    const updatesSection = document.querySelectorAll("section")[0];
+    if (updatesSection && !updatesSection.id) updatesSection.id = "updates";
+    const resourcesSection = Array.from(document.querySelectorAll("section")).find((section) => section.textContent.includes("Technical Resources"));
+    if (resourcesSection && !resourcesSection.id) resourcesSection.id = "resources";
+    if (!search || !cards.length) return;
+
+    search.addEventListener("input", () => {
+      const query = search.value.trim().toLowerCase();
+      cards.forEach((card) => {
+        const match = !query || card.textContent.toLowerCase().includes(query);
+        card.classList.toggle("codex-hidden-card", !match);
+      });
+    });
+
+    const navButtons = Array.from(document.querySelectorAll("button")).filter((button) => {
+      const icon = button.querySelector(".material-symbols-outlined");
+      return icon && ["chevron_left", "chevron_right"].includes(icon.textContent.trim());
+    });
+    const firstCard = cards[0];
+    const lastCard = cards[cards.length - 1];
+    if (navButtons.length >= 2 && firstCard && lastCard) {
+      navButtons[0].addEventListener("click", () => firstCard.scrollIntoView({ behavior: "smooth", block: "center" }));
+      navButtons[1].addEventListener("click", () => lastCard.scrollIntoView({ behavior: "smooth", block: "center" }));
+    }
+  };
+
+  const wireProductPage = () => {
+    const search = document.querySelector('input[placeholder*="Search catalog"]');
+    const sidebar = Array.from(document.querySelectorAll("aside")).find((node) => node.textContent.includes("Filters"));
+    const cards = Array.from(document.querySelectorAll("main a, main div")).filter((node) => {
+      return node.querySelector && node.querySelector('a[href$="quote.html"], a[href*="quote.html"], a[href="/quote.html"]');
+    });
+    if (!search || !sidebar || !cards.length) return;
+
+    const cardData = cards.map((card) => {
+      const title = (card.querySelector("h3, h4")?.textContent || "").trim();
+      const category = (Array.from(card.querySelectorAll("p")).map((p) => p.textContent.trim()).find((value) => /rigging|instruments|engines|fire|davits|safety/i.test(value)) || title).trim();
+      return { card, title: (title + " " + category).toLowerCase(), category: category.toLowerCase() };
+    });
+
+    const checkboxLabels = Array.from(sidebar.querySelectorAll("label")).filter((label) => label.querySelector('input[type="checkbox"]'));
+    const applyFilters = () => {
+      const query = search.value.trim().toLowerCase();
+      const selected = checkboxLabels
+        .filter((label) => label.querySelector("input").checked)
+        .map((label) => label.textContent.trim().toLowerCase());
+
+      cardData.forEach(({ card, title, category }) => {
+        const matchesQuery = !query || title.includes(query);
+        const matchesCategory = !selected.length || selected.some((entry) => category.includes(entry) || entry.includes(category));
+        card.classList.toggle("codex-hidden-card", !(matchesQuery && matchesCategory));
+      });
+    };
+
+    search.addEventListener("input", applyFilters);
+    checkboxLabels.forEach((label) => label.querySelector("input").addEventListener("change", applyFilters));
+
+    document.querySelectorAll('button').forEach((button) => {
+      const icon = button.querySelector(".material-symbols-outlined");
+      if (!icon || icon.textContent.trim().toLowerCase() !== "info") return;
+      button.type = "button";
+      button.addEventListener("click", () => location.href = routes.quote);
+    });
+  };
+
+  const wireContactPage = () => {
+    const formSection = document.querySelector("#form");
+    if (!formSection) return;
+
+    const hubButtons = Array.from(document.querySelectorAll("button")).filter((button) => button.textContent.toLowerCase().includes("contact hub"));
+    hubButtons.forEach((button) => {
+      button.type = "button";
+      button.addEventListener("click", () => formSection.scrollIntoView({ behavior: "smooth", block: "start" }));
+    });
+
+    const navButtons = Array.from(document.querySelectorAll("button")).filter((button) => {
+      const icon = button.querySelector(".material-symbols-outlined");
+      return icon && ["west", "east"].includes(icon.textContent.trim());
+    });
+
+    const hubCards = Array.from(document.querySelectorAll("#locations .space-y-4 > div"));
+    let activeIndex = 0;
+    const setActiveHub = (index) => {
+      activeIndex = (index + hubCards.length) % hubCards.length;
+      hubCards.forEach((card, current) => {
+        const active = current === activeIndex;
+        card.classList.toggle("codex-chip-active", active);
+        card.classList.toggle("text-white", active);
+      });
+    };
+
+    if (hubCards.length) setActiveHub(0);
+    if (navButtons[0]) navButtons[0].addEventListener("click", () => setActiveHub(activeIndex - 1));
+    if (navButtons[1]) navButtons[1].addEventListener("click", () => setActiveHub(activeIndex + 1));
+  };
+
+  const wireSupportPage = () => {
+    const form = document.querySelector("form");
+    const buttons = Array.from(document.querySelectorAll("button")).filter((button) => button.textContent.toLowerCase().includes("request regional support") || button.textContent.toLowerCase().includes("regional directory"));
+    if (!form) return;
+    buttons.forEach((button) => {
+      button.type = "button";
+      button.addEventListener("click", () => form.scrollIntoView({ behavior: "smooth", block: "start" }));
+    });
+  };
+
+  assignLinkTargets();
+  wireForms();
+  wireMapLink();
+  wireSocialLinks();
+  wireProductPage();
+  wireNewsPage();
+  wireContactPage();
+  wireSupportPage();
+})();
+</script>
+</body>
+</html>

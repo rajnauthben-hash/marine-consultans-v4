@@ -10,6 +10,12 @@ This project preserves the downloaded Google Stitch export for the Marine Consul
 - `server.py`
   - Lightweight Python server that serves the original exported HTML files as the source of truth.
   - Applies minimal runtime fixes for routing, missing fallback pages, and client-side interactions.
+- `build_static.py`
+  - Generates deployable static HTML files at the repository root from the preserved Stitch export.
+- `*.html` at the repository root
+  - Static deployment artifacts generated from the runtime transform so platforms like Vercel can serve the site directly.
+- `vercel.json`
+  - Minimal Vercel configuration for clean static serving.
 - `README.md`
   - Project notes, setup steps, and documented fixes.
 
@@ -64,7 +70,7 @@ Requirements:
 
 - Python 3.14+ (or a recent Python 3 version)
 
-Run:
+For local development with the runtime wrapper:
 
 ```powershell
 python server.py
@@ -82,16 +88,28 @@ To use a different port:
 python server.py --port 8010
 ```
 
+To regenerate the static deployment files:
+
+```powershell
+python build_static.py
+```
+
+You can also preview the static deployment output directly:
+
+```powershell
+python -m http.server 8000
+```
+
 ## Verification performed
 
 - Confirmed the server wrapper compiles successfully with `python -m py_compile server.py`.
 - Confirmed all primary routes return `200` when served locally.
 - Verified Stitch placeholder routes are resolved in served output.
+- Confirmed the generated static files return `200` for `/`, `/index.html`, `/about.html`, `/products.html`, `/services.html`, `/support.html`, `/industries.html`, `/news.html`, `/contact.html`, `/quote.html`, `/privacy.html`, and `/terms.html`.
 - Generated headless Chrome screenshots for the home page at desktop and mobile sizes to validate layout.
 - Confirmed there were no blocking runtime failures while rendering the site locally.
 
 ## GitHub readiness
 
-- The project is ready to be committed and pushed once a GitHub remote is available.
-- In this environment, `git.exe` is available directly, but GitHub CLI/repo creation tooling was not available on PATH.
-- A remote repository URL was not provided in the original request, so remote push setup may still require one final step.
+- The project is committed locally and pushed to GitHub.
+- The generated static files are included so Vercel can serve the site directly instead of returning `404 NOT_FOUND`.

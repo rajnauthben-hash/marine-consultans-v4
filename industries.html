@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Industries We Support | Marine Consultants</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f4faff",
+              "on-primary-fixed-variant": "#1a4a6e",
+              "on-surface-variant": "#42474d",
+              "on-error": "#ffffff",
+              "inverse-surface": "#263238",
+              "surface-container": "#e3f0f8",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#a0cbf5",
+              "tertiary-container": "#481c00",
+              "primary": "#001628",
+              "tertiary-fixed-dim": "#ffb68f",
+              "primary-fixed": "#cee5ff",
+              "inverse-on-surface": "#e6f3fb",
+              "secondary-fixed-dim": "#afcbd8",
+              "surface-dim": "#cfdce4",
+              "on-tertiary": "#ffffff",
+              "outline": "#73777e",
+              "on-secondary-fixed-variant": "#304a55",
+              "background": "#f4faff",
+              "on-secondary-fixed": "#021f29",
+              "secondary-container": "#cbe7f5",
+              "primary-fixed-dim": "#a0cbf5",
+              "on-background": "#111d23",
+              "on-primary-fixed": "#001d32",
+              "on-secondary-container": "#4e6874",
+              "surface-bright": "#f4faff",
+              "tertiary-fixed": "#ffdbca",
+              "secondary": "#48626e",
+              "surface-tint": "#366287",
+              "on-primary-container": "#6a94bc",
+              "primary-container": "#002b47",
+              "on-tertiary-fixed": "#331200",
+              "outline-variant": "#c3c7ce",
+              "tertiary": "#280c00",
+              "on-tertiary-container": "#eb6a00",
+              "error": "#ba1a1a",
+              "surface-container-low": "#e9f6fd",
+              "error-container": "#ffdad6",
+              "on-surface": "#111d23",
+              "surface-container-high": "#ddeaf2",
+              "secondary-fixed": "#cbe7f5",
+              "on-error-container": "#93000a",
+              "surface-variant": "#d7e4ec",
+              "on-tertiary-fixed-variant": "#773200",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#d7e4ec",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .technical-gradient {
+            background: linear-gradient(135deg, #001628 0%, #002b47 100%);
+        }
+    </style>
+<style id="codex-runtime-style">
+  [hidden] { display: none !important; }
+  @media (max-width: 640px) {
+    nav > div:first-child,
+    header > nav:first-child {
+      gap: 0.5rem;
+    }
+    nav .text-xl {
+      font-size: 0.95rem !important;
+      line-height: 1.1 !important;
+      max-width: 13rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    nav .bg-tertiary-container,
+    nav button.bg-tertiary-container,
+    nav a.bg-tertiary-container {
+      padding: 0.5rem 0.8rem !important;
+      font-size: 0.72rem !important;
+      white-space: nowrap;
+    }
+  }
+  @media (max-width: 400px) {
+    nav .bg-tertiary-container,
+    nav button.bg-tertiary-container,
+    nav a.bg-tertiary-container {
+      display: none !important;
+    }
+  }
+  .codex-toast {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #eb6a00;
+    background: rgba(255,255,255,0.92);
+    color: #111d23;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    box-shadow: 0 20px 40px rgba(17, 29, 35, 0.08);
+  }
+  .codex-toast strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-family: "Manrope", sans-serif;
+  }
+  .codex-chip-active {
+    background: #001628 !important;
+    color: white !important;
+  }
+  .codex-hidden-card {
+    display: none !important;
+  }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-8xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-blue-900 dark:text-white uppercase font-headline">
+                Marine Consultants
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors text-sm font-body" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors text-sm font-body" href="#">About</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors text-sm font-body" href="#">Products</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors text-sm font-body" href="#">Services</a>
+<a class="text-blue-900 dark:text-blue-300 font-bold border-b-2 border-orange-600 pb-1 text-sm font-body" href="#">Industries</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors text-sm font-body" href="#">News</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-slate-100/50 rounded-full">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="bg-tertiary-container text-on-tertiary-container px-5 py-2 rounded-md font-bold text-sm hover:opacity-90 transition-all active:scale-95">
+                    Contact
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative technical-gradient min-h-[614px] flex items-center overflow-hidden">
+<div class="absolute inset-0 opacity-20 mix-blend-overlay">
+<img class="w-full h-full object-cover" data-alt="Technical blueprint overlay on a large industrial ship hull in a dry dock with high contrast lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx4f4iP_WrMp_7MfC7L4O-VoiuWoYzZ2s6VJO7zms8o4P8na64iHcodEQu4oEIGYU5GFWnaWFNojLhT6D61Jo42AoJSnjWyHW7a1IJHgkKdToacz4ijYx_ftatmR9OQAWHvbKCcIJUNbVhJIVTtjWQb1dSX8QOxQmR5jvy5t7Io0Pxis1of-kJz0Ynb_xygZCcWPY4P9RUtK1H8iw2l-48hwEMgigWR1WanIKBMocqHqQmIfnBlAwQBalcPTeJ8XhMOn76We-eErH1"/>
+</div>
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 relative z-10 py-24">
+<div class="flex flex-col justify-center">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight mb-6">
+                        Navigating <br/><span class="text-on-tertiary-container">Industrial Complexity</span>
+</h1>
+<p class="text-on-primary-container text-lg max-w-lg mb-8 leading-relaxed">
+                        Marine Consultants Limited provides specialized engineering and operational support across the global maritime and heavy industrial landscape.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-tertiary-container text-on-tertiary-container px-8 py-3 rounded-md font-bold text-sm hover:opacity-95 transition-all">
+                            Explore Capabilities
+                        </button>
+</div>
+</div>
+<div class="hidden md:flex justify-end items-start">
+<div class="bg-surface-container-high/10 backdrop-blur-md p-8 border-l-4 border-orange-600 max-w-sm">
+<div class="uppercase tracking-widest text-[10px] text-on-tertiary-container font-bold mb-4">Operational Insight</div>
+<p class="text-white text-sm font-light italic leading-relaxed">
+                            "Precision is not just a metric; it's our foundational requirement for ensuring safety and performance in extreme environments."
+                        </p>
+<div class="mt-4 text-xs font-bold text-white uppercase tracking-tighter">Sector Analysis Report 2024</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Industry Sectors Overview - Bento Grid -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16">
+<h2 class="font-headline text-3xl font-bold text-primary mb-2 uppercase tracking-tight">Market Focus</h2>
+<p class="text-on-surface-variant max-w-2xl">We support critical infrastructure and high-stakes operations across eight core sectors with specialized technical mastery.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Marine -->
+<div class="md:col-span-2 bg-surface-container-low p-8 relative group overflow-hidden min-h-[320px]">
+<div class="relative z-10 h-full flex flex-col">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" data-icon="directions_boat">directions_boat</span>
+<h3 class="font-headline text-2xl font-bold text-primary mb-2">Marine</h3>
+<p class="text-on-surface-variant text-sm flex-grow">Advanced vessel management, fleet optimization, and technical compliance for deep-sea and coastal operations.</p>
+<span class="text-xs font-bold text-on-tertiary-container mt-4 uppercase tracking-widest group-hover:translate-x-2 transition-transform inline-flex items-center gap-2">View Detail <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+<div class="absolute right-0 bottom-0 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[12rem]" data-icon="anchor">anchor</span>
+</div>
+</div>
+<!-- Offshore -->
+<div class="bg-surface-container p-8 group relative min-h-[320px]">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" data-icon="oil_barrel">oil_barrel</span>
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Offshore</h3>
+<p class="text-on-surface-variant text-sm">Rig maintenance, subsea engineering, and offshore platform safety protocols.</p>
+<div class="absolute bottom-8 left-8">
+<span class="material-symbols-outlined text-on-tertiary-container opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+</div>
+<!-- Industrial -->
+<div class="bg-surface-container-high p-8 group relative min-h-[320px]">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" data-icon="factory">factory</span>
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Industrial</h3>
+<p class="text-on-surface-variant text-sm">Heavy machinery lifecycle management and process automation for large-scale facilities.</p>
+<div class="absolute bottom-8 left-8">
+<span class="material-symbols-outlined text-on-tertiary-container opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+</div>
+<!-- Energy -->
+<div class="bg-surface-container-high p-8 group relative min-h-[320px]">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" data-icon="bolt">bolt</span>
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Energy</h3>
+<p class="text-on-surface-variant text-sm">Supporting renewable transitions and traditional power infrastructure with technical audits.</p>
+<div class="absolute bottom-8 left-8">
+<span class="material-symbols-outlined text-on-tertiary-container opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+</div>
+<!-- Commercial Shipping -->
+<div class="bg-surface-container p-8 group relative min-h-[320px]">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" data-icon="conveyor_belt">conveyor_belt</span>
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Commercial Shipping</h3>
+<p class="text-on-surface-variant text-sm">Logistics optimization and cargo handling systems for global trade routes.</p>
+<div class="absolute bottom-8 left-8">
+<span class="material-symbols-outlined text-on-tertiary-container opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+</div>
+<!-- Ports & Logistics / Infrastructure -->
+<div class="md:col-span-2 bg-surface-container-lowest p-8 relative group overflow-hidden border-l-4 border-primary min-h-[320px]">
+<div class="grid grid-cols-2 gap-8 h-full">
+<div>
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Ports &amp; Logistics</h3>
+<p class="text-on-surface-variant text-sm">Terminal operations and multimodal transport hub engineering.</p>
+<ul class="mt-4 space-y-2">
+<li class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-outline"><span class="w-1 h-1 bg-orange-500 rounded-full"></span> Automation</li>
+<li class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-outline"><span class="w-1 h-1 bg-orange-500 rounded-full"></span> Berthing</li>
+</ul>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Infrastructure</h3>
+<p class="text-on-surface-variant text-sm">Resilient marine construction and coastal defense engineering.</p>
+<ul class="mt-4 space-y-2">
+<li class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-outline"><span class="w-1 h-1 bg-orange-500 rounded-full"></span> Dredging</li>
+<li class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-outline"><span class="w-1 h-1 bg-orange-500 rounded-full"></span> Piling</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Relevance & Capabilities Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+<div>
+<div class="uppercase tracking-widest text-[10px] text-on-tertiary-container font-bold mb-6">Expertise Matrix</div>
+<h2 class="font-headline text-4xl font-bold text-primary mb-8 leading-tight">Operational Support <br/>Engineering Excellence</h2>
+<div class="space-y-10">
+<div class="flex gap-6">
+<div class="w-12 h-12 flex-shrink-0 bg-primary-container text-white flex items-center justify-center rounded">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<div>
+<h4 class="font-headline text-lg font-bold text-primary mb-2">Compliance &amp; Risk Mitigation</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Ensuring all operations meet rigorous international IMO standards and local environmental regulations, minimizing downtime through proactive auditing.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 flex-shrink-0 bg-primary-container text-white flex items-center justify-center rounded">
+<span class="material-symbols-outlined">settings_suggest</span>
+</div>
+<div>
+<h4 class="font-headline text-lg font-bold text-primary mb-2">Technical Asset Optimization</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Using predictive data and engineering models to extend the lifecycle of heavy industrial equipment in corrosive marine environments.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 flex-shrink-0 bg-primary-container text-white flex items-center justify-center rounded">
+<span class="material-symbols-outlined">construction</span>
+</div>
+<div>
+<h4 class="font-headline text-lg font-bold text-primary mb-2">Emergency Response &amp; Logistics</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">24/7 technical mobilization for critical repairs and logistical bottlenecks in remote offshore or port locations.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-surface-container-high overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover" data-alt="Technical drawing of a ship turbine engine with real mechanical parts in the foreground of an engineering workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUQDEeOArlcwuh-RW197PtvJVFLGTpZ0ig-41KjsHbG5idQeo3NKjjsbU-hpcqB5uUiVQ7UIqk1UIHLOcprFIqrg9N1QOuzIlqhIBaXos_q1a6NzmjlOzLSF1GUaPcJo7pWeeldp8DSi2PD3fjvlJm6gbQ8RQxSoyqr4f3PKcy1Q0vj1kvxzSVZr4-uEgtsVt0xiLqqvG4AazuMGfr_yURlrgJ5zJDbVT5Y_4jy-9981M54BbSWZfGHdMGnNzJRBIqTIMRz7hIghwE"/>
+</div>
+<div class="absolute -bottom-10 -left-10 bg-white p-8 shadow-xl max-w-xs hidden md:block">
+<div class="text-4xl font-black text-primary-container mb-2">15+</div>
+<div class="text-xs font-bold uppercase tracking-widest text-outline">Years of Integrated Service</div>
+<p class="text-on-surface-variant text-xs mt-4">Direct field experience in over 40 major ports globally across all supported sectors.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 bg-primary">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<h2 class="font-headline text-3xl font-bold text-white mb-4">Integrate Our Technical Precision Into Your Operations</h2>
+<p class="text-on-primary-container max-w-2xl mx-auto mb-12">Select your sector to view specific services or connect directly with our engineering advisory team for a consultation.</p>
+<div class="flex flex-col md:flex-row justify-center gap-4">
+<button class="bg-tertiary-container text-on-tertiary-container px-10 py-4 rounded-md font-bold text-sm hover:opacity-90 transition-all uppercase tracking-widest">
+                        View Services
+                    </button>
+<button class="bg-surface-container-low text-primary px-10 py-4 rounded-md font-bold text-sm hover:bg-white transition-all uppercase tracking-widest">
+                        Browse Products
+                    </button>
+<button class="border border-on-primary-container text-white px-10 py-4 rounded-md font-bold text-sm hover:bg-white/5 transition-all uppercase tracking-widest">
+                        Contact Our Team
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-blue-950 dark:bg-slate-950 w-full pt-16 pb-8 border-t border-blue-900 dark:border-slate-800">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 px-6 max-w-8xl mx-auto">
+<div class="col-span-2 lg:col-span-1">
+<div class="text-2xl font-black text-white mb-6 font-headline">Marine Consultants</div>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">Precision engineering and technical consulting for the global maritime industry.</p>
+</div>
+<div>
+<div class="uppercase tracking-widest text-[10px] text-white font-bold mb-6 font-label">Navigation</div>
+<ul class="space-y-3">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block" href="#">Home</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block" href="#">About</a></li>
+<li><a class="text-orange-500 font-bold text-sm hover:translate-x-1 inline-block" href="#">Industries</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block" href="#">News</a></li>
+</ul>
+</div>
+<div>
+<div class="uppercase tracking-widest text-[10px] text-white font-bold mb-6 font-label">Capabilities</div>
+<ul class="space-y-3">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block" href="#">Products</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block" href="#">Services</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<div class="uppercase tracking-widest text-[10px] text-white font-bold mb-6 font-label">Legal</div>
+<ul class="space-y-3">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block" href="#">Terms of Service</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-4 lg:col-span-1">
+<div class="uppercase tracking-widest text-[10px] text-white font-bold mb-6 font-label">Newsletter</div>
+<div class="relative">
+<input class="w-full bg-blue-900/30 border-none text-white text-sm px-4 py-3 focus:ring-2 focus:ring-orange-500 outline-none" placeholder="Email address" type="email"/>
+<button class="absolute right-2 top-2 text-white">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-8xl mx-auto px-6 mt-16 pt-8 border-t border-blue-900/50">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-slate-400 text-xs font-body">© 2024 Marine Consultants Limited. Precision Engineering.</div>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">language</span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+</div>
+</footer>
+<script id="codex-runtime-script">
+(() => {
+  const routes = {"home": "/index.html", "about": "/about.html", "products": "/products.html", "services": "/services.html", "support": "/support.html", "industries": "/industries.html", "news": "/news.html", "contact": "/contact.html", "quote": "/quote.html", "privacy": "/privacy.html", "terms": "/terms.html"};
+  const path = location.pathname === "/" ? "/index.html" : location.pathname;
+
+  const labelRoute = (text) => {
+    const label = text.replace(/\s+/g, " ").trim().toLowerCase();
+    if (!label) return null;
+    if (label === "home") return routes.home;
+    if (label === "about") return routes.about;
+    if (label === "products") return routes.products;
+    if (label === "services") return routes.services;
+    if (label === "industries") return routes.industries;
+    if (label === "news") return routes.news;
+    if (label === "contact") return routes.contact;
+    if (label === "support" || label === "support portal") return routes.support;
+    if (label === "get a quote" || label === "request pricing" || label === "request quote" || label === "start quote") return routes.quote;
+    if (label.includes("inquire now")) return routes.quote;
+    if (label.includes("browse catalog") || label.includes("view catalog") || label.includes("see products") || label.includes("specifications")) return routes.products;
+    if (label.includes("view services")) return routes.services;
+    if (label.includes("request service support") || label.includes("view sourcing capabilities")) return routes.support;
+    if (label.includes("regional directory") || label.includes("view service support") || label.includes("request regional support")) return routes.support;
+    if (label.includes("contact regional hub")) return routes.contact + "#form";
+    if (label.includes("submit inquiry")) return "#form";
+    if (label.includes("all news") || label.includes("read full report")) return routes.news;
+    if (label.includes("view details") || label.includes("read more") || label.includes("learn more")) return routes.news + "#updates";
+    if (label.includes("download pdf") || label.includes("download resource") || label.includes("read abstract") || label.includes("view statement")) return routes.news + "#resources";
+    if (label.includes("privacy")) return routes.privacy;
+    if (label.includes("terms")) return routes.terms;
+    if (label.includes("case studies")) return routes.about;
+    if (label.includes("oil & gas") || label.includes("commercial marine") || label.includes("national security") || label.includes("pleasure crafts") || label.includes("shipping") || label.includes("port infrastructure") || label.includes("renewables")) return routes.industries;
+    return null;
+  };
+
+  const assignLinkTargets = () => {
+    document.querySelectorAll('a[href="#"]').forEach((anchor) => {
+      const target = labelRoute(anchor.textContent || "");
+      if (target) anchor.setAttribute("href", target);
+    });
+
+    document.querySelectorAll('button:not([type="submit"])').forEach((button) => {
+      const target = labelRoute(button.textContent || "");
+      if (!target) return;
+      button.dataset.route = target;
+      button.type = "button";
+      button.addEventListener("click", () => {
+        if (target.startsWith("#")) {
+          const section = document.querySelector(target);
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+          return;
+        }
+        location.href = target;
+      });
+    });
+  };
+
+  const showToast = (form, title, body) => {
+    const existing = form.parentElement.querySelector(".codex-toast");
+    if (existing) existing.remove();
+    const toast = document.createElement("div");
+    toast.className = "codex-toast";
+    toast.innerHTML = `<strong>${title}</strong><span>${body}</span>`;
+    form.insertAdjacentElement("afterend", toast);
+  };
+
+  const wireForms = () => {
+    document.querySelectorAll("form").forEach((form) => {
+      if (form.dataset.codexBound === "true") return;
+      form.dataset.codexBound = "true";
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const emailInput = form.querySelector('input[type="email"]');
+        const hasQuoteField = form.textContent.toLowerCase().includes("technical specification form");
+        const hasProjectField = form.textContent.toLowerCase().includes("project inquiry");
+
+        if (hasQuoteField) {
+          showToast(form, "Quote request captured", "This static demo now records the submission locally and shows the expected confirmation state. No backend endpoint was included in the Stitch export.");
+        } else if (hasProjectField) {
+          showToast(form, "Inquiry submitted", "Your regional support inquiry has been validated in the browser and the form has been reset for another submission.");
+        } else if (emailInput) {
+          showToast(form, "Subscription received", "The email capture works locally for demo purposes. A mailing backend was not part of the downloaded export.");
+        } else {
+          showToast(form, "Form submitted", "This form is functioning as a local static demo with client-side validation and confirmation.");
+        }
+        form.reset();
+      });
+    });
+  };
+
+  const wireMapLink = () => {
+    document.querySelectorAll('a[href="#"]').forEach((anchor) => {
+      const text = anchor.textContent.replace(/\s+/g, " ").trim().toLowerCase();
+      if (!text.includes("view on map")) return;
+      anchor.href = "https://www.google.com/maps/search/?api=1&query=88%20Maritime%20Way%20North%20Harbor%20District%20Singapore%20018989";
+      anchor.target = "_blank";
+      anchor.rel = "noopener noreferrer";
+    });
+  };
+
+  const wireSocialLinks = () => {
+    document.querySelectorAll('a[href="#"]').forEach((anchor) => {
+      const icon = anchor.querySelector(".material-symbols-outlined");
+      if (!icon) return;
+      const iconName = icon.textContent.trim().toLowerCase();
+      if (iconName === "mail") {
+        anchor.href = "mailto:info@marineconsultants.com";
+      } else if (iconName === "language" || iconName === "public") {
+        anchor.href = routes.home;
+      } else if (iconName === "share") {
+        anchor.href = routes.contact;
+      } else if (iconName === "account_circle") {
+        anchor.href = routes.support;
+      }
+    });
+  };
+
+  const wireNewsPage = () => {
+    const search = document.querySelector('input[placeholder*="Search News"]');
+    const cards = Array.from(document.querySelectorAll("article"));
+    const updatesSection = document.querySelectorAll("section")[0];
+    if (updatesSection && !updatesSection.id) updatesSection.id = "updates";
+    const resourcesSection = Array.from(document.querySelectorAll("section")).find((section) => section.textContent.includes("Technical Resources"));
+    if (resourcesSection && !resourcesSection.id) resourcesSection.id = "resources";
+    if (!search || !cards.length) return;
+
+    search.addEventListener("input", () => {
+      const query = search.value.trim().toLowerCase();
+      cards.forEach((card) => {
+        const match = !query || card.textContent.toLowerCase().includes(query);
+        card.classList.toggle("codex-hidden-card", !match);
+      });
+    });
+
+    const navButtons = Array.from(document.querySelectorAll("button")).filter((button) => {
+      const icon = button.querySelector(".material-symbols-outlined");
+      return icon && ["chevron_left", "chevron_right"].includes(icon.textContent.trim());
+    });
+    const firstCard = cards[0];
+    const lastCard = cards[cards.length - 1];
+    if (navButtons.length >= 2 && firstCard && lastCard) {
+      navButtons[0].addEventListener("click", () => firstCard.scrollIntoView({ behavior: "smooth", block: "center" }));
+      navButtons[1].addEventListener("click", () => lastCard.scrollIntoView({ behavior: "smooth", block: "center" }));
+    }
+  };
+
+  const wireProductPage = () => {
+    const search = document.querySelector('input[placeholder*="Search catalog"]');
+    const sidebar = Array.from(document.querySelectorAll("aside")).find((node) => node.textContent.includes("Filters"));
+    const cards = Array.from(document.querySelectorAll("main a, main div")).filter((node) => {
+      return node.querySelector && node.querySelector('a[href$="quote.html"], a[href*="quote.html"], a[href="/quote.html"]');
+    });
+    if (!search || !sidebar || !cards.length) return;
+
+    const cardData = cards.map((card) => {
+      const title = (card.querySelector("h3, h4")?.textContent || "").trim();
+      const category = (Array.from(card.querySelectorAll("p")).map((p) => p.textContent.trim()).find((value) => /rigging|instruments|engines|fire|davits|safety/i.test(value)) || title).trim();
+      return { card, title: (title + " " + category).toLowerCase(), category: category.toLowerCase() };
+    });
+
+    const checkboxLabels = Array.from(sidebar.querySelectorAll("label")).filter((label) => label.querySelector('input[type="checkbox"]'));
+    const applyFilters = () => {
+      const query = search.value.trim().toLowerCase();
+      const selected = checkboxLabels
+        .filter((label) => label.querySelector("input").checked)
+        .map((label) => label.textContent.trim().toLowerCase());
+
+      cardData.forEach(({ card, title, category }) => {
+        const matchesQuery = !query || title.includes(query);
+        const matchesCategory = !selected.length || selected.some((entry) => category.includes(entry) || entry.includes(category));
+        card.classList.toggle("codex-hidden-card", !(matchesQuery && matchesCategory));
+      });
+    };
+
+    search.addEventListener("input", applyFilters);
+    checkboxLabels.forEach((label) => label.querySelector("input").addEventListener("change", applyFilters));
+
+    document.querySelectorAll('button').forEach((button) => {
+      const icon = button.querySelector(".material-symbols-outlined");
+      if (!icon || icon.textContent.trim().toLowerCase() !== "info") return;
+      button.type = "button";
+      button.addEventListener("click", () => location.href = routes.quote);
+    });
+  };
+
+  const wireContactPage = () => {
+    const formSection = document.querySelector("#form");
+    if (!formSection) return;
+
+    const hubButtons = Array.from(document.querySelectorAll("button")).filter((button) => button.textContent.toLowerCase().includes("contact hub"));
+    hubButtons.forEach((button) => {
+      button.type = "button";
+      button.addEventListener("click", () => formSection.scrollIntoView({ behavior: "smooth", block: "start" }));
+    });
+
+    const navButtons = Array.from(document.querySelectorAll("button")).filter((button) => {
+      const icon = button.querySelector(".material-symbols-outlined");
+      return icon && ["west", "east"].includes(icon.textContent.trim());
+    });
+
+    const hubCards = Array.from(document.querySelectorAll("#locations .space-y-4 > div"));
+    let activeIndex = 0;
+    const setActiveHub = (index) => {
+      activeIndex = (index + hubCards.length) % hubCards.length;
+      hubCards.forEach((card, current) => {
+        const active = current === activeIndex;
+        card.classList.toggle("codex-chip-active", active);
+        card.classList.toggle("text-white", active);
+      });
+    };
+
+    if (hubCards.length) setActiveHub(0);
+    if (navButtons[0]) navButtons[0].addEventListener("click", () => setActiveHub(activeIndex - 1));
+    if (navButtons[1]) navButtons[1].addEventListener("click", () => setActiveHub(activeIndex + 1));
+  };
+
+  const wireSupportPage = () => {
+    const form = document.querySelector("form");
+    const buttons = Array.from(document.querySelectorAll("button")).filter((button) => button.textContent.toLowerCase().includes("request regional support") || button.textContent.toLowerCase().includes("regional directory"));
+    if (!form) return;
+    buttons.forEach((button) => {
+      button.type = "button";
+      button.addEventListener("click", () => form.scrollIntoView({ behavior: "smooth", block: "start" }));
+    });
+  };
+
+  assignLinkTargets();
+  wireForms();
+  wireMapLink();
+  wireSocialLinks();
+  wireProductPage();
+  wireNewsPage();
+  wireContactPage();
+  wireSupportPage();
+})();
+</script>
+</body></html>
