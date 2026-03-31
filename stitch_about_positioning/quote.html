@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Request a Quote | Marine Consultants</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f4faff",
+              "on-primary-fixed-variant": "#1a4a6e",
+              "on-surface-variant": "#42474d",
+              "on-error": "#ffffff",
+              "inverse-surface": "#263238",
+              "surface-container": "#e3f0f8",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#a0cbf5",
+              "tertiary-container": "#481c00",
+              "primary": "#001628",
+              "tertiary-fixed-dim": "#ffb68f",
+              "primary-fixed": "#cee5ff",
+              "inverse-on-surface": "#e6f3fb",
+              "secondary-fixed-dim": "#afcbd8",
+              "surface-dim": "#cfdce4",
+              "on-tertiary": "#ffffff",
+              "outline": "#73777e",
+              "on-secondary-fixed-variant": "#304a55",
+              "background": "#f4faff",
+              "on-secondary-fixed": "#021f29",
+              "secondary-container": "#cbe7f5",
+              "primary-fixed-dim": "#a0cbf5",
+              "on-background": "#111d23",
+              "on-primary-fixed": "#001d32",
+              "on-secondary-container": "#4e6874",
+              "surface-bright": "#f4faff",
+              "tertiary-fixed": "#ffdbca",
+              "secondary": "#48626e",
+              "surface-tint": "#366287",
+              "on-primary-container": "#6a94bc",
+              "primary-container": "#002b47",
+              "on-tertiary-fixed": "#331200",
+              "outline-variant": "#c3c7ce",
+              "tertiary": "#280c00",
+              "on-tertiary-container": "#eb6a00",
+              "error": "#ba1a1a",
+              "surface-container-low": "#e9f6fd",
+              "error-container": "#ffdad6",
+              "on-surface": "#111d23",
+              "surface-container-high": "#ddeaf2",
+              "secondary-fixed": "#cbe7f5",
+              "on-error-container": "#93000a",
+              "surface-variant": "#d7e4ec",
+              "on-tertiary-fixed-variant": "#773200",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#d7e4ec",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .technical-gradient {
+            background: linear-gradient(135deg, #001628 0%, #002b47 100%);
+        }
+    </style>
+<link rel="icon" href="/favicon.ico" />
+<style id="codex-runtime-style">
+  [hidden] { display: none !important; }
+  @media (max-width: 640px) {
+    nav > div:first-child,
+    header > nav:first-child {
+      gap: 0.5rem;
+    }
+    nav .text-xl {
+      font-size: 0.95rem !important;
+      line-height: 1.1 !important;
+      max-width: 13rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    nav .bg-tertiary-container,
+    nav button.bg-tertiary-container,
+    nav a.bg-tertiary-container {
+      padding: 0.5rem 0.8rem !important;
+      font-size: 0.72rem !important;
+      white-space: nowrap;
+    }
+  }
+  @media (max-width: 400px) {
+    nav .bg-tertiary-container,
+    nav button.bg-tertiary-container,
+    nav a.bg-tertiary-container {
+      display: none !important;
+    }
+  }
+  .codex-toast {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #eb6a00;
+    background: rgba(255,255,255,0.92);
+    color: #111d23;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    box-shadow: 0 20px 40px rgba(17, 29, 35, 0.08);
+  }
+  .codex-toast strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-family: "Manrope", sans-serif;
+  }
+  .codex-chip-active {
+    background: #001628 !important;
+    color: white !important;
+  }
+  .codex-hidden-card {
+    display: none !important;
+  }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-tertiary-container selection:text-on-tertiary-container">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-8xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-blue-900 dark:text-white uppercase font-headline">
+                Marine Consultants
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors text-sm font-label" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors text-sm font-label" href="#">About</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors text-sm font-label" href="#">Products</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors text-sm font-label" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors text-sm font-label" href="#">Industries</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors text-sm font-label" href="#">News</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-tertiary-container text-on-tertiary-container px-5 py-2 rounded-md font-headline font-bold text-sm hover:opacity-90 active:scale-95 transition-all">
+                    Contact
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Quote Request Hero -->
+<section class="relative technical-gradient overflow-hidden py-24 md:py-32">
+<div class="absolute inset-0 opacity-20 overflow-hidden">
+<div class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-container rounded-full blur-[120px] -mr-40 -mt-40"></div>
+<div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary rounded-full blur-[100px] -ml-20 -mb-20"></div>
+</div>
+<div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<span class="inline-block text-on-tertiary-container bg-tertiary-container px-3 py-1 text-[10px] font-bold uppercase tracking-widest mb-6">Precision Quotation</span>
+<h1 class="text-white font-headline text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
+                        Engineering Your <span class="text-on-primary-container">Maritime Success.</span>
+</h1>
+<p class="text-primary-fixed-dim text-lg max-w-xl font-body leading-relaxed mb-10">
+                        Detailed analysis, technical foresight, and operational excellence. Provide your project parameters below for a comprehensive marine consultation quote.
+                    </p>
+<!-- Technical Inset -->
+<div class="bg-surface-container-high/10 backdrop-blur-md p-6 border-l-2 border-on-tertiary-container max-w-md">
+<div class="flex items-center gap-4 mb-3">
+<span class="material-symbols-outlined text-on-tertiary-container">analytics</span>
+<span class="text-white font-headline font-bold text-sm uppercase tracking-wide">Standard Response Protocols</span>
+</div>
+<p class="text-slate-300 text-xs font-label">Our engineering team reviews all technical specifications within 24-48 business hours to ensure data integrity and accurate cost projection.</p>
+</div>
+</div>
+<div class="hidden lg:block lg:col-span-5 relative">
+<div class="aspect-square bg-surface-container-low rounded-xl overflow-hidden shadow-2xl rotate-3">
+<img alt="Marine blueprint" class="w-full h-full object-cover grayscale contrast-125 opacity-80" data-alt="top down view of marine engineering blueprints and professional technical drawing instruments on a clean white desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFwuHBGTDB5f-PbFNhjPVvlT_T1WRsmAOLBwHdChr9luHC1fNsry-VzfR0XieMcywtalOJ90zdrv3BdcfdNRIkU-X-odQCPi6d2JUYV0GMNyBDJ1uQTlfUJS9ZviJpzm2dsL1SpTdG5fT8n9cbp7wjCBa2DMgT_xS8rfZCuliOd3E4a1YHDqzDij31myMoQAX5bbBwThkWCJUtUW2ALs9IXklxhzF-9x3dRdmfS82c1y7aWk_aG4ZMQCccgU6HtpzYWWtfJy-aCKjy"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white p-6 shadow-xl rounded-lg max-w-[200px]">
+<p class="text-primary font-headline font-black text-3xl mb-1">98%</p>
+<p class="text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Precision Rating</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quote Process Explanation -->
+<section class="py-20 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="space-y-4">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container text-primary font-headline font-bold text-xl">01</div>
+<h3 class="font-headline font-bold text-lg text-primary">Requirement Analysis</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">We evaluate your technical specifications against current maritime standards and regulatory frameworks to ensure feasibility.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container text-primary font-headline font-bold text-xl">02</div>
+<h3 class="font-headline font-bold text-lg text-primary">Strategic Sourcing</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Our consultants identify optimized procurement channels and engineering resources tailored specifically to your industry sector.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container text-primary font-headline font-bold text-xl">03</div>
+<h3 class="font-headline font-bold text-lg text-primary">Verified Proposal</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Receive a detailed breakdown including timelines, resource allocation, and technical deliverables verified by our senior lead engineers.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Working Quote Form Section -->
+<section class="pb-32 bg-surface">
+<div class="max-w-5xl mx-auto px-6">
+<div class="bg-surface-container-low p-8 md:p-12 rounded-xl relative overflow-hidden">
+<!-- Subtle Background Element -->
+<div class="absolute top-0 right-0 p-8 opacity-5">
+<span class="material-symbols-outlined text-[160px]" style="font-variation-settings: 'wght' 200;">description</span>
+</div>
+<div class="relative z-10">
+<div class="mb-12">
+<h2 class="font-headline text-3xl font-bold text-primary mb-2">Technical Specification Form</h2>
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-wide">Fields marked with an asterisk (*) are mandatory for submission.</p>
+</div>
+<form class="space-y-10">
+<!-- Section: Personal Information -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-outline">Full Name *</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-0 focus:border-b-2 focus:border-primary transition-all p-4 text-on-surface text-sm" placeholder="e.g. Capt. James Sullivan" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-outline">Company Name *</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-0 focus:border-b-2 focus:border-primary transition-all p-4 text-on-surface text-sm" placeholder="Maritime Logistics Global" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-outline">Email Address *</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-0 focus:border-b-2 focus:border-primary transition-all p-4 text-on-surface text-sm" placeholder="sullivan@company.com" required="" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-outline">Phone Number</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-0 focus:border-b-2 focus:border-primary transition-all p-4 text-on-surface text-sm" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+<!-- Section: Professional Context -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-outline-variant/20">
+<div class="space-y-2">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-outline">Industry Segment *</label>
+<select class="w-full bg-surface-container-lowest border-none focus:ring-0 focus:border-b-2 focus:border-primary transition-all p-4 text-on-surface text-sm appearance-none" required="">
+<option value="">Select Industry</option>
+<option>Commercial Shipping</option>
+<option>Offshore Energy</option>
+<option>Naval Defense</option>
+<option>Luxury Yachting</option>
+<option>Port Infrastructure</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-outline">Product or Service Category *</label>
+<select class="w-full bg-surface-container-lowest border-none focus:ring-0 focus:border-b-2 focus:border-primary transition-all p-4 text-on-surface text-sm appearance-none" required="">
+<option value="">Select Category</option>
+<option>Hull Engineering</option>
+<option>Propulsion Systems</option>
+<option>Navigational Software</option>
+<option>Maintenance &amp; Repair</option>
+<option>Safety Compliance Audit</option>
+</select>
+</div>
+</div>
+<!-- Section: Project Details -->
+<div class="space-y-2 pt-6 border-t border-outline-variant/20">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-outline">Details of Requirement *</label>
+<textarea class="w-full bg-surface-container-lowest border-none focus:ring-0 focus:border-b-2 focus:border-primary transition-all p-4 text-on-surface text-sm resize-none" placeholder="Provide a detailed description of your technical needs, including deadlines and specific constraints..." required="" rows="6"></textarea>
+</div>
+<!-- Section: Communication -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-8 pt-6 border-t border-outline-variant/20">
+<div class="space-y-3">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-outline">Preferred Response Method</label>
+<div class="flex gap-6">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="text-primary focus:ring-primary h-4 w-4 border-outline-variant" name="response" type="radio" value="email"/>
+<span class="text-sm font-label text-on-surface group-hover:text-primary transition-colors">Email</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="text-primary focus:ring-primary h-4 w-4 border-outline-variant" name="response" type="radio" value="phone"/>
+<span class="text-sm font-label text-on-surface group-hover:text-primary transition-colors">Phone Call</span>
+</label>
+</div>
+</div>
+<button class="bg-primary text-white font-headline font-bold px-10 py-5 rounded-md hover:bg-primary-container transition-all flex items-center justify-center gap-3 group" type="submit">
+                                    Generate Quote Request
+                                    <span class="material-symbols-outlined text-on-tertiary-container group-hover:translate-x-1 transition-transform">send</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Post-Submission Logic Hint (Static Placeholder) -->
+<div class="mt-8 p-6 border-2 border-dashed border-outline-variant/30 rounded-xl flex items-start gap-4 opacity-50">
+<span class="material-symbols-outlined text-secondary">info</span>
+<div>
+<h4 class="text-sm font-bold font-headline mb-1">Upon submission:</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">A confirmation ticket will be generated and sent to your email. Your dedicated account manager will then initiate the technical feasibility study.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Links -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary mb-2 block">Resources</span>
+<h2 class="font-headline text-3xl font-bold text-primary">Explore Our Expertise</h2>
+</div>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:underline" href="#">
+                        View all capabilities <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Link Card 1 -->
+<a class="group block bg-surface-container-lowest p-1 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300" href="#">
+<div class="flex flex-col lg:flex-row gap-6 p-6">
+<div class="lg:w-1/3 aspect-video lg:aspect-square overflow-hidden rounded-lg">
+<img alt="Products" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Modern maritime vessel engine room with high tech machinery and blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAveQ7MZJuvDyEo4fij2RIwH9_BneYBIZXi2-76UIwOD3wxp4s1w-vif4zTXUxTNs2URA7EtGQKpgLtB9hIfKSBDRu0-9h-DeaoZh7pM9drh1wwmKhzmNlUYwubfOVcKYdm-gsLk8K2DBc-5NjCJUKB0I-hTJ9VqaQMJk7l35fRxIrbRhWkune2jMtBau2Xzb6sAydjrfJ-0F3wMC6sdBp8i7VW1wx1KADj46sBgM5N9-TR8apmko5g1Mcs9iEHlKwQMciEsRBO4DYe"/>
+</div>
+<div class="lg:w-2/3 flex flex-col justify-center">
+<h3 class="font-headline font-bold text-xl text-primary mb-3 group-hover:text-on-tertiary-container transition-colors">Precision Products</h3>
+<p class="text-on-surface-variant text-sm mb-4">Discover our catalog of hardware and software solutions engineered for peak maritime performance.</p>
+<span class="text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-2">
+                                    Catalog Details <span class="material-symbols-outlined text-xs">trending_flat</span>
+</span>
+</div>
+</div>
+</a>
+<!-- Link Card 2 -->
+<a class="group block bg-surface-container-lowest p-1 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300" href="#">
+<div class="flex flex-col lg:flex-row gap-6 p-6">
+<div class="lg:w-1/3 aspect-video lg:aspect-square overflow-hidden rounded-lg">
+<img alt="Services" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Two marine engineers in safety gear discussing over a digital tablet in a port setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Y-TgKCL3g24_mw48XiZNzAEdqySPmKhKfRoeEzaQjiKmteB-yoWwQLDTc9uVC90egkQWwNEviNdezHkRzhPTF3NSBNqe1rEnkd4yUcLdHfiigW3-kjWIJxyw1aJeFE5NdfeWKz50I4aLaqAmx52aRRS97SyRN4oYNAtgpiXSNven0G84-jsfJae5pGk3pC3qyAqMId4KUWIl-JrDvQYgAp06chcjz4wdTaPtxFdPjqsOOzRmjplmQf7B9NM9SXb1hKyRmL_KfDH0"/>
+</div>
+<div class="lg:w-2/3 flex flex-col justify-center">
+<h3 class="font-headline font-bold text-xl text-primary mb-3 group-hover:text-on-tertiary-container transition-colors">Consultancy Services</h3>
+<p class="text-on-surface-variant text-sm mb-4">Strategic advisory and technical support services tailored for complex offshore and coastal operations.</p>
+<span class="text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-2">
+                                    Service Overview <span class="material-symbols-outlined text-xs">trending_flat</span>
+</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-blue-950 dark:bg-slate-950 text-white w-full pt-16 pb-8 border-t border-blue-900 dark:border-slate-800">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 px-6 max-w-8xl mx-auto mb-16">
+<div class="col-span-2 lg:col-span-1">
+<div class="text-2xl font-black text-white font-headline mb-6">Marine Consultants</div>
+<p class="text-slate-400 text-xs leading-relaxed max-w-xs">Global leaders in precision maritime engineering and technical advisory since 1994.</p>
+</div>
+<div>
+<span class="uppercase tracking-widest text-[10px] font-bold text-slate-500 mb-6 block">Company</span>
+<ul class="space-y-3">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm font-label" href="#">Home</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm font-label" href="#">About</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm font-label" href="#">Industries</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm font-label" href="#">News</a></li>
+</ul>
+</div>
+<div>
+<span class="uppercase tracking-widest text-[10px] font-bold text-slate-500 mb-6 block">Offerings</span>
+<ul class="space-y-3">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm font-label" href="#">Products</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm font-label" href="#">Services</a></li>
+<li><a class="text-orange-500 font-bold transition-colors text-sm font-label" href="#">Get a Quote</a></li>
+</ul>
+</div>
+<div>
+<span class="uppercase tracking-widest text-[10px] font-bold text-slate-500 mb-6 block">Support</span>
+<ul class="space-y-3">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm font-label" href="#">Contact</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm font-label" href="#">Support</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm font-label" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm font-label" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="px-6 max-w-8xl mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[10px] font-label text-slate-500 uppercase tracking-widest">© 2024 Marine Consultants Limited. Precision Engineering.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-500 hover:text-white cursor-pointer transition-colors text-xl">language</span>
+<span class="material-symbols-outlined text-slate-500 hover:text-white cursor-pointer transition-colors text-xl">hub</span>
+<span class="material-symbols-outlined text-slate-500 hover:text-white cursor-pointer transition-colors text-xl">anchor</span>
+</div>
+</div>
+</footer>
+<script id="codex-runtime-script">
+(() => {
+  const routes = {"home": "/index.html", "about": "/about.html", "products": "/products.html", "services": "/services.html", "support": "/support.html", "industries": "/industries.html", "news": "/news.html", "contact": "/contact.html", "quote": "/quote.html", "privacy": "/privacy.html", "terms": "/terms.html"};
+  const path = location.pathname === "/" ? "/index.html" : location.pathname;
+
+  const labelRoute = (text) => {
+    const label = text.replace(/\s+/g, " ").trim().toLowerCase();
+    if (!label) return null;
+    if (label === "home") return routes.home;
+    if (label === "about") return routes.about;
+    if (label === "products") return routes.products;
+    if (label === "services") return routes.services;
+    if (label === "industries") return routes.industries;
+    if (label === "news") return routes.news;
+    if (label === "contact") return routes.contact;
+    if (label === "support" || label === "support portal") return routes.support;
+    if (label === "get a quote" || label === "request pricing" || label === "request quote" || label === "start quote") return routes.quote;
+    if (label.includes("inquire now")) return routes.quote;
+    if (label.includes("browse catalog") || label.includes("view catalog") || label.includes("see products") || label.includes("specifications")) return routes.products;
+    if (label.includes("browse products")) return routes.products;
+    if (label.includes("catalog details")) return routes.products;
+    if (label.includes("chains & ropes") || label.includes("engines") || label.includes("navigation") || label.includes("safety")) return routes.products + "#catalog";
+    if (label.includes("view services")) return routes.services;
+    if (label.includes("our services")) return routes.services;
+    if (label.includes("explore capabilities")) return routes.services;
+    if (label.includes("view all capabilities")) return routes.services;
+    if (label.includes("service overview")) return routes.services;
+    if (label.includes("request service support") || label.includes("view sourcing capabilities")) return routes.support;
+    if (label.includes("technical resources") || label.includes("safety standards") || label.includes("view technical specs")) return routes.support;
+    if (label.includes("technical capability deck")) return routes.services;
+    if (label.includes("regional directory") || label.includes("view service support") || label.includes("request regional support")) return routes.support;
+    if (label.includes("immediate consultation")) return routes.contact + "#form";
+    if (label.includes("location & contact") || label.includes("contact our team") || label.includes("contact sales team") || label.includes("contact regional hub")) return routes.contact + "#form";
+    if (label.includes("submit inquiry")) return "#form";
+    if (label.includes("all news") || label.includes("read full report")) return routes.news;
+    if (label.includes("view details") || label.includes("read more") || label.includes("learn more")) return routes.news + "#updates";
+    if (label.includes("download pdf") || label.includes("download resource") || label.includes("read abstract") || label.includes("view statement")) return routes.news + "#resources";
+    if (label.includes("inquire now")) return routes.quote;
+    if (label.includes("privacy")) return routes.privacy;
+    if (label.includes("terms")) return routes.terms;
+    if (label.includes("case studies")) return routes.about;
+    if (label.includes("oil & gas") || label.includes("commercial marine") || label.includes("national security") || label.includes("pleasure crafts") || label.includes("shipping") || label.includes("port infrastructure") || label.includes("renewables")) return routes.industries;
+    if (label.includes("americas & caribbean") || label.includes("europe & mediterranean") || label.includes("asia-pacific & oceania") || label.includes("middle east & africa")) return "#service-request";
+    return null;
+  };
+
+  const assignLinkTargets = () => {
+    document.querySelectorAll('a[href="#"]').forEach((anchor) => {
+      const target = labelRoute(anchor.textContent || "");
+      if (target) anchor.setAttribute("href", target);
+    });
+
+    document.querySelectorAll('button:not([type="submit"])').forEach((button) => {
+      const target = labelRoute(button.textContent || "");
+      if (!target) return;
+      button.dataset.route = target;
+      button.type = "button";
+      button.addEventListener("click", () => {
+        if (target.startsWith("#")) {
+          const section = document.querySelector(target);
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+          return;
+        }
+        location.href = target;
+      });
+    });
+  };
+
+  const showToast = (form, title, body) => {
+    const existing = form.parentElement.querySelector(".codex-toast");
+    if (existing) existing.remove();
+    const toast = document.createElement("div");
+    toast.className = "codex-toast";
+    toast.innerHTML = `<strong>${title}</strong><span>${body}</span>`;
+    form.insertAdjacentElement("afterend", toast);
+  };
+
+  const wireForms = () => {
+    document.querySelectorAll("form").forEach((form) => {
+      if (form.dataset.codexBound === "true") return;
+      form.dataset.codexBound = "true";
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const emailInput = form.querySelector('input[type="email"]');
+        const hasQuoteField = form.textContent.toLowerCase().includes("technical specification form");
+        const hasProjectField = form.textContent.toLowerCase().includes("project inquiry");
+
+        if (hasQuoteField) {
+          showToast(form, "Quote request captured", "This static demo now records the submission locally and shows the expected confirmation state. No backend endpoint was included in the Stitch export.");
+        } else if (hasProjectField) {
+          showToast(form, "Inquiry submitted", "Your regional support inquiry has been validated in the browser and the form has been reset for another submission.");
+        } else if (emailInput) {
+          showToast(form, "Subscription received", "The email capture works locally for demo purposes. A mailing backend was not part of the downloaded export.");
+        } else {
+          showToast(form, "Form submitted", "This form is functioning as a local static demo with client-side validation and confirmation.");
+        }
+        form.reset();
+      });
+    });
+  };
+
+  const wireMapLink = () => {
+    document.querySelectorAll('a[href="#"]').forEach((anchor) => {
+      const text = anchor.textContent.replace(/\s+/g, " ").trim().toLowerCase();
+      if (!text.includes("view on map")) return;
+      anchor.href = "https://www.google.com/maps/search/?api=1&query=88%20Maritime%20Way%20North%20Harbor%20District%20Singapore%20018989";
+      anchor.target = "_blank";
+      anchor.rel = "noopener noreferrer";
+    });
+  };
+
+  const wireSocialLinks = () => {
+    document.querySelectorAll('a[href="#"]').forEach((anchor) => {
+      const icon = anchor.querySelector(".material-symbols-outlined");
+      if (!icon) return;
+      const iconName = icon.textContent.trim().toLowerCase();
+      if (iconName === "mail") {
+        anchor.href = "mailto:info@marineconsultants.com";
+      } else if (iconName === "location_on") {
+        anchor.href = routes.contact;
+      } else if (iconName === "language" || iconName === "public") {
+        anchor.href = routes.home;
+      } else if (iconName === "share") {
+        anchor.href = routes.contact;
+      } else if (iconName === "account_circle") {
+        anchor.href = routes.support;
+      }
+    });
+  };
+
+  const wireNewsPage = () => {
+    const search = document.querySelector('input[placeholder*="Search News"]');
+    const cards = Array.from(document.querySelectorAll("article"));
+    const updatesSection = document.querySelectorAll("section")[0];
+    if (updatesSection && !updatesSection.id) updatesSection.id = "updates";
+    const resourcesSection = Array.from(document.querySelectorAll("section")).find((section) => section.textContent.includes("Technical Resources"));
+    if (resourcesSection && !resourcesSection.id) resourcesSection.id = "resources";
+    if (!search || !cards.length) return;
+
+    search.addEventListener("input", () => {
+      const query = search.value.trim().toLowerCase();
+      cards.forEach((card) => {
+        const match = !query || card.textContent.toLowerCase().includes(query);
+        card.classList.toggle("codex-hidden-card", !match);
+      });
+    });
+
+    const navButtons = Array.from(document.querySelectorAll("button")).filter((button) => {
+      const icon = button.querySelector(".material-symbols-outlined");
+      return icon && ["chevron_left", "chevron_right"].includes(icon.textContent.trim());
+    });
+    const firstCard = cards[0];
+    const lastCard = cards[cards.length - 1];
+    if (navButtons.length >= 2 && firstCard && lastCard) {
+      navButtons[0].addEventListener("click", () => firstCard.scrollIntoView({ behavior: "smooth", block: "center" }));
+      navButtons[1].addEventListener("click", () => lastCard.scrollIntoView({ behavior: "smooth", block: "center" }));
+    }
+  };
+
+  const wireProductPage = () => {
+    const search = document.querySelector('input[placeholder*="Search catalog"]');
+    const sidebar = Array.from(document.querySelectorAll("aside")).find((node) => node.textContent.includes("Filters"));
+    const cards = Array.from(document.querySelectorAll("main a, main div")).filter((node) => {
+      return node.querySelector && node.querySelector('a[href$="quote.html"], a[href*="quote.html"], a[href="/quote.html"]');
+    });
+    if (!search || !sidebar || !cards.length) return;
+
+    const cardData = cards.map((card) => {
+      const title = (card.querySelector("h3, h4")?.textContent || "").trim();
+      const category = (Array.from(card.querySelectorAll("p")).map((p) => p.textContent.trim()).find((value) => /rigging|instruments|engines|fire|davits|safety/i.test(value)) || title).trim();
+      return { card, title: (title + " " + category).toLowerCase(), category: category.toLowerCase() };
+    });
+
+    const checkboxLabels = Array.from(sidebar.querySelectorAll("label")).filter((label) => label.querySelector('input[type="checkbox"]'));
+    const applyFilters = () => {
+      const query = search.value.trim().toLowerCase();
+      const selected = checkboxLabels
+        .filter((label) => label.querySelector("input").checked)
+        .map((label) => label.textContent.trim().toLowerCase());
+
+      cardData.forEach(({ card, title, category }) => {
+        const matchesQuery = !query || title.includes(query);
+        const matchesCategory = !selected.length || selected.some((entry) => category.includes(entry) || entry.includes(category));
+        card.classList.toggle("codex-hidden-card", !(matchesQuery && matchesCategory));
+      });
+    };
+
+    search.addEventListener("input", applyFilters);
+    checkboxLabels.forEach((label) => label.querySelector("input").addEventListener("change", applyFilters));
+
+    document.querySelectorAll('button').forEach((button) => {
+      const icon = button.querySelector(".material-symbols-outlined");
+      if (!icon || icon.textContent.trim().toLowerCase() !== "info") return;
+      button.type = "button";
+      button.addEventListener("click", () => location.href = routes.quote);
+    });
+  };
+
+  const wireContactPage = () => {
+    const formSection = document.querySelector("#form");
+    if (!formSection) return;
+
+    const hubButtons = Array.from(document.querySelectorAll("button")).filter((button) => button.textContent.toLowerCase().includes("contact hub"));
+    hubButtons.forEach((button) => {
+      button.type = "button";
+      button.addEventListener("click", () => formSection.scrollIntoView({ behavior: "smooth", block: "start" }));
+    });
+
+    const navButtons = Array.from(document.querySelectorAll("button")).filter((button) => {
+      const icon = button.querySelector(".material-symbols-outlined");
+      return icon && ["west", "east"].includes(icon.textContent.trim());
+    });
+
+    const hubCards = Array.from(document.querySelectorAll("#locations .space-y-4 > div"));
+    let activeIndex = 0;
+    const setActiveHub = (index) => {
+      activeIndex = (index + hubCards.length) % hubCards.length;
+      hubCards.forEach((card, current) => {
+        const active = current === activeIndex;
+        card.classList.toggle("codex-chip-active", active);
+        card.classList.toggle("text-white", active);
+      });
+    };
+
+    if (hubCards.length) setActiveHub(0);
+    if (navButtons[0]) navButtons[0].addEventListener("click", () => setActiveHub(activeIndex - 1));
+    if (navButtons[1]) navButtons[1].addEventListener("click", () => setActiveHub(activeIndex + 1));
+  };
+
+  const wireSupportPage = () => {
+    const form = document.querySelector("form");
+    const buttons = Array.from(document.querySelectorAll("button")).filter((button) => button.textContent.toLowerCase().includes("request regional support") || button.textContent.toLowerCase().includes("regional directory"));
+    if (!form) return;
+    if (!form.id) form.id = "service-request";
+    buttons.forEach((button) => {
+      button.type = "button";
+      button.addEventListener("click", () => form.scrollIntoView({ behavior: "smooth", block: "start" }));
+    });
+  };
+
+  assignLinkTargets();
+  wireForms();
+  wireMapLink();
+  wireSocialLinks();
+  wireProductPage();
+  wireNewsPage();
+  wireContactPage();
+  wireSupportPage();
+})();
+</script>
+</body></html>

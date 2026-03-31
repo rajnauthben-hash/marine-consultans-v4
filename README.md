@@ -16,6 +16,8 @@ This project preserves the downloaded Google Stitch export for the Marine Consul
   - Runs a browser-backed audit of the generated static site and validates routes plus internal browser-rendered links.
 - `*.html` at the repository root
   - Static deployment artifacts generated from the runtime transform so platforms like Vercel can serve the site directly.
+- `stitch_about_positioning/*.html`
+  - Mirrored deployment artifacts so the site also works if a hosting platform is accidentally pointed at the export folder as the project root.
 - `favicon.ico`
   - Generated favicon to prevent browser asset 404s on deployment.
 - `vercel.json`
@@ -97,6 +99,13 @@ To regenerate the static deployment files:
 ```powershell
 python build_static.py
 ```
+
+This writes deployable files to both:
+
+- the repository root
+- `stitch_about_positioning/`
+
+That duplication is intentional so the deployment remains valid whether the host is configured to use the repo root or the export folder as its root directory.
 
 You can also preview the static deployment output directly:
 
