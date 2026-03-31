@@ -12,8 +12,12 @@ This project preserves the downloaded Google Stitch export for the Marine Consul
   - Applies minimal runtime fixes for routing, missing fallback pages, and client-side interactions.
 - `build_static.py`
   - Generates deployable static HTML files at the repository root from the preserved Stitch export.
+- `audit_static.py`
+  - Runs a browser-backed audit of the generated static site and validates routes plus internal browser-rendered links.
 - `*.html` at the repository root
   - Static deployment artifacts generated from the runtime transform so platforms like Vercel can serve the site directly.
+- `favicon.ico`
+  - Generated favicon to prevent browser asset 404s on deployment.
 - `vercel.json`
   - Minimal Vercel configuration for clean static serving.
 - `README.md`
@@ -100,12 +104,21 @@ You can also preview the static deployment output directly:
 python -m http.server 8000
 ```
 
+To run the deeper browser-backed audit:
+
+```powershell
+python audit_static.py
+```
+
 ## Verification performed
 
 - Confirmed the server wrapper compiles successfully with `python -m py_compile server.py`.
 - Confirmed all primary routes return `200` when served locally.
 - Verified Stitch placeholder routes are resolved in served output.
 - Confirmed the generated static files return `200` for `/`, `/index.html`, `/about.html`, `/products.html`, `/services.html`, `/support.html`, `/industries.html`, `/news.html`, `/contact.html`, `/quote.html`, `/privacy.html`, and `/terms.html`.
+- Confirmed `/favicon.ico` returns `200`.
+- Confirmed the browser-rendered DOM on all primary pages contains no unresolved Stitch placeholders and no live `href=\"#\"` links after JavaScript runs.
+- Confirmed all internal browser-rendered links resolve successfully through `python audit_static.py`.
 - Generated headless Chrome screenshots for the home page at desktop and mobile sizes to validate layout.
 - Confirmed there were no blocking runtime failures while rendering the site locally.
 

@@ -80,6 +80,7 @@
             background: linear-gradient(135deg, #001628 0%, #002b47 100%);
         }
     </style>
+<link rel="icon" href="/favicon.ico" />
 <style id="codex-runtime-style">
   [hidden] { display: none !important; }
   @media (max-width: 640px) {
@@ -450,18 +451,30 @@
     if (label === "get a quote" || label === "request pricing" || label === "request quote" || label === "start quote") return routes.quote;
     if (label.includes("inquire now")) return routes.quote;
     if (label.includes("browse catalog") || label.includes("view catalog") || label.includes("see products") || label.includes("specifications")) return routes.products;
+    if (label.includes("browse products")) return routes.products;
+    if (label.includes("catalog details")) return routes.products;
+    if (label.includes("chains & ropes") || label.includes("engines") || label.includes("navigation") || label.includes("safety")) return routes.products + "#catalog";
     if (label.includes("view services")) return routes.services;
+    if (label.includes("our services")) return routes.services;
+    if (label.includes("explore capabilities")) return routes.services;
+    if (label.includes("view all capabilities")) return routes.services;
+    if (label.includes("service overview")) return routes.services;
     if (label.includes("request service support") || label.includes("view sourcing capabilities")) return routes.support;
+    if (label.includes("technical resources") || label.includes("safety standards") || label.includes("view technical specs")) return routes.support;
+    if (label.includes("technical capability deck")) return routes.services;
     if (label.includes("regional directory") || label.includes("view service support") || label.includes("request regional support")) return routes.support;
-    if (label.includes("contact regional hub")) return routes.contact + "#form";
+    if (label.includes("immediate consultation")) return routes.contact + "#form";
+    if (label.includes("location & contact") || label.includes("contact our team") || label.includes("contact sales team") || label.includes("contact regional hub")) return routes.contact + "#form";
     if (label.includes("submit inquiry")) return "#form";
     if (label.includes("all news") || label.includes("read full report")) return routes.news;
     if (label.includes("view details") || label.includes("read more") || label.includes("learn more")) return routes.news + "#updates";
     if (label.includes("download pdf") || label.includes("download resource") || label.includes("read abstract") || label.includes("view statement")) return routes.news + "#resources";
+    if (label.includes("inquire now")) return routes.quote;
     if (label.includes("privacy")) return routes.privacy;
     if (label.includes("terms")) return routes.terms;
     if (label.includes("case studies")) return routes.about;
     if (label.includes("oil & gas") || label.includes("commercial marine") || label.includes("national security") || label.includes("pleasure crafts") || label.includes("shipping") || label.includes("port infrastructure") || label.includes("renewables")) return routes.industries;
+    if (label.includes("americas & caribbean") || label.includes("europe & mediterranean") || label.includes("asia-pacific & oceania") || label.includes("middle east & africa")) return "#service-request";
     return null;
   };
 
@@ -539,6 +552,8 @@
       const iconName = icon.textContent.trim().toLowerCase();
       if (iconName === "mail") {
         anchor.href = "mailto:info@marineconsultants.com";
+      } else if (iconName === "location_on") {
+        anchor.href = routes.contact;
       } else if (iconName === "language" || iconName === "public") {
         anchor.href = routes.home;
       } else if (iconName === "share") {
@@ -652,6 +667,7 @@
     const form = document.querySelector("form");
     const buttons = Array.from(document.querySelectorAll("button")).filter((button) => button.textContent.toLowerCase().includes("request regional support") || button.textContent.toLowerCase().includes("regional directory"));
     if (!form) return;
+    if (!form.id) form.id = "service-request";
     buttons.forEach((button) => {
       button.type = "button";
       button.addEventListener("click", () => form.scrollIntoView({ behavior: "smooth", block: "start" }));
