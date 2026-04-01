@@ -50,10 +50,10 @@ The current build intentionally avoids unsupported global, multinational, or inf
   - `service-inquiry.html`
 - `assets/`
   - Shared CSS and JavaScript for the final live site
-- `canonical_sources/`
-  - The selected Stitch HTML pages kept as the final reference set used during consolidation
 - `archive/legacy-exports/`
   - Raw and legacy Stitch exports removed from active use
+- `archive/reference-sources/`
+  - The selected Stitch HTML pages kept as the archived reference set used during consolidation
 - `build_static.py`
   - Static generator for the final consolidated site
 - `server.py`
