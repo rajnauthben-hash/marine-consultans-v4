@@ -177,8 +177,8 @@ VERCEL_CONFIG = dedent(
 CORE_NAV = [
     ("Home", "/index.html", "home"),
     ("About", "/about.html", "about"),
-    ("Resources", "/resources.html", "resources"),
-    ("News", "/news.html", "news"),
+    ("Catalogue / Resources", "/resources.html", "resources"),
+    ("News / Updates", "/news.html", "news"),
     ("Contact", "/contact.html", "contact"),
 ]
 
@@ -390,7 +390,7 @@ SERVICE_DATA = {
         "Procurement / Supply Support",
         "inventory_2",
         "B2B sourcing support for marine products, technical stores, and maintenance requirements.",
-        "This service is positioned around technical procurement and vendor coordination rather than unsupported multinational marketing claims. Add supplier lists, stock ranges, and logistics workflows only after approval.",
+        "This service is positioned around technical procurement and vendor coordination rather than unsupported broad marketing claims. Add supplier lists, stock ranges, and logistics workflows only after approval.",
         ("Specification review", "Supplier coordination", "Commercial comparison support", "Delivery follow-up"),
         ("Purchasing departments", "Fleet support teams", "Ship chandlers", "Project coordinators"),
         ("technical-assistance", "maintenance-support", "support-request"),
@@ -471,9 +471,19 @@ def render_header(current: str) -> str:
     product_classes = "text-primary border-b-2 border-on-tertiary-container pb-1" if current == "products" else "text-on-surface-variant hover:text-primary"
     service_classes = "text-primary border-b-2 border-on-tertiary-container pb-1" if current == "services" else "text-on-surface-variant hover:text-primary"
 
-    mobile_links = "".join(
-        f'<a class="block rounded-md px-3 py-2 text-sm font-semibold text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="{escape(href)}">{escape(label)}</a>'
-        for label, href, _key in CORE_NAV
+    mobile_primary_links = "".join(
+        (
+            f'<a class="block rounded-md px-3 py-2 text-sm font-semibold text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="{escape(href)}">{escape(label)}</a>'
+        )
+        for label, href in (
+            ("Home", "/index.html"),
+            ("About", "/about.html"),
+            ("Products", "/products.html"),
+            ("Services", "/services.html"),
+            ("Catalogue / Resources", "/resources.html"),
+            ("News / Updates", "/news.html"),
+            ("Contact", "/contact.html"),
+        )
     )
     mobile_product_links = "".join(
         f'<a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="{escape(CATEGORY_DATA[slug].path)}">{escape(CATEGORY_DATA[slug].title)}</a>'
@@ -483,13 +493,24 @@ def render_header(current: str) -> str:
         f'<a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="{escape(SERVICE_DATA[slug].path)}">{escape(SERVICE_DATA[slug].title)}</a>'
         for slug in SERVICE_ORDER
     )
+    inquiry_links = "".join(
+        (
+            f'<a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="{escape(href)}">{escape(label)}</a>'
+        )
+        for label, href in (
+            ("General Contact", "/contact.html"),
+            ("Product Inquiry", "/inquiries/product-inquiry.html"),
+            ("Service Inquiry", "/inquiries/service-inquiry.html"),
+            ("Request a Quote", "/request-quote.html"),
+        )
+    )
 
     return dedent(
         f"""
         <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-slate-50/85 backdrop-blur-xl">
           <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
             <a class="text-xl font-extrabold uppercase tracking-tighter text-primary" href="/index.html">Marine Consultants</a>
-            <nav class="hidden xl:flex items-center gap-7">
+            <nav class="hidden xl:flex items-center gap-6">
               {nav_link("Home", "/index.html", "home")}
               {nav_link("About", "/about.html", "about")}
               <div class="menu-group relative">
@@ -497,6 +518,9 @@ def render_header(current: str) -> str:
                 <div class="menu-panel absolute left-0 top-full mt-3 w-[21rem] rounded-xl border border-outline-variant bg-white p-4 shadow-soft">
                   <a class="mb-3 block rounded-md bg-surface-container-low px-3 py-2 text-sm font-bold text-primary" href="/products.html">Product Catalog Overview</a>
                   <div class="grid gap-1">{product_links}</div>
+                  <div class="mt-3 border-t border-outline-variant pt-3">
+                    <a class="block rounded-md px-3 py-2 text-sm font-semibold text-primary hover:bg-surface-container-low" href="/inquiries/product-inquiry.html">Product Inquiry</a>
+                  </div>
                 </div>
               </div>
               <div class="menu-group relative">
@@ -504,10 +528,13 @@ def render_header(current: str) -> str:
                 <div class="menu-panel absolute left-0 top-full mt-3 w-[21rem] rounded-xl border border-outline-variant bg-white p-4 shadow-soft">
                   <a class="mb-3 block rounded-md bg-surface-container-low px-3 py-2 text-sm font-bold text-primary" href="/services.html">Services Overview</a>
                   <div class="grid gap-1">{service_links}</div>
+                  <div class="mt-3 border-t border-outline-variant pt-3">
+                    <a class="block rounded-md px-3 py-2 text-sm font-semibold text-primary hover:bg-surface-container-low" href="/inquiries/service-inquiry.html">Service Inquiry</a>
+                  </div>
                 </div>
               </div>
-              {nav_link("Resources", "/resources.html", "resources")}
-              {nav_link("News", "/news.html", "news")}
+              {nav_link("Catalogue / Resources", "/resources.html", "resources")}
+              {nav_link("News / Updates", "/news.html", "news")}
               {nav_link("Contact", "/contact.html", "contact")}
             </nav>
             <div class="flex items-center gap-3">
@@ -520,9 +547,7 @@ def render_header(current: str) -> str:
           <div class="mobile-menu border-t border-outline-variant bg-white xl:hidden" data-mobile-menu hidden>
             <div class="mx-auto max-w-7xl space-y-6 px-6 py-5">
               <div class="grid gap-1">
-                {mobile_links}
-                <a class="block rounded-md px-3 py-2 text-sm font-semibold text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/products.html">Products</a>
-                <a class="block rounded-md px-3 py-2 text-sm font-semibold text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services.html">Services</a>
+                {mobile_primary_links}
               </div>
               <div>
                 <div class="mb-2 px-3 text-[11px] font-bold uppercase tracking-[0.18em] text-secondary">Product Categories</div>
@@ -531,6 +556,10 @@ def render_header(current: str) -> str:
               <div>
                 <div class="mb-2 px-3 text-[11px] font-bold uppercase tracking-[0.18em] text-secondary">Service Links</div>
                 <div class="grid gap-1">{mobile_service_links}</div>
+              </div>
+              <div>
+                <div class="mb-2 px-3 text-[11px] font-bold uppercase tracking-[0.18em] text-secondary">Inquiry Paths</div>
+                <div class="grid gap-1">{inquiry_links}</div>
               </div>
               <a class="inline-flex w-full items-center justify-center rounded-md bg-primary px-5 py-3 text-sm font-bold text-white" href="/request-quote.html">Request a Quote</a>
             </div>
@@ -946,6 +975,7 @@ def render_about() -> str:
         ).strip()
         for title, copy, href, icon in (
             ("Company Overview", "Grounded regional positioning and editable profile content.", "/about/company-overview.html", "apartment"),
+            ("Mission / Vision / Values", "One canonical operating-principles section kept on the main about page.", "/about.html#mission-vision-values", "flag"),
             ("Quality / Compliance", "A neutral compliance placeholder page that avoids unsupported approvals.", "/about/quality-compliance.html", "verified"),
             ("Leadership", "Leadership Placeholder content ready for approved biographies and roles.", "/about/leadership.html", "groups"),
         )
@@ -965,6 +995,7 @@ def render_about() -> str:
                 panel_items=(
                     ("Coverage", "Trinidad & Tobago / Caribbean"),
                     ("Profile", "Company Overview Placeholder"),
+                    ("Values", "Accuracy / responsiveness / safety"),
                     ("Leadership", "Leadership Placeholder"),
                 ),
             ),
@@ -985,7 +1016,7 @@ def render_about() -> str:
                           <div class="rounded-xl bg-surface-container p-5"><div class="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-secondary">Business Type</div><div class="text-sm font-semibold text-primary">B2B marine support</div></div>
                         </div>
                       </div>
-                      <div class="rounded-2xl border border-outline-variant/40 bg-primary p-7 text-white shadow-hero">
+                      <div class="rounded-2xl border border-outline-variant/40 bg-primary p-7 text-white shadow-hero" id="mission-vision-values">
                         <div class="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-on-tertiary-container">Mission / Vision / Values</div>
                         <ul class="space-y-4 text-sm leading-relaxed text-on-primary-container">
                           <li><strong class="text-white">Mission:</strong> Support vessel operators and marine buyers with practical regional supply and service coordination.</li>
@@ -1002,8 +1033,8 @@ def render_about() -> str:
                 f"""
                 <section class="bg-surface-container-low px-6 py-24">
                   <div class="mx-auto max-w-7xl">
-                    {section_intro("Subpages", "Approved About Sections", "The about area is now split into clear canonical pages so there is no ambiguity about which version is live.")}
-                    <div class="grid gap-6 md:grid-cols-3">{subcards}</div>
+                    {section_intro("Subpages / Sections", "Approved About Structure", "The about area is now split into clear canonical pages and one anchored operating-principles section so there is no ambiguity about which version is live.")}
+                    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">{subcards}</div>
                   </div>
                 </section>
                 """
