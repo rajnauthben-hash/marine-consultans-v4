@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | Marine Consultants Limited</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f4faff",
+              "on-primary-fixed-variant": "#1a4a6e",
+              "surface-tint": "#366287",
+              "secondary-fixed": "#cbe7f5",
+              "surface-container-low": "#e9f6fd",
+              "surface-container": "#e3f0f8",
+              "tertiary-container": "#481c00",
+              "on-secondary-fixed-variant": "#304a55",
+              "on-primary-container": "#6a94bc",
+              "on-surface": "#111d23",
+              "on-secondary-container": "#4e6874",
+              "on-surface-variant": "#42474d",
+              "on-tertiary-fixed-variant": "#773200",
+              "error": "#ba1a1a",
+              "background": "#f4faff",
+              "on-error-container": "#93000a",
+              "surface-dim": "#cfdce4",
+              "inverse-on-surface": "#e6f3fb",
+              "surface-bright": "#f4faff",
+              "surface-container-high": "#ddeaf2",
+              "inverse-surface": "#263238",
+              "surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-tertiary-container": "#eb6a00",
+              "tertiary-fixed": "#ffdbca",
+              "secondary-container": "#cbe7f5",
+              "primary-fixed": "#cee5ff",
+              "on-secondary-fixed": "#021f29",
+              "tertiary": "#280c00",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#001d32",
+              "on-tertiary-fixed": "#331200",
+              "on-tertiary": "#ffffff",
+              "primary": "#001628",
+              "surface-variant": "#d7e4ec",
+              "on-background": "#111d23",
+              "inverse-primary": "#a0cbf5",
+              "outline": "#73777e",
+              "secondary": "#48626e",
+              "primary-container": "#002b47",
+              "secondary-fixed-dim": "#afcbd8",
+              "tertiary-fixed-dim": "#ffb68f",
+              "surface-container-highest": "#d7e4ec",
+              "on-primary": "#ffffff",
+              "primary-fixed-dim": "#a0cbf5",
+              "outline-variant": "#c3c7ce"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        background: rgba(244, 250, 255, 0.8);
+        backdrop-filter: blur(24px);
+      }
+      .blue-shift:hover {
+        background-color: #002b47;
+        color: #ffffff;
+        transition: all 200ms ease;
+      }
+      .technical-inset {
+        position: relative;
+      }
+      .technical-inset::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: 40px;
+        height: 40px;
+        border-top: 2px solid #48626e;
+        border-left: 2px solid #48626e;
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Top Navigation Shell -->
+<nav class="sticky top-0 z-50 w-full bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-xl font-black text-sky-950 dark:text-white tracking-tighter uppercase font-headline">
+                Marine Consultants Limited
+            </div>
+<div class="hidden md:flex items-center gap-8 font-headline font-bold tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-900 dark:hover:text-sky-100 transition-colors" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-900 dark:hover:text-sky-100 transition-colors" href="#">Products</a>
+<a class="text-sky-900 dark:text-sky-100 border-b-2 border-orange-600 pb-1" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-900 dark:hover:text-sky-100 transition-colors" href="#">Technical Specs</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-900 dark:hover:text-sky-100 transition-colors" href="#">About Us</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-900 dark:hover:text-sky-100 transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-tertiary-container text-on-tertiary-container px-6 py-2.5 font-headline font-bold rounded-lg hover:brightness-110 transition-all">
+                Request Quote
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative py-24 px-8 overflow-hidden bg-primary-container">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<h1 class="text-5xl lg:text-7xl font-headline font-extrabold text-white tracking-tight leading-none mb-6">
+                    Technical Support <br/> &amp; Maintenance
+                </h1>
+<p class="text-on-primary-container text-xl lg:text-2xl max-w-2xl leading-relaxed mb-8">
+                    Rigorous engineering oversight and regional maintenance expertise for the Caribbean maritime sector. Precision-engineered solutions for operational continuity.
+                </p>
+<div class="flex gap-4">
+<span class="inline-flex items-center gap-2 px-4 py-2 bg-surface/10 text-white rounded font-label text-sm uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm" data-icon="anchor">anchor</span>
+                        IMO Standards
+                    </span>
+<span class="inline-flex items-center gap-2 px-4 py-2 bg-surface/10 text-white rounded font-label text-sm uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+                        Class Certified
+                    </span>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-square bg-surface-container-low rounded-xl technical-inset p-4 overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover rounded shadow-inner opacity-90 mix-blend-multiply" data-alt="Technical engineer in hard hat inspecting large marine engine component on a cargo ship with professional tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGUJJy0ifOdfbSVOvd7bbCZKiCuhOy2P3VcewIJqE6b5Q6MlhJSAfHLIDbOMMKOEto6sTIBKHi7FKrIA1HUdxoVRZJH1oof-2RurgrqQpF-8xK-wKrCOwgty9jazCmd-M0rr-tUETRmwzUE8eUiyIukwVr6bHALT-m-YQhnpOdkrr4m28evnwlqn25C2xUJd7pxZ6X0Q7ZdN4siaNURYJJWC8_RijH6cL8Qx2-dBfM8jWK4LhK4euj2qFPK5_qK8oVgZCPn9WmtNGu"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-high p-6 rounded shadow-xl hidden md:block">
+<div class="font-label text-xs text-secondary uppercase tracking-widest mb-1">Service Status</div>
+<div class="font-headline font-extrabold text-primary text-xl">Active Regional Hubs</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+<span class="text-sm font-semibold">Ready for Deployment</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-screen-2xl mx-auto px-8 py-24">
+<!-- Service Grid - Bento Style -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- 1. Inspection Services -->
+<section class="bg-surface-container-lowest p-8 flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+<div>
+<div class="mb-6 flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="visibility">visibility</span>
+<span class="font-label text-[10px] text-outline-variant font-bold tracking-[0.2em] uppercase">Service Code: INS-M1</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4">Inspection Services</h3>
+<p class="text-on-surface-variant mb-6 text-sm leading-relaxed">Comprehensive structural and mechanical assessments ensuring vessel integrity and regulatory adherence.</p>
+<div class="space-y-4 mb-8">
+<div>
+<span class="font-label text-xs font-bold text-primary uppercase tracking-wider block mb-1">Scope of Support</span>
+<ul class="text-sm text-on-surface-variant space-y-1">
+<li>• Hull thickness gauging</li>
+<li>• Propulsion system diagnostics</li>
+<li>• Corrosion mapping &amp; analysis</li>
+</ul>
+</div>
+<div>
+<span class="font-label text-xs font-bold text-primary uppercase tracking-wider block mb-1">Who it is for</span>
+<p class="text-sm text-on-surface-variant">Fleet operators, port authorities, and vessel owners.</p>
+</div>
+</div>
+</div>
+<button class="w-full py-3 bg-surface-container text-primary font-headline font-bold text-sm uppercase tracking-widest blue-shift">
+                    Inquiry CTA
+                </button>
+</section>
+<!-- 2. Maintenance Support -->
+<section class="bg-primary text-white p-8 flex flex-col justify-between shadow-2xl lg:row-span-2">
+<div>
+<div class="mb-6">
+<span class="material-symbols-outlined text-4xl text-on-tertiary-container" data-icon="build_circle" style="font-variation-settings: 'FILL' 1;">build_circle</span>
+</div>
+<h3 class="font-headline text-3xl font-extrabold mb-6 tracking-tight">Maintenance Support</h3>
+<p class="text-on-primary-container text-lg mb-8 leading-relaxed">Preventative and corrective engineering works designed to minimize downtime in demanding Caribbean waters.</p>
+<div class="space-y-6 mb-12">
+<div class="bg-white/5 p-4 rounded">
+<span class="font-label text-xs font-bold text-on-tertiary-container uppercase tracking-wider block mb-2">Scope of Support</span>
+<ul class="text-sm text-white/80 space-y-2">
+<li>• Scheduled dry-dock management</li>
+<li>• On-site mechanical repairs</li>
+<li>• Hydraulics &amp; pneumatic servicing</li>
+<li>• Engine overhaul assistance</li>
+</ul>
+</div>
+<div>
+<span class="font-label text-xs font-bold text-on-tertiary-container uppercase tracking-wider block mb-2">Who it is for</span>
+<p class="text-sm text-white/80">Regional shipping lines and industrial marine contractors requiring reliable technical partners.</p>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-tertiary-container text-on-tertiary-container font-headline font-bold text-sm uppercase tracking-widest hover:brightness-125 transition-all">
+                    Urgent Service Request
+                </button>
+</section>
+<!-- 3. Certification Support -->
+<section class="bg-surface-container-lowest p-8 flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+<div>
+<div class="mb-6 flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="assignment_turned_in">assignment_turned_in</span>
+<span class="font-label text-[10px] text-outline-variant font-bold tracking-[0.2em] uppercase">Service Code: CERT-S4</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4">Certification Support</h3>
+<p class="text-on-surface-variant mb-6 text-sm leading-relaxed">Navigating the complexities of maritime law and classification society requirements for regional vessels.</p>
+<div class="space-y-4 mb-8">
+<div>
+<span class="font-label text-xs font-bold text-primary uppercase tracking-wider block mb-1">Scope of Support</span>
+<ul class="text-sm text-on-surface-variant space-y-1">
+<li>• Class renewal preparation</li>
+<li>• Statutory compliance audits</li>
+<li>• Documentation management</li>
+</ul>
+</div>
+<div>
+<span class="font-label text-xs font-bold text-primary uppercase tracking-wider block mb-1">Who it is for</span>
+<p class="text-sm text-on-surface-variant">Vessel managers and legal compliance teams.</p>
+</div>
+</div>
+</div>
+<button class="w-full py-3 bg-surface-container text-primary font-headline font-bold text-sm uppercase tracking-widest blue-shift">
+                    Inquiry CTA
+                </button>
+</section>
+<!-- 4. Safety Equipment Servicing -->
+<section class="bg-surface-container-lowest p-8 flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+<div>
+<div class="mb-6 flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="health_and_safety">health_and_safety</span>
+<span class="font-label text-[10px] text-outline-variant font-bold tracking-[0.2em] uppercase">Service Code: SAFE-X9</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4">Safety Equipment Servicing</h3>
+<p class="text-on-surface-variant mb-6 text-sm leading-relaxed">Ensuring life-saving appliances and firefighting equipment are mission-ready at all times.</p>
+<div class="space-y-4 mb-8">
+<div>
+<span class="font-label text-xs font-bold text-primary uppercase tracking-wider block mb-1">Scope of Support</span>
+<ul class="text-sm text-on-surface-variant space-y-1">
+<li>• LSA/FFA inspections</li>
+<li>• Lifeboat launch system testing</li>
+<li>• SCBA &amp; extinguisher refills</li>
+</ul>
+</div>
+<div>
+<span class="font-label text-xs font-bold text-primary uppercase tracking-wider block mb-1">Who it is for</span>
+<p class="text-sm text-on-surface-variant">Cruise operators, ferry services, and oil &amp; gas platforms.</p>
+</div>
+</div>
+</div>
+<button class="w-full py-3 bg-surface-container text-primary font-headline font-bold text-sm uppercase tracking-widest blue-shift">
+                    Inquiry CTA
+                </button>
+</section>
+<!-- 5. Procurement Support -->
+<section class="bg-surface-container-low p-8 flex flex-col justify-between group hover:shadow-xl transition-all duration-300 border-l-4 border-primary">
+<div>
+<div class="mb-6 flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-label text-[10px] text-outline-variant font-bold tracking-[0.2em] uppercase">Service Code: PROC-L2</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4">Procurement &amp; Supply</h3>
+<p class="text-on-surface-variant mb-6 text-sm leading-relaxed">Critical spare parts sourcing and logistics for specialized marine components across the islands.</p>
+<div class="space-y-4 mb-8">
+<div>
+<span class="font-label text-xs font-bold text-primary uppercase tracking-wider block mb-1">Scope of Support</span>
+<ul class="text-sm text-on-surface-variant space-y-1">
+<li>• OEM spare parts logistics</li>
+<li>• Regional customs brokerage</li>
+<li>• Inventory management solutions</li>
+</ul>
+</div>
+<div>
+<span class="font-label text-xs font-bold text-primary uppercase tracking-wider block mb-1">Who it is for</span>
+<p class="text-sm text-on-surface-variant">Purchasing departments and technical superintendents.</p>
+</div>
+</div>
+</div>
+<button class="w-full py-3 bg-primary text-white font-headline font-bold text-sm uppercase tracking-widest hover:bg-primary-container transition-all">
+                    Inquiry CTA
+                </button>
+</section>
+<!-- 6. Technical Assistance -->
+<section class="bg-surface-container-lowest p-8 flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+<div>
+<div class="mb-6 flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="support_agent">support_agent</span>
+<span class="font-label text-[10px] text-outline-variant font-bold tracking-[0.2em] uppercase">Service Code: TECH-H0</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4">Technical Assistance</h3>
+<p class="text-on-surface-variant mb-6 text-sm leading-relaxed">Expert advisory and troubleshooting support for complex marine engineering challenges.</p>
+<div class="space-y-4 mb-8">
+<div>
+<span class="font-label text-xs font-bold text-primary uppercase tracking-wider block mb-1">Scope of Support</span>
+<ul class="text-sm text-on-surface-variant space-y-1">
+<li>• Remote diagnostic support</li>
+<li>• Feasibility studies</li>
+<li>• Project management oversight</li>
+</ul>
+</div>
+<div>
+<span class="font-label text-xs font-bold text-primary uppercase tracking-wider block mb-1">Who it is for</span>
+<p class="text-sm text-on-surface-variant">Shipyards, offshore operators, and government agencies.</p>
+</div>
+</div>
+</div>
+<button class="w-full py-3 bg-surface-container text-primary font-headline font-bold text-sm uppercase tracking-widest blue-shift">
+                    Inquiry CTA
+                </button>
+</section>
+</div>
+</main>
+<!-- Technical Specs Banner -->
+<section class="bg-surface-container py-16 px-8">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="md:w-1/2">
+<h2 class="font-headline text-3xl font-extrabold text-primary mb-4">Regional Marine Reliability</h2>
+<p class="text-on-surface-variant">Our service teams are strategically positioned to provide rapid response across Caribbean port locations, ensuring that technical support is never more than a short transit away.</p>
+</div>
+<div class="md:w-1/2 grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container-lowest">
+<div class="text-2xl font-black text-on-tertiary-container mb-1">24/7</div>
+<div class="text-xs font-bold uppercase tracking-tighter">Support Hub</div>
+</div>
+<div class="p-4 bg-surface-container-lowest">
+<div class="text-2xl font-black text-on-tertiary-container mb-1">15+</div>
+<div class="text-xs font-bold uppercase tracking-tighter">Regional Ports</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="bg-slate-100 dark:bg-slate-950 w-full pt-16 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 max-w-screen-2xl mx-auto">
+<div class="col-span-1">
+<div class="text-lg font-bold text-sky-900 dark:text-sky-100 mb-6">Marine Consultants Limited</div>
+<p class="text-slate-500 text-sm leading-relaxed">
+                    Setting the standard for maritime technical excellence in the Caribbean region through precision engineering and dedicated support.
+                </p>
+</div>
+<div>
+<h4 class="font-['Inter'] text-sm uppercase tracking-widest text-sky-950 dark:text-sky-50 font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-500 dark:text-slate-400 text-sm hover:text-orange-500 transition-colors underline underline-offset-4" href="#">Product Catalog</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 text-sm hover:text-orange-500 transition-colors underline underline-offset-4" href="#">Service Map</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 text-sm hover:text-orange-500 transition-colors underline underline-offset-4" href="#">Safety Standards</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-['Inter'] text-sm uppercase tracking-widest text-sky-950 dark:text-sky-50 font-bold mb-6">Resources</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-500 dark:text-slate-400 text-sm hover:text-orange-500 transition-colors underline underline-offset-4" href="#">Regional Offices</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 text-sm hover:text-orange-500 transition-colors underline underline-offset-4" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 text-sm hover:text-orange-500 transition-colors underline underline-offset-4" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-['Inter'] text-sm uppercase tracking-widest text-sky-950 dark:text-sky-50 font-bold mb-6">Contact Us</h4>
+<div class="text-slate-500 text-sm space-y-2">
+<p>Port of Spain, Trinidad &amp; Tobago</p>
+<p>Phone: +1 (868) 555-0123</p>
+<p>Email: technical@marineconsultants.ltd</p>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="font-['Inter'] text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400">
+                © 2024 Marine Consultants Limited. Caribbean Maritime Excellence.
+            </p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f4faff",
+              "on-primary-fixed-variant": "#1a4a6e",
+              "on-surface-variant": "#42474d",
+              "on-error": "#ffffff",
+              "inverse-surface": "#263238",
+              "surface-container": "#e3f0f8",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#a0cbf5",
+              "tertiary-container": "#481c00",
+              "primary": "#001628",
+              "tertiary-fixed-dim": "#ffb68f",
+              "primary-fixed": "#cee5ff",
+              "inverse-on-surface": "#e6f3fb",
+              "secondary-fixed-dim": "#afcbd8",
+              "surface-dim": "#cfdce4",
+              "on-tertiary": "#ffffff",
+              "outline": "#73777e",
+              "on-secondary-fixed-variant": "#304a55",
+              "background": "#f4faff",
+              "on-secondary-fixed": "#021f29",
+              "secondary-container": "#cbe7f5",
+              "primary-fixed-dim": "#a0cbf5",
+              "on-background": "#111d23",
+              "on-primary-fixed": "#001d32",
+              "on-secondary-container": "#4e6874",
+              "surface-bright": "#f4faff",
+              "tertiary-fixed": "#ffdbca",
+              "secondary": "#48626e",
+              "surface-tint": "#366287",
+              "on-primary-container": "#6a94bc",
+              "primary-container": "#002b47",
+              "on-tertiary-fixed": "#331200",
+              "outline-variant": "#c3c7ce",
+              "tertiary": "#280c00",
+              "on-tertiary-container": "#eb6a00",
+              "error": "#ba1a1a",
+              "surface-container-low": "#e9f6fd",
+              "error-container": "#ffdad6",
+              "on-surface": "#111d23",
+              "surface-container-high": "#ddeaf2",
+              "secondary-fixed": "#cbe7f5",
+              "on-error-container": "#93000a",
+              "surface-variant": "#d7e4ec",
+              "on-tertiary-fixed-variant": "#773200",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#d7e4ec",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-background antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-8xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-blue-900 uppercase">
+                Marine Consultants
+            </div>
+<nav class="hidden lg:flex items-center space-x-8">
+<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">Home</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">About</a>
+<a class="text-blue-900 font-bold border-b-2 border-orange-600 pb-1 text-sm" href="#">Products</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">Services</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">Industries</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">News</a>
+</nav>
+<div class="flex items-center space-x-4">
+<div class="relative hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none text-sm rounded-lg focus:ring-2 focus:ring-primary-container w-64" placeholder="Search catalog..." type="text"/>
+</div>
+<a class="bg-tertiary-container text-on-tertiary-container px-6 py-2 rounded text-sm font-bold uppercase tracking-wider hover:opacity-90 transition-opacity flex items-center" href="{{DATA:SCREEN:SCREEN_8}}">
+                    Contact
+                </a>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Breadcrumbs -->
+<div class="bg-surface-container-low py-4">
+<div class="max-w-7xl mx-auto px-6">
+<nav class="flex items-center space-x-2 text-xs font-bold uppercase tracking-widest text-outline">
+<a class="hover:text-primary transition-colors" href="#">Catalog</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Chains, Ropes &amp; Rigging</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-background">Viking Braidline Nylon Hawser</span>
+</nav>
+</div>
+</div>
+<!-- Product Hero & Overview -->
+<section class="py-12 bg-white">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+<!-- Product Gallery -->
+<div class="space-y-4">
+<div class="aspect-square bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/20">
+<img alt="high-quality industrial nylon rope hawser detail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCne8Jg0-hjJ-L5lbFONC8lTyTALiUWRL1GG8sBPy72Krp14H0HFe_Esmw_nU5DlromfNu2xMQGqudZIjc06IOgW6fA_fNfV3anDnrXcA3kYE63bWV_FAyvJq7PSlKVe8XCvi-GNM-n2MS1QkaHMUN9LhU9KzcxxT5oaQdOeLSZJeQlEUfzV255YirshVv95OEWcj-YxUiyDmuvHbkb_xZuxkWhTpPTHAT_9KxWH5NeEvWYlMRCy2qvd9ePquf6WqimkuyqeWG7wYms"/>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden border border-primary/10 cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="Thumbnail 1" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCne8Jg0-hjJ-L5lbFONC8lTyTALiUWRL1GG8sBPy72Krp14H0HFe_Esmw_nU5DlromfNu2xMQGqudZIjc06IOgW6fA_fNfV3anDnrXcA3kYE63bWV_FAyvJq7PSlKVe8XCvi-GNM-n2MS1QkaHMUN9LhU9KzcxxT5oaQdOeLSZJeQlEUfzV255YirshVv95OEWcj-YxUiyDmuvHbkb_xZuxkWhTpPTHAT_9KxWH5NeEvWYlMRCy2qvd9ePquf6WqimkuyqeWG7wYms"/>
+</div>
+</div>
+</div>
+<!-- Product Details -->
+<div class="space-y-8">
+<div>
+<span class="inline-block bg-on-tertiary-container/10 text-on-tertiary-container px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] mb-4">Industrial Rigging</span>
+<h1 class="text-4xl font-extrabold text-on-background tracking-tight mb-4">Viking Braidline Nylon Super Hawser</h1>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            A high-performance double-braided nylon rope optimized for regional marine operations. Engineered for superior shock absorption and maximum durability during critical mooring and towing procedures.
+                        </p>
+</div>
+<div class="grid grid-cols-2 gap-6 py-8 border-y border-outline-variant/20">
+<div>
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-outline mb-2">Category</h4>
+<p class="font-bold text-on-background">Chains, Ropes &amp; Rigging</p>
+</div>
+<div>
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-outline mb-2">Availability</h4>
+<p class="font-bold text-on-background flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span> In Stock / By Order
+                            </p>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="font-bold text-on-background uppercase tracking-widest text-xs">Key Features</h3>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-6">
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span> Superior shock absorption
+                            </li>
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span> High strength-to-weight ratio
+                            </li>
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span> Excellent abrasion resistance
+                            </li>
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span> UV &amp; Marine growth resistant
+                            </li>
+</ul>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="bg-tertiary-container text-on-tertiary-container px-10 py-4 font-bold rounded flex items-center justify-center gap-2 group text-sm uppercase tracking-widest hover:brightness-110 transition-all shadow-sm" href="{{DATA:SCREEN:SCREEN_8}}">
+                            Request a Quote
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<button class="border-2 border-primary text-primary px-10 py-4 font-bold rounded text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all shadow-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">download</span>
+                            Technical Data Sheet
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specifications Table -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-12">
+<h2 class="text-3xl font-extrabold text-on-background mb-4">Technical Specifications</h2>
+<p class="text-on-surface-variant">Precise engineering data for Viking Braidline series nylon hawsers.</p>
+</div>
+<div class="bg-white rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-primary text-white uppercase text-[10px] tracking-widest">
+<th class="px-6 py-4">Diameter (mm)</th>
+<th class="px-6 py-4">Circumference (in)</th>
+<th class="px-6 py-4">Weight (kg/100m)</th>
+<th class="px-6 py-4">Break Strength (kN)</th>
+<th class="px-6 py-4">Break Strength (Metric Tons)</th>
+</tr>
+</thead>
+<tbody class="text-sm divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4 font-bold">48mm</td>
+<td class="px-6 py-4">6"</td>
+<td class="px-6 py-4">146.0</td>
+<td class="px-6 py-4">560</td>
+<td class="px-6 py-4 text-on-tertiary-container font-medium">57.1</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4 font-bold">56mm</td>
+<td class="px-6 py-4">7"</td>
+<td class="px-6 py-4">199.0</td>
+<td class="px-6 py-4">760</td>
+<td class="px-6 py-4 text-on-tertiary-container font-medium">77.5</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4 font-bold">64mm</td>
+<td class="px-6 py-4">8"</td>
+<td class="px-6 py-4">260.0</td>
+<td class="px-6 py-4">980</td>
+<td class="px-6 py-4 text-on-tertiary-container font-medium">100.0</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4 font-bold">72mm</td>
+<td class="px-6 py-4">9"</td>
+<td class="px-6 py-4">329.0</td>
+<td class="px-6 py-4">1,250</td>
+<td class="px-6 py-4 text-on-tertiary-container font-medium">127.5</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4 font-bold">80mm</td>
+<td class="px-6 py-4">10"</td>
+<td class="px-6 py-4">406.0</td>
+<td class="px-6 py-4">1,540</td>
+<td class="px-6 py-4 text-on-tertiary-container font-medium">157.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="mt-4 text-[10px] text-outline italic">Note: Custom lengths and eye-splicing available upon request. Class approval certificates provided for all lifting and mooring equipment.</p>
+</div>
+</section>
+<!-- Applications & Benefits -->
+<section class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16">
+<div>
+<h3 class="text-2xl font-extrabold text-on-background mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">anchor</span> Main Applications
+                    </h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">ship</span>
+</div>
+<div>
+<h4 class="font-bold text-on-background mb-1">Mooring Operations</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">High-performance lines for regional cargo vessels and tankers requiring significant elasticity to manage surge.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">directions_boat</span>
+</div>
+<div>
+<h4 class="font-bold text-on-background mb-1">Heavy Duty Towing</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Reliable towing springs and hawsers for offshore support and salvage operations within the region.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">foundation</span>
+</div>
+<div>
+<h4 class="font-bold text-on-background mb-1">Offshore Installations</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Securing floating platforms and regional energy infrastructure in dynamic environmental conditions.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary-container rounded-xl p-10 text-white relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-2xl font-extrabold mb-6">Expert Technical Guidance</h3>
+<p class="text-on-primary-container mb-8 leading-relaxed">
+                            Our marine engineers provide consultation to ensure your rigging selection meets the safety standards required for your specific vessel and regional application.
+                        </p>
+<div class="space-y-4 mb-8">
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-tertiary-fixed-dim">verified</span>
+                                SOLAS &amp; ISO 9554 Compliant
+                            </div>
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-tertiary-fixed-dim">verified</span>
+                                Lloyd's Register Certified
+                            </div>
+</div>
+<a class="inline-flex bg-tertiary-container text-on-tertiary-container px-8 py-3 font-bold rounded uppercase tracking-widest text-xs hover:opacity-90 transition-opacity" href="{{DATA:SCREEN:SCREEN_8}}">
+                            Talk to an Engineer
+                        </a>
+</div>
+<span class="material-symbols-outlined absolute -bottom-10 -right-10 text-[200px] text-white/5 rotate-12">engineering</span>
+</div>
+</div>
+</section>
+<!-- Related Products -->
+<section class="py-24 bg-surface border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-2xl font-extrabold text-on-background mb-2">Related Equipment</h2>
+<p class="text-sm text-on-surface-variant">Essential rigging and deck hardware for mooring operations.</p>
+</div>
+<a class="text-xs font-bold text-primary uppercase tracking-widest flex items-center gap-1 group" href="#">
+                        View Category <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Product: Crosby Rigging -->
+<div class="bg-surface-container-lowest p-5 rounded group hover:shadow-lg transition-all duration-300 border border-transparent hover:border-outline-variant/30">
+<div class="aspect-[4/3] bg-surface-container mb-4 overflow-hidden rounded-sm relative">
+<img alt="Crosby Rigging Hardware" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCne8Jg0-hjJ-L5lbFONC8lTyTALiUWRL1GG8sBPy72Krp14H0HFe_Esmw_nU5DlromfNu2xMQGqudZIjc06IOgW6fA_fNfV3anDnrXcA3kYE63bWV_FAyvJq7PSlKVe8XCvi-GNM-n2MS1QkaHMUN9LhU9KzcxxT5oaQdOeLSZJeQlEUfzV255YirshVv95OEWcj-YxUiyDmuvHbkb_xZuxkWhTpPTHAT_9KxWH5NeEvWYlMRCy2qvd9ePquf6WqimkuyqeWG7wYms"/>
+</div>
+<h4 class="text-on-background font-bold mb-2">Crosby Shackle Series</h4>
+<p class="text-xs text-on-surface-variant mb-4">Bolt type anchor shackles with thin head bolt-nut with cotter pin.</p>
+<a class="text-[10px] font-bold text-primary uppercase tracking-widest flex items-center gap-1" href="#">
+                            View Details <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+<!-- Product: Steel Wire -->
+<div class="bg-surface-container-lowest p-5 rounded group hover:shadow-lg transition-all duration-300 border border-transparent hover:border-outline-variant/30">
+<div class="aspect-[4/3] bg-surface-container mb-4 overflow-hidden rounded-sm relative">
+<img alt="Marine Steel Wire Rope" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCne8Jg0-hjJ-L5lbFONC8lTyTALiUWRL1GG8sBPy72Krp14H0HFe_Esmw_nU5DlromfNu2xMQGqudZIjc06IOgW6fA_fNfV3anDnrXcA3kYE63bWV_FAyvJq7PSlKVe8XCvi-GNM-n2MS1QkaHMUN9LhU9KzcxxT5oaQdOeLSZJeQlEUfzV255YirshVv95OEWcj-YxUiyDmuvHbkb_xZuxkWhTpPTHAT_9KxWH5NeEvWYlMRCy2qvd9ePquf6WqimkuyqeWG7wYms"/>
+</div>
+<h4 class="text-on-background font-bold mb-2">Galvanized Steel Wire</h4>
+<p class="text-xs text-on-surface-variant mb-4">6x36 class high tensile galvanized wire rope for winch systems.</p>
+<a class="text-[10px] font-bold text-primary uppercase tracking-widest flex items-center gap-1" href="#">
+                            View Details <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+<!-- Product: Mooring Chocks -->
+<div class="bg-surface-container-lowest p-5 rounded group hover:shadow-lg transition-all duration-300 border border-transparent hover:border-outline-variant/30">
+<div class="aspect-[4/3] bg-surface-container mb-4 overflow-hidden rounded-sm relative">
+<img alt="Heavy Duty Mooring Chocks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4Bbfn8YnQR6nIUyjgAIH-zkV_qLGEdwVmKYHKe6j_od7IbDAHhLumHQoASKkg8xo-YHeFXU6Os3_UOErL80oar7sm_TPdWWc034ymwfER9RJbPU3xa8smGewRy1vV3UM9I-UArf762ubMTxkGu5_bW9CHuOyn9BPHjEpNn41sbsQ1aADK1AUOwZ-b538MU4IcxvR7JoWEjhjTRm5bnS_WXdvlbiDZjunbJfwqdVoiX-nSzyDHZi2AVP06QFfRfbCf98xf5w8ewO9H"/>
+</div>
+<h4 class="text-on-background font-bold mb-2">Panama Chocks</h4>
+<p class="text-xs text-on-surface-variant mb-4">Deck and bulwark mounted chocks for heavy hawsers.</p>
+<a class="text-[10px] font-bold text-primary uppercase tracking-widest flex items-center gap-1" href="#">
+                            View Details <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-blue-950 text-white w-full pt-16 pb-8 border-t border-blue-900">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 px-6 max-w-8xl mx-auto">
+<div class="col-span-2 lg:col-span-1">
+<div class="text-2xl font-black text-white mb-6 uppercase tracking-tighter">Marine Consultants</div>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">Engineering support and procurement for marine operations across the Caribbean and beyond.</p>
+</div>
+<div>
+<h5 class="text-[10px] font-bold uppercase tracking-widest text-orange-500 mb-6">Explore</h5>
+<ul class="space-y-4">
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Home</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">About</a></li>
+<li><a class="text-sm text-orange-500 font-bold" href="#">Products</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Services</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-[10px] font-bold uppercase tracking-widest text-orange-500 mb-6">Categories</h5>
+<ul class="space-y-4">
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Chains &amp; Ropes</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Engines</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Navigation</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Safety</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-[10px] font-bold uppercase tracking-widest text-orange-500 mb-6">Support</h5>
+<ul class="space-y-4">
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="{{DATA:SCREEN:SCREEN_11}}">Support</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Terms</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="{{DATA:SCREEN:SCREEN_8}}">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-2 lg:col-span-1">
+<h5 class="text-[10px] font-bold uppercase tracking-widest text-orange-500 mb-6">Headquarters</h5>
+<p class="text-sm text-slate-400 mb-2">Chaguaramas, Trinidad &amp; Tobago</p>
+<div class="bg-blue-900/40 p-4 rounded border border-blue-800">
+<p class="text-[10px] text-orange-500 font-bold uppercase mb-1">Local Office</p>
+<p class="text-lg font-mono">+1 868 634 4353</p>
+</div>
+</div>
+</div>
+<div class="max-w-8xl mx-auto px-6 pt-16 mt-16 border-t border-blue-900 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">© 2024 Marine Consultants Limited. Reliable Engineering.</p>
+</div>
+</footer>
+</body></html>

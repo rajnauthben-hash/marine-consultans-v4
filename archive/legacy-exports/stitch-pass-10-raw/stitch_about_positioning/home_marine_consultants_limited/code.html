@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f4faff",
+              "on-primary-fixed-variant": "#1a4a6e",
+              "on-surface-variant": "#42474d",
+              "on-error": "#ffffff",
+              "inverse-surface": "#263238",
+              "surface-container": "#e3f0f8",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#a0cbf5",
+              "tertiary-container": "#481c00",
+              "primary": "#001628",
+              "tertiary-fixed-dim": "#ffb68f",
+              "primary-fixed": "#cee5ff",
+              "inverse-on-surface": "#e6f3fb",
+              "secondary-fixed-dim": "#afcbd8",
+              "surface-dim": "#cfdce4",
+              "on-tertiary": "#ffffff",
+              "outline": "#73777e",
+              "on-secondary-fixed-variant": "#304a55",
+              "background": "#f4faff",
+              "on-secondary-fixed": "#021f29",
+              "secondary-container": "#cbe7f5",
+              "primary-fixed-dim": "#a0cbf5",
+              "on-background": "#111d23",
+              "on-primary-fixed": "#001d32",
+              "on-secondary-container": "#4e6874",
+              "surface-bright": "#f4faff",
+              "tertiary-fixed": "#ffdbca",
+              "secondary": "#48626e",
+              "surface-tint": "#366287",
+              "on-primary-container": "#6a94bc",
+              "primary-container": "#002b47",
+              "on-tertiary-fixed": "#331200",
+              "outline-variant": "#c3c7ce",
+              "tertiary": "#280c00",
+              "on-tertiary-container": "#eb6a00",
+              "error": "#ba1a1a",
+              "surface-container-low": "#e9f6fd",
+              "error-container": "#ffdad6",
+              "on-surface": "#111d23",
+              "surface-container-high": "#ddeaf2",
+              "secondary-fixed": "#cbe7f5",
+              "on-error-container": "#93000a",
+              "surface-variant": "#d7e4ec",
+              "on-tertiary-fixed-variant": "#773200",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#d7e4ec",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+        .technical-gradient {
+            background: linear-gradient(135deg, #001628 0%, #002b47 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-on-tertiary-container selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center w-full px-6 py-4 max-w-8xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-blue-900 dark:text-white uppercase">
+                Marine Consultants
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-blue-900 dark:text-blue-300 font-bold border-b-2 border-orange-600 pb-1" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors" href="#">About</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors" href="#">Products</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors" href="#">Industries</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors" href="#">News</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-tertiary-container text-on-tertiary-container px-6 py-2 font-bold hover:scale-95 transition-transform">
+                    Contact
+                </button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative technical-gradient min-h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 opacity-20 mix-blend-overlay">
+<img alt="" class="w-full h-full object-cover" data-alt="Technical blueprint lines overlaid on a high-tech engine room or maritime vessel control center with cold blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByBEOQh3965l2odZ1KtbP2e38vqBJku1LBpB2_HrXLW0DkVfGOIEwV1VfL4ByGAoORJjGij0gvY3KHrUd0WONILOYbxeqMU_kWxqOCRsUbxAvLtkZ3Vz62VsYHN2RBgchQkhG43kUdc6MXC0YGfwksuV3_0LSdz6lAvQQdKF_5w_MNCpF7H-vB5rnAIgxnz7-iiuW9XWW2Fvyjsbp7DL-kXfZlB4rD7bN7wVgybyMH7yTiErssgoZPRXlZH5v5VEoMUkQzvXKmJjwd"/>
+</div>
+<div class="container mx-auto px-6 relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<div class="inline-block bg-on-tertiary-container text-white text-[10px] uppercase tracking-widest px-3 py-1 mb-6">
+                        Operational Excellence Since 1994
+                    </div>
+<h1 class="text-5xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight mb-8">
+                        Marine, Industrial, and Technical Support <span class="text-on-tertiary-container">Solutions</span> You Can Rely On.
+                    </h1>
+<p class="text-lg text-primary-fixed max-w-xl mb-10 leading-relaxed">
+                        Marine Consultants Limited provides specialized engineering expertise and precision-driven procurement for the global maritime sector. We ensure your assets remain compliant, efficient, and operational in the harshest environments.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-tertiary-container text-on-tertiary-container px-8 py-4 font-bold rounded-md hover:translate-y-[-2px] transition-all flex items-center gap-2">
+                            Browse Catalog
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 font-bold rounded-md hover:bg-white/20 transition-all">
+                            Contact Us
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 hidden lg:block">
+<div class="bg-surface-container-high p-8 border-l-4 border-on-tertiary-container relative">
+<div class="absolute -top-4 -left-4 bg-primary p-2 text-white">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+</div>
+<h3 class="text-primary font-bold mb-4 uppercase text-xs tracking-widest">Live Fleet Status</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm border-b border-outline-variant/20 pb-2">
+<span class="text-on-surface-variant">Active Engagements</span>
+<span class="font-bold text-primary">142 Units</span>
+</div>
+<div class="flex justify-between items-center text-sm border-b border-outline-variant/20 pb-2">
+<span class="text-on-surface-variant">Regional Support Hubs</span>
+<span class="font-bold text-primary">12 Global</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Technical Uptime</span>
+<span class="font-bold text-on-tertiary-container">99.8%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Highlights / Bento Grid -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-8xl mx-auto">
+<div class="mb-16">
+<h2 class="text-3xl font-extrabold text-primary mb-2 uppercase tracking-tight">Technical Highlights</h2>
+<div class="w-12 h-1 bg-on-tertiary-container"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- High-Impact Story 1 -->
+<div class="md:col-span-2 group relative overflow-hidden h-[400px] bg-primary">
+<img alt="" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Large container ship hull being maintained in a dry dock with workers and scaffolding under dramatic sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsmitXFHoDW1QGHXY_RkU3UcCxAOOKxTjkShHXI3-WszvEq3x9JHu-N16pU8zTEzZX_p-ejCr7O3kl3sSa2942L4ff9jWZ9SqJ88uvi_ZAX0uc0S_Yf_CjvoBbYN0r2wDXfQRVhTLWjFAj20-n1tmqb_3MynbYLPkj6LpMmmX6lbKaki_1itm1gveZ24U0Yd2qWBPj3BPxDJQL-t6ciWcF-hje1wEhT4rScAXn1B689Iv2INxl78k8TeA9cZFgKKEfkpVhe-T7bAo-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-10">
+<span class="bg-secondary px-3 py-1 text-[10px] text-white uppercase font-bold tracking-widest mb-4 inline-block">Case Study</span>
+<h3 class="text-3xl font-bold text-white mb-4">Optimizing Propulsion Systems in Extreme Arctic Conditions</h3>
+<button class="text-on-tertiary-container font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
+                                Read Full Story <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Highlight 2 -->
+<div class="bg-surface-container-low p-10 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl text-on-tertiary-container mb-6" data-icon="verified">verified</span>
+<h3 class="text-xl font-bold text-primary mb-4 leading-tight">ISO 9001:2024 Certification Renewed</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Our commitment to quality management systems remains the bedrock of our marine engineering services.</p>
+</div>
+<a class="text-primary font-bold text-xs uppercase tracking-widest border-b-2 border-primary w-fit pb-1" href="#">Documentation</a>
+</div>
+<!-- Highlight 3 -->
+<div class="bg-primary-container p-10 flex flex-col justify-between text-white">
+<div>
+<span class="material-symbols-outlined text-4xl text-on-tertiary-container mb-6" data-icon="hub">hub</span>
+<h3 class="text-xl font-bold mb-4 leading-tight">Real-time Logistics Network Expansion</h3>
+<p class="text-on-primary-container text-sm leading-relaxed">Integrated supply chain management for immediate part replacement across 4 major oceanic hubs.</p>
+</div>
+<a class="text-on-tertiary-container font-bold text-xs uppercase tracking-widest w-fit" href="#">View Network</a>
+</div>
+<!-- Highlight 4 -->
+<div class="md:col-span-2 bg-surface-container p-10 flex flex-col md:flex-row items-center gap-8">
+<div class="md:w-1/2">
+<h3 class="text-2xl font-bold text-primary mb-4">Precision Instrumentation Catalog</h3>
+<p class="text-on-surface-variant mb-6">Explore over 12,000 SKU items specifically curated for industrial and marine technical environments.</p>
+<button class="bg-primary text-white px-6 py-3 font-bold hover:bg-on-tertiary-container transition-colors">Browse Products</button>
+</div>
+<div class="md:w-1/2 overflow-hidden h-48 w-full bg-surface-bright">
+<img alt="" class="w-full h-full object-cover" data-alt="Close up of high-precision industrial pressure gauge with technical markings and stainless steel finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX7dM-MaRh7-GY9l0ZqxyVksgrz0b6E2WOloj-mhhmiv3GpTPjC-PRgrwXFwlf27dbnuVCAo0qmOFwH77OaFNsCZuKAHE754wWb9vJABg8q9FuQj2_xEQfLKpUmoevsm-vbuTGJet0aC_aphMDRWiH3IsXiLYNTiSgtpcwBzN7PXJj-8mZaBFUInnPults-2z-Cvz2w3LI9dkhHqQUM_JSJUpZ6OuCHwCtX7Mn2rvldCs7TOKzT4b6EULwXugEgf5ABSPtRi72h19h"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Market Focus / Industries -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-8xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="text-3xl font-extrabold text-primary mb-4 uppercase tracking-tight">Industries We Support</h2>
+<p class="text-on-surface-variant">Providing technical depth across diverse industrial sectors with a focus on mission-critical uptime.</p>
+</div>
+<a class="text-primary font-bold hover:text-on-tertiary-container transition-colors" href="#">View All Markets →</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-outline-variant/20">
+<div class="bg-surface p-12 hover:bg-surface-bright transition-colors text-center group">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-on-tertiary-container mb-4 block" data-icon="ship">sailing</span>
+<h4 class="font-bold text-primary uppercase text-sm tracking-widest">Commercial Marine</h4>
+</div>
+<div class="bg-surface p-12 hover:bg-surface-bright transition-colors text-center group">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-on-tertiary-container mb-4 block" data-icon="factory">factory</span>
+<h4 class="font-bold text-primary uppercase text-sm tracking-widest">Heavy Industrial</h4>
+</div>
+<div class="bg-surface p-12 hover:bg-surface-bright transition-colors text-center group">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-on-tertiary-container mb-4 block" data-icon="oil_barrel">oil_barrel</span>
+<h4 class="font-bold text-primary uppercase text-sm tracking-widest">Oil &amp; Gas</h4>
+</div>
+<div class="bg-surface p-12 hover:bg-surface-bright transition-colors text-center group">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-on-tertiary-container mb-4 block" data-icon="wind_power">wind_power</span>
+<h4 class="font-bold text-primary uppercase text-sm tracking-widest">Renewable Energy</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Capability / Service Lines -->
+<section class="py-24 px-6">
+<div class="max-w-8xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="bg-surface p-6 border-l-2 border-primary-container">
+<h4 class="font-bold text-primary mb-2 uppercase text-xs tracking-widest">Maintenance</h4>
+<p class="text-xs text-on-surface-variant">Preventative and corrective engineering cycles for propulsion and auxiliary systems.</p>
+</div>
+<div class="bg-surface p-6 border-l-2 border-primary-container">
+<h4 class="font-bold text-primary mb-2 uppercase text-xs tracking-widest">Procurement</h4>
+<p class="text-xs text-on-surface-variant">Global sourcing for hard-to-find technical components and heavy machinery.</p>
+</div>
+<div class="bg-surface p-6 border-l-2 border-primary-container">
+<h4 class="font-bold text-primary mb-2 uppercase text-xs tracking-widest">Consulting</h4>
+<p class="text-xs text-on-surface-variant">Technical audits, compliance reviews, and efficiency optimization strategies.</p>
+</div>
+<div class="bg-surface p-6 border-l-2 border-primary-container">
+<h4 class="font-bold text-primary mb-2 uppercase text-xs tracking-widest">Support</h4>
+<p class="text-xs text-on-surface-variant">24/7 technical assistance and emergency onsite support for maritime operations.</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="text-4xl font-extrabold text-primary mb-6 leading-tight">Complete Operational Integrity Throughout the Lifecycle.</h2>
+<p class="text-on-surface-variant mb-8 text-lg">We don't just sell parts; we provide the technical intelligence required to integrate them. From initial audit to final installation and ongoing maintenance.</p>
+<button class="bg-on-tertiary-container text-white px-8 py-4 font-bold rounded-md hover:translate-y-[-2px] transition-all">
+                        Explore Our Services
+                    </button>
+</div>
+</div>
+</section>
+<!-- Regional Reach -->
+<section class="py-24 bg-primary text-white overflow-hidden relative">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<img alt="" class="w-full h-full object-cover grayscale" data-alt="Abstract world map dots and lines representing global logistics routes and data connections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUsljTDAjYL6LiD4jtEr0mTn8lyLNRqL2lJcCMCv6WiUAbBOB-c2ThKbB6vZfQy3xvSCpXEbvI7WegPt5TG-nkYDptSCrUBiaqDDZfStH1n72vfgEYUh4cQ6KpGh0QX8sXQ2m3MCYbPsPAmCJuBn-zug4OEQiEQdJoINKGJ8vc52YTX7rGL7DS-msWehkww4YxjjXHm6ZSTGUqYktnCNW0LhschoqTcFIl_Jnb308HzwQwhvp5IbZFYDI84UG0uY0E8uJ5INhSSD2s"/>
+</div>
+<div class="max-w-8xl mx-auto px-6 relative z-10">
+<div class="text-center mb-20">
+<h2 class="text-3xl font-extrabold mb-4 uppercase tracking-widest">Global Reach, Local Precision</h2>
+<p class="text-primary-fixed max-w-2xl mx-auto">Wherever your fleet operates, Marine Consultants Limited provides a localized response with international standards.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+<div>
+<div class="text-4xl font-extrabold text-on-tertiary-container mb-2">12</div>
+<div class="text-[10px] uppercase tracking-widest font-bold">Strategic Hubs</div>
+</div>
+<div>
+<div class="text-4xl font-extrabold text-on-tertiary-container mb-2">45+</div>
+<div class="text-[10px] uppercase tracking-widest font-bold">Countries Served</div>
+</div>
+<div>
+<div class="text-4xl font-extrabold text-on-tertiary-container mb-2">3k+</div>
+<div class="text-[10px] uppercase tracking-widest font-bold">Projects Delivered</div>
+</div>
+<div>
+<div class="text-4xl font-extrabold text-on-tertiary-container mb-2">24/7</div>
+<div class="text-[10px] uppercase tracking-widest font-bold">Response Support</div>
+</div>
+<div>
+<div class="text-4xl font-extrabold text-on-tertiary-container mb-2">100%</div>
+<div class="text-[10px] uppercase tracking-widest font-bold">Audit Success</div>
+</div>
+</div>
+</div>
+</section>
+<!-- News & Updates -->
+<section class="py-24 bg-surface px-6">
+<div class="max-w-8xl mx-auto">
+<div class="flex justify-between items-center mb-16">
+<h2 class="text-3xl font-extrabold text-primary uppercase tracking-tight">Market Intelligence</h2>
+<a class="text-primary font-bold text-sm border-b-2 border-primary pb-1" href="#">All News</a>
+</div>
+<div class="grid md:grid-cols-3 gap-10">
+<article class="group cursor-pointer">
+<div class="h-64 overflow-hidden mb-6 bg-surface-container">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Digital dashboard displaying maritime data, shipping routes, and global positioning coordinates in a dark control room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXatv1T0EmktTUoI4HG4uLwawWNS_SvaUUhRbTlSg0_uhDS2ahEFZ4Zj40jpkLpxe7xkt2fufKBabqzJMgCT3v9fIwOlM6XQIsW0A8smO6MvWnXbzr-O5muI5wyyAHQqrYOwpRwcz84KiqoYTLKIfYvWOvJ1fEGiKyncFWW6Fl_073HhAgse1aAf2Ra3GN2R6PodowMgFovU7rm5IsUfVTH8-SaO_GMcGkb3Psfqk1X80DGSQB7NBLkfs6wnTQ8USDW_CNuMv9mcAO"/>
+</div>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-2 block">May 14, 2024 • Technology</span>
+<h3 class="text-xl font-bold text-primary group-hover:text-on-tertiary-container transition-colors leading-snug">Implementing AI in Predictive Vessel Maintenance Protocols</h3>
+</article>
+<article class="group cursor-pointer">
+<div class="h-64 overflow-hidden mb-6 bg-surface-container">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Sunset over a busy industrial port with towering cranes and stacked containers reflecting on the water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjk9u9h2-3Z0eRUAY0Gi9CAusfSPTcT0GSzDsWu1wUibT-ALNjwk1r7311PjuuB2KuiBjlJSyZJqT1LyrHKLe1vDq96DSXcgFK4kwP8g_XSPeNMSh5v0OO8MmyFtVIG3JIeP0JB1fh0YMVr7Z6sGkaySJhcoHJT1iTg-HJPlG_5xJ9w-yQeGnrlhwUtaDD_kWnezFoPHuHa8EpFx0e0TfN8vKbdhBaW5CREc2rxBjmgGacYVf0GsZRPXyAG3vcWpASFrqXPCSdSltE"/>
+</div>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-2 block">May 02, 2024 • Logistics</span>
+<h3 class="text-xl font-bold text-primary group-hover:text-on-tertiary-container transition-colors leading-snug">Addressing the 2024 Supply Chain Bottlenecks in Marine Parts</h3>
+</article>
+<article class="group cursor-pointer">
+<div class="h-64 overflow-hidden mb-6 bg-surface-container">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Engineer wearing a safety vest and hardhat inspecting a large mechanical component with a tablet in hand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM4mW2deGw5mioxQhhObOMK40Ds8aAdss7UJjwuDN1SPQfuesfYOQvrMOEjQEKgy5PE7IlpQe1VMa-B24_dYgjNI3InIfPaItQUp1QjjlOH94QF_PopI_0Zm9G-xTRJuJYgXvh7F1YfWO1ipUz8IM_6VP6jrWpko4TFg2p5CcB8r0-w5LBJWQsCnfQXpR1FY5qPgKtJCQYyCwqhBrebLfeMaJSDlWxRWj0n1wCKyQzJyvwQRtYeJTYMQvecYWYfS_7HxP4PivWvZXm"/>
+</div>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-2 block">April 28, 2024 • Safety</span>
+<h3 class="text-xl font-bold text-primary group-hover:text-on-tertiary-container transition-colors leading-snug">Marine Consultants Awarded Safety Excellence Medal</h3>
+</article>
+</div>
+</div>
+</section>
+<!-- Contact Summary -->
+<section class="py-24 px-6 bg-surface-container-high">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-4xl font-extrabold text-primary mb-6">Ready to Strengthen Your Technical Backbone?</h2>
+<p class="text-on-surface-variant text-lg mb-10">Connect with our engineering specialist team for a comprehensive audit or procurement request.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<div class="bg-surface-container-lowest p-6 text-left flex items-center gap-4 flex-1">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="mail">mail</span>
+<div>
+<div class="text-[10px] uppercase font-bold text-outline tracking-widest">Email Us</div>
+<div class="font-bold text-primary">solutions@marine-consultants.com</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 text-left flex items-center gap-4 flex-1">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="call">call</span>
+<div>
+<div class="text-[10px] uppercase font-bold text-outline tracking-widest">Call Operations</div>
+<div class="font-bold text-primary">+44 (0) 20 7946 0123</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-16 pb-8 bg-blue-950 dark:bg-slate-950 text-white border-t border-blue-900 dark:border-slate-800">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 px-6 max-w-8xl mx-auto">
+<div class="col-span-2 lg:col-span-2">
+<div class="text-2xl font-black text-white mb-6 uppercase tracking-tight">Marine Consultants</div>
+<p class="text-slate-400 text-sm max-w-xs leading-relaxed">
+                    A global leader in marine engineering and industrial procurement. Precision. Integrity. Availability.
+                </p>
+</div>
+<div>
+<h4 class="uppercase tracking-widest text-[10px] font-bold mb-6 text-slate-500">Navigation</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Home</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">About</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Products</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Services</a></li>
+</ul>
+</div>
+<div>
+<h4 class="uppercase tracking-widest text-[10px] font-bold mb-6 text-slate-500">Insights</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Industries</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">News</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Case Studies</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="uppercase tracking-widest text-[10px] font-bold mb-6 text-slate-500">Legal</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Terms of Service</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-8xl mx-auto px-6 mt-16 pt-8 border-t border-blue-900/50 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[10px] uppercase tracking-widest text-slate-500">© 2024 Marine Consultants Limited. Precision Engineering.</p>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-sm" data-icon="share">share</span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-sm" data-icon="public">public</span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-sm" data-icon="corporate_fare">corporate_fare</span></a>
+</div>
+</div>
+</footer>
+</body></html>

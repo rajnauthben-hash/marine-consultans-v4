@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f4faff",
+              "on-primary-fixed-variant": "#1a4a6e",
+              "on-surface-variant": "#42474d",
+              "on-error": "#ffffff",
+              "inverse-surface": "#263238",
+              "surface-container": "#e3f0f8",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#a0cbf5",
+              "tertiary-container": "#481c00",
+              "primary": "#001628",
+              "tertiary-fixed-dim": "#ffb68f",
+              "primary-fixed": "#cee5ff",
+              "inverse-on-surface": "#e6f3fb",
+              "secondary-fixed-dim": "#afcbd8",
+              "surface-dim": "#cfdce4",
+              "on-tertiary": "#ffffff",
+              "outline": "#73777e",
+              "on-secondary-fixed-variant": "#304a55",
+              "background": "#f4faff",
+              "on-secondary-fixed": "#021f29",
+              "secondary-container": "#cbe7f5",
+              "primary-fixed-dim": "#a0cbf5",
+              "on-background": "#111d23",
+              "on-primary-fixed": "#001d32",
+              "on-secondary-container": "#4e6874",
+              "surface-bright": "#f4faff",
+              "tertiary-fixed": "#ffdbca",
+              "secondary": "#48626e",
+              "surface-tint": "#366287",
+              "on-primary-container": "#6a94bc",
+              "primary-container": "#002b47",
+              "on-tertiary-fixed": "#331200",
+              "outline-variant": "#c3c7ce",
+              "tertiary": "#280c00",
+              "on-tertiary-container": "#eb6a00",
+              "error": "#ba1a1a",
+              "surface-container-low": "#e9f6fd",
+              "error-container": "#ffdad6",
+              "on-surface": "#111d23",
+              "surface-container-high": "#ddeaf2",
+              "secondary-fixed": "#cbe7f5",
+              "on-error-container": "#93000a",
+              "surface-variant": "#d7e4ec",
+              "on-tertiary-fixed-variant": "#773200",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#d7e4ec",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+        .technical-gradient {
+            background: linear-gradient(135deg, #001628 0%, #002b47 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-on-tertiary-container selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm">
+<nav class="flex justify-between items-center w-full px-6 py-4 max-w-8xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-blue-900 uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600">navigation</span>
+            Marine Consultants Limited
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-blue-900 font-bold border-b-2 border-orange-600 pb-1" href="#">Home</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors" href="{{DATA:SCREEN:SCREEN_10}}">About</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors" href="{{DATA:SCREEN:SCREEN_9}}">Products</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors" href="{{DATA:SCREEN:SCREEN_13}}">Services</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors" href="{{DATA:SCREEN:SCREEN_4}}">Industries</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors" href="{{DATA:SCREEN:SCREEN_2}}">News</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="bg-tertiary-container text-on-tertiary-container px-6 py-2 font-bold hover:scale-95 transition-transform text-sm rounded" href="{{DATA:SCREEN:SCREEN_5}}">
+                Contact
+            </a>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative technical-gradient min-h-[800px] flex items-center overflow-hidden">
+<div class="absolute inset-0 opacity-20 mix-blend-overlay">
+<img alt="" class="w-full h-full object-cover" data-alt="Technical blueprint lines overlaid on a high-tech engine room or maritime vessel control center with cold blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByBEOQh3965l2odZ1KtbP2e38vqBJku1LBpB2_HrXLW0DkVfGOIEwV1VfL4ByGAoORJjGij0gvY3KHrUd0WONILOYbxeqMU_kWxqOCRsUbxAvLtkZ3Vz62VsYHN2RBgchQkhG43kUdc6MXC0YGfwksuV3_0LSdz6lAvQQdKF_5w_MNCpF7H-vB5rnAIgxnz7-iiuW9XWW2Fvyjsbp7DL-kXfZlB4rD7bN7wVgybyMH7yTiErssgoZPRXlZH5v5VEoMUkQzvXKmJjwd"/>
+</div>
+<div class="container mx-auto px-6 relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<div class="inline-block bg-on-tertiary-container text-white text-[10px] uppercase tracking-widest px-3 py-1 mb-6">
+                    Keeping Marine Operators Operating Since 1971
+                </div>
+<h1 class="text-5xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight mb-8">
+                    Marine, Industrial, and Technical Support <span class="text-on-tertiary-container">Solutions in Trinidad &amp; Tobago</span>
+</h1>
+<p class="text-lg text-primary-fixed max-w-xl mb-10 leading-relaxed">
+                    Providing specialized engineering expertise, certified marine products, and technical procurement for the regional maritime sector since 1971.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-tertiary-container text-on-tertiary-container px-8 py-4 font-bold rounded-md hover:translate-y-[-2px] transition-all flex items-center gap-2" href="{{DATA:SCREEN:SCREEN_9}}">
+                        Browse Catalog
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 font-bold rounded-md hover:bg-white/20 transition-all" href="{{DATA:SCREEN:SCREEN_5}}">
+                        Request Quote
+                    </a>
+</div>
+</div>
+<div class="lg:col-span-5 hidden lg:block">
+<div class="bg-surface-container-high p-8 border-l-4 border-on-tertiary-container relative">
+<div class="absolute -top-4 -left-4 bg-primary p-2 text-white">
+<span class="material-symbols-outlined" data-icon="engineering">engineering</span>
+</div>
+<h3 class="text-primary font-bold mb-4 uppercase text-xs tracking-widest">Technical Readiness</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm border-b border-outline-variant/20 pb-2">
+<span class="text-on-surface-variant">Regional HQ</span>
+<span class="font-bold text-primary">Chaguaramas, T&amp;T</span>
+</div>
+<div class="flex justify-between items-center text-sm border-b border-outline-variant/20 pb-2">
+<span class="text-on-surface-variant">Service Excellence</span>
+<span class="font-bold text-primary">Certified Engineering</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Operational Reliability</span>
+<span class="font-bold text-on-tertiary-container">99.8%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Services Section -->
+<section class="py-24 px-6 bg-white border-b border-outline-variant/10">
+<div class="max-w-8xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-extrabold text-primary mb-2 uppercase tracking-tight">Core Service Capabilities</h2>
+<div class="w-12 h-1 bg-on-tertiary-container mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<a class="bg-surface-container p-10 text-center hover:bg-surface-container-high transition-colors group" href="{{DATA:SCREEN:SCREEN_13}}">
+<span class="material-symbols-outlined text-5xl text-on-tertiary-container mb-6 block" data-icon="verified_user">verified_user</span>
+<h4 class="font-bold text-primary uppercase text-xs tracking-widest mb-2">Inspection &amp; Certification</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider">ISO 9001 / STOW Compliant</p>
+</a>
+<a class="bg-surface-container p-10 text-center hover:bg-surface-container-high transition-colors" href="{{DATA:SCREEN:SCREEN_13}}">
+<span class="material-symbols-outlined text-5xl text-on-tertiary-container mb-6 block" data-icon="settings">settings</span>
+<h4 class="font-bold text-primary uppercase text-xs tracking-widest mb-2">Mechanical Maintenance</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider">Precision Marine Engineering</p>
+</a>
+<a class="bg-surface-container p-10 text-center hover:bg-surface-container-high transition-colors" href="{{DATA:SCREEN:SCREEN_13}}">
+<span class="material-symbols-outlined text-5xl text-on-tertiary-container mb-6 block" data-icon="inventory">inventory</span>
+<h4 class="font-bold text-primary uppercase text-xs tracking-widest mb-2">Technical Supply</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider">Certified Equipment Procurement</p>
+</a>
+</div>
+</div>
+</section>
+<!-- Latest Products Section -->
+<section class="py-24 bg-surface-container-low px-6">
+<div class="max-w-8xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-3xl font-extrabold text-primary mb-2 uppercase tracking-tight">Product Categories</h2>
+<p class="text-on-surface-variant text-sm">Certified marine and industrial inventory for immediate deployment.</p>
+</div>
+<a class="text-primary font-bold text-sm uppercase tracking-widest flex items-center gap-2 group" href="{{DATA:SCREEN:SCREEN_9}}">
+                    View Catalog <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<a class="bg-white p-6 text-center hover:shadow-md transition-shadow" href="{{DATA:SCREEN:SCREEN_9}}">
+<span class="material-symbols-outlined text-3xl text-secondary mb-3 block" data-icon="lifebuoy">lifebuoy</span>
+<h4 class="font-bold text-primary text-[10px] uppercase tracking-widest">Liferafts &amp; Evacuation</h4>
+</a>
+<a class="bg-white p-6 text-center hover:shadow-md transition-shadow" href="{{DATA:SCREEN:SCREEN_9}}">
+<span class="material-symbols-outlined text-3xl text-secondary mb-3 block" data-icon="rowing">rowing</span>
+<h4 class="font-bold text-primary text-[10px] uppercase tracking-widest">Lifeboats &amp; Rescue Craft</h4>
+</a>
+<a class="bg-white p-6 text-center hover:shadow-md transition-shadow" href="{{DATA:SCREEN:SCREEN_9}}">
+<span class="material-symbols-outlined text-3xl text-secondary mb-3 block" data-icon="explore">explore</span>
+<h4 class="font-bold text-primary text-[10px] uppercase tracking-widest">Navigation Aids</h4>
+</a>
+<a class="bg-white p-6 text-center hover:shadow-md transition-shadow" href="{{DATA:SCREEN:SCREEN_9}}">
+<span class="material-symbols-outlined text-3xl text-secondary mb-3 block" data-icon="radar">radar</span>
+<h4 class="font-bold text-primary text-[10px] uppercase tracking-widest">Marine Electronics</h4>
+</a>
+<a class="bg-white p-6 text-center hover:shadow-md transition-shadow" href="{{DATA:SCREEN:SCREEN_9}}">
+<span class="material-symbols-outlined text-3xl text-secondary mb-3 block" data-icon="link">link</span>
+<h4 class="font-bold text-primary text-[10px] uppercase tracking-widest">Chains &amp; Rigging</h4>
+</a>
+<a class="bg-white p-6 text-center hover:shadow-md transition-shadow" href="{{DATA:SCREEN:SCREEN_9}}">
+<span class="material-symbols-outlined text-3xl text-secondary mb-3 block" data-icon="map">map</span>
+<h4 class="font-bold text-primary text-[10px] uppercase tracking-widest">Charts &amp; Instruments</h4>
+</a>
+<a class="bg-white p-6 text-center hover:shadow-md transition-shadow" href="{{DATA:SCREEN:SCREEN_9}}">
+<span class="material-symbols-outlined text-3xl text-secondary mb-3 block" data-icon="fire_extinguisher">fire_extinguisher</span>
+<h4 class="font-bold text-primary text-[10px] uppercase tracking-widest">Fire Safety</h4>
+</a>
+<a class="bg-white p-6 text-center hover:shadow-md transition-shadow" href="{{DATA:SCREEN:SCREEN_9}}">
+<span class="material-symbols-outlined text-3xl text-secondary mb-3 block" data-icon="propane_tank">propane_tank</span>
+<h4 class="font-bold text-primary text-[10px] uppercase tracking-widest">Marine Power</h4>
+</a>
+</div>
+</div>
+</section>
+<!-- Certifications Section -->
+<section class="py-24 bg-white border-y border-outline-variant/10">
+<div class="max-w-8xl mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl font-extrabold text-primary mb-6 uppercase tracking-tight">Verified Compliance</h2>
+<p class="text-on-surface-variant mb-10 leading-relaxed">Marine Consultants Limited strictly adheres to international quality management and local safety standards to ensure operational excellence for all regional assets.</p>
+<div class="space-y-6">
+<div class="flex gap-4 p-6 bg-surface rounded border-l-4 border-orange-600">
+<span class="material-symbols-outlined text-orange-600 text-4xl" data-icon="verified_user">verified_user</span>
+<div>
+<h4 class="font-bold text-primary">ISO 9001:2015 Certified</h4>
+<p class="text-xs text-on-surface-variant">Quality management systems for maritime supply and engineering consultancy in T&amp;T.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 bg-surface rounded border-l-4 border-orange-600">
+<span class="material-symbols-outlined text-orange-600 text-4xl" data-icon="health_and_safety">health_and_safety</span>
+<div>
+<h4 class="font-bold text-primary">STOW (Safe TO Work)</h4>
+<p class="text-xs text-on-surface-variant">Certified to the highest regional health, safety, and environmental standards of Trinidad &amp; Tobago.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<img alt="Certification Badges" class="w-full rounded-lg shadow-xl grayscale contrast-125" data-alt="Professional quality control engineer inspecting a marine engine component with ISO and STOW certification overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM4mW2deGw5mioxQhhObOMK40Ds8aAdss7UJjwuDN1SPQfuesfYOQvrMOEjQEKgy5PE7IlpQe1VMa-B24_dYgjNI3InIfPaItQUp1QjjlOH94QF_PopI_0Zm9G-xTRJuJYgXvh7F1YfWO1ipUz8IM_6VP6jrWpko4TFg2p5CcB8r0-w5LBJWQsCnfQXpR1FY5qPgKtJCQYyCwqhBrebLfeMaJSDlWxRWj0n1wCKyQzJyvwQRtYeJTYMQvecYWYfS_7HxP4PivWvZXm"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Market Focus / Industries -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-8xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="text-3xl font-extrabold text-primary mb-4 uppercase tracking-tight">Regional Market Focus</h2>
+<p class="text-on-surface-variant">Providing technical depth across Trinidad &amp; Tobago's diverse industrial sectors with a focus on mission-critical uptime.</p>
+</div>
+<a class="text-primary font-bold hover:text-on-tertiary-container transition-colors uppercase tracking-widest text-xs" href="{{DATA:SCREEN:SCREEN_4}}">View All Markets →</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-outline-variant/20">
+<a class="bg-surface p-12 hover:bg-surface-bright transition-colors text-center group" href="{{DATA:SCREEN:SCREEN_4}}">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-on-tertiary-container mb-4 block" data-icon="directions_boat">directions_boat</span>
+<h4 class="font-bold text-primary uppercase text-xs tracking-widest">Commercial Marine</h4>
+</a>
+<a class="bg-surface p-12 hover:bg-surface-bright transition-colors text-center group" href="{{DATA:SCREEN:SCREEN_4}}">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-on-tertiary-container mb-4 block" data-icon="factory">factory</span>
+<h4 class="font-bold text-primary uppercase text-xs tracking-widest">Heavy Industrial</h4>
+</a>
+<a class="bg-surface p-12 hover:bg-surface-bright transition-colors text-center group" href="{{DATA:SCREEN:SCREEN_4}}">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-on-tertiary-container mb-4 block" data-icon="oil_barrel">oil_barrel</span>
+<h4 class="font-bold text-primary uppercase text-xs tracking-widest">Oil &amp; Gas</h4>
+</a>
+<a class="bg-surface p-12 hover:bg-surface-bright transition-colors text-center group" href="{{DATA:SCREEN:SCREEN_4}}">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-on-tertiary-container mb-4 block" data-icon="shield">shield</span>
+<h4 class="font-bold text-primary uppercase text-xs tracking-widest">National Security</h4>
+</a>
+</div>
+</div>
+</section>
+<!-- Regional Contact Support -->
+<section class="py-24 px-6 bg-surface-container-high">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-4xl font-extrabold text-primary mb-6">Partner with the Regional Experts</h2>
+<p class="text-on-surface-variant text-lg mb-10">Connect with our Chaguaramas-based engineering specialists for a comprehensive audit or procurement request.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a class="bg-surface-container-lowest p-6 text-left flex items-center gap-4 flex-1 hover:shadow-lg transition-shadow" href="mailto:solutions@mcl.co.tt">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="mail">mail</span>
+<div>
+<div class="text-[10px] uppercase font-bold text-outline tracking-widest">Engineering Email</div>
+<div class="font-bold text-primary">solutions@mcl.co.tt</div>
+</div>
+</a>
+<a class="bg-surface-container-lowest p-6 text-left flex items-center gap-4 flex-1 hover:shadow-lg transition-shadow" href="tel:+18686344591">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="call">call</span>
+<div>
+<div class="text-[10px] uppercase font-bold text-outline tracking-widest">Trinidad Ops</div>
+<div class="font-bold text-primary">+1 (868) 634-4591</div>
+</div>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-16 pb-8 bg-primary text-white border-t border-blue-900">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 px-6 max-w-8xl mx-auto">
+<div class="col-span-2 lg:col-span-2">
+<div class="text-2xl font-black text-white mb-6 uppercase tracking-tight flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600">navigation</span>
+                Marine Consultants
+            </div>
+<p class="text-slate-400 text-sm max-w-xs leading-relaxed mb-4">
+                Trinidad &amp; Tobago-based regional leaders in marine engineering and industrial procurement. Precision. Integrity. Availability since 1971.
+            </p>
+<div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">
+                Headquarters:<br/>
+                Chaguaramas, Trinidad &amp; Tobago
+            </div>
+</div>
+<div>
+<h4 class="uppercase tracking-widest text-[10px] font-bold mb-6 text-orange-500">Navigation</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Home</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="{{DATA:SCREEN:SCREEN_10}}">About</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="{{DATA:SCREEN:SCREEN_9}}">Products</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="{{DATA:SCREEN:SCREEN_13}}">Services</a></li>
+</ul>
+</div>
+<div>
+<h4 class="uppercase tracking-widest text-[10px] font-bold mb-6 text-orange-500">Insights</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="{{DATA:SCREEN:SCREEN_4}}">Industries</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="{{DATA:SCREEN:SCREEN_2}}">News</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="{{DATA:SCREEN:SCREEN_10}}">Case Studies</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="{{DATA:SCREEN:SCREEN_5}}">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="uppercase tracking-widest text-[10px] font-bold mb-6 text-orange-500">Legal</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Terms of Service</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="{{DATA:SCREEN:SCREEN_5}}">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-8xl mx-auto px-6 mt-16 pt-8 border-t border-blue-900/50 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[10px] uppercase tracking-widest text-slate-500">© 2024 Marine Consultants Limited (MCL). Keeping Marine Operators Operating since 1971.</p>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-sm" data-icon="language">language</span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-sm" data-icon="mail">mail</span></a>
+</div>
+</div>
+</footer>
+</body></html>

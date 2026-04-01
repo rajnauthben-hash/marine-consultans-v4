@@ -6,9 +6,12 @@ import re
 import subprocess
 import threading
 import urllib.request
-from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
+from functools import partial
+from http.server import ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
+
+import server
 
 
 ROOT = Path(__file__).resolve().parent
@@ -18,15 +21,73 @@ ROUTES = [
     "/about.html",
     "/products.html",
     "/services.html",
-    "/support.html",
-    "/industries.html",
+    "/resources.html",
     "/news.html",
     "/contact.html",
-    "/quote.html",
+    "/request-quote.html",
+    "/about/company-overview.html",
+    "/about/quality-compliance.html",
+    "/about/leadership.html",
+    "/products/viking-braidline-nylon-super-hawser.html",
+    "/inquiries/product-inquiry.html",
+    "/inquiries/service-inquiry.html",
     "/privacy.html",
     "/terms.html",
     "/404.html",
     "/favicon.ico",
+]
+
+for path in (
+    "liferafts-evacuation-systems",
+    "lifeboats-davits-rescue-craft",
+    "marine-safety-products",
+    "navigation-aids",
+    "marine-electronics",
+    "chains-ropes-rigging",
+    "charts-publications-instruments",
+    "fire-safety-equipment",
+    "engines-marine-power-systems",
+):
+    ROUTES.append(f"/categories/{path}.html")
+
+for path in (
+    "inspection-services",
+    "maintenance-support",
+    "certification-support",
+    "safety-equipment-servicing",
+    "procurement-supply-support",
+    "technical-assistance",
+    "support-request",
+):
+    ROUTES.append(f"/services/{path}.html")
+
+
+BANNED_PHRASES = [
+    "global operations",
+    "across every latitude",
+    "global hubs",
+    "14 locations",
+    "450+ certified",
+    "singapore hq",
+    "london headquarters",
+    "rotterdam",
+    "tokyo",
+    "dubai",
+    "sydney",
+    "hamburg",
+    "oslo",
+    "lagos",
+    "24/7 hotline",
+    "global procurement",
+    "global precision",
+    "global sourcing",
+    "global leaders",
+    "world-leading",
+    "since 1994",
+    "since 1971",
+    "since 1985",
+    "over five decades",
+    "master mariner",
 ]
 
 
@@ -45,7 +106,7 @@ def find_chrome() -> str | None:
 
 @contextlib.contextmanager
 def local_server(port: int):
-    handler = lambda *args, **kwargs: SimpleHTTPRequestHandler(*args, directory=str(ROOT), **kwargs)
+    handler = partial(server.StaticSiteHandler)
     httpd = ThreadingHTTPServer(("127.0.0.1", port), handler)
     thread = threading.Thread(target=httpd.serve_forever, daemon=True)
     thread.start()
@@ -88,7 +149,7 @@ def scrub_dom(dom: str) -> str:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Audit the generated static deployment output.")
+    parser = argparse.ArgumentParser(description="Audit the consolidated static deployment output.")
     parser.add_argument("--port", type=int, default=8030)
     parser.add_argument("--timeout", type=int, default=7)
     args = parser.parse_args()
@@ -102,8 +163,7 @@ def main() -> None:
 
         route_failures: list[str] = []
         for route in ROUTES:
-            url = urljoin(base_url, route)
-            status = fetch_status(url)
+            status = fetch_status(urljoin(base_url, route))
             print(f"{route} -> {status}")
             if status != 200:
                 route_failures.append(route)
@@ -113,31 +173,20 @@ def main() -> None:
 
         dom_issues: list[str] = []
         checked_internal_links: set[str] = set()
-        pages_for_dom = [
-            "/index.html",
-            "/about.html",
-            "/products.html",
-            "/services.html",
-            "/support.html",
-            "/industries.html",
-            "/news.html",
-            "/contact.html",
-            "/quote.html",
-            "/privacy.html",
-            "/terms.html",
-        ]
-
-        for route in pages_for_dom:
+        for route in [path for path in ROUTES if path.endswith(".html") and path != "/404.html"]:
             url = urljoin(base_url, route)
             dom = scrub_dom(dump_dom(chrome, url, args.timeout))
-            if "{{DATA:SCREEN:" in dom:
-                dom_issues.append(f"{route}: unresolved Stitch placeholders in live DOM")
+            lowered = dom.lower()
 
-            hash_links = re.findall(r'href=\"#\"', dom, flags=re.I)
-            if hash_links:
-                dom_issues.append(f"{route}: {len(hash_links)} live hash links remained after JS")
+            if 'href="#"' in lowered:
+                dom_issues.append(f"{route}: live hash links remained after JS")
+            if "{{data:screen:" in lowered:
+                dom_issues.append(f"{route}: unresolved Stitch placeholders remained")
+            for phrase in BANNED_PHRASES:
+                if phrase in lowered:
+                    dom_issues.append(f"{route}: banned phrase found -> {phrase}")
 
-            for href in re.findall(r'href=\"([^\"]+)\"', dom, flags=re.I):
+            for href in re.findall(r'href="([^"]+)"', dom, flags=re.I):
                 if href.startswith(("mailto:", "tel:", "https://", "http://")):
                     continue
                 normalized = urlparse(urljoin(url, href))._replace(fragment="").geturl()

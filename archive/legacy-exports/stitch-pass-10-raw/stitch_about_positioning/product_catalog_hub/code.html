@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#e6f3fb",
+              "outline-variant": "#c3c7ce",
+              "on-primary-fixed-variant": "#1a4a6e",
+              "surface-container-highest": "#d7e4ec",
+              "on-secondary-container": "#4e6874",
+              "background": "#f4faff",
+              "tertiary-container": "#481c00",
+              "inverse-primary": "#a0cbf5",
+              "tertiary": "#280c00",
+              "surface-container-high": "#ddeaf2",
+              "primary": "#001628",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#f4faff",
+              "secondary-container": "#cbe7f5",
+              "on-tertiary-container": "#eb6a00",
+              "on-error": "#ffffff",
+              "tertiary-fixed-dim": "#ffb68f",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#6a94bc",
+              "on-secondary-fixed": "#021f29",
+              "on-background": "#111d23",
+              "primary-fixed": "#cee5ff",
+              "tertiary-fixed": "#ffdbca",
+              "surface": "#f4faff",
+              "on-surface": "#111d23",
+              "on-surface-variant": "#42474d",
+              "inverse-surface": "#263238",
+              "secondary": "#48626e",
+              "error": "#ba1a1a",
+              "surface-container": "#e3f0f8",
+              "on-error-container": "#93000a",
+              "surface-tint": "#366287",
+              "on-secondary-fixed-variant": "#304a55",
+              "error-container": "#ffdad6",
+              "outline": "#73777e",
+              "primary-fixed-dim": "#a0cbf5",
+              "surface-dim": "#cfdce4",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#331200",
+              "secondary-fixed": "#cbe7f5",
+              "on-tertiary-fixed-variant": "#773200",
+              "surface-variant": "#d7e4ec",
+              "surface-container-low": "#e9f6fd",
+              "primary-container": "#002b47",
+              "on-secondary": "#ffffff",
+              "secondary-fixed-dim": "#afcbd8",
+              "on-primary-fixed": "#001d32"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-on-tertiary-container selection:text-white">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-xl font-black text-sky-950 dark:text-white tracking-tighter uppercase font-headline">
+                Marine Consultants Limited
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-['Manrope'] font-bold tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-900 dark:hover:text-sky-100 transition-colors" href="#">Home</a>
+<a class="text-sky-900 dark:text-sky-100 border-b-2 border-orange-600 pb-1" href="#">Products</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-900 dark:hover:text-sky-100 transition-colors" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-900 dark:hover:text-sky-100 transition-colors" href="#">Technical Specs</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-900 dark:hover:text-sky-100 transition-colors" href="#">About Us</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-900 dark:hover:text-sky-100 transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="bg-tertiary-container text-on-tertiary-container px-6 py-2.5 rounded-md font-headline font-bold text-sm tracking-tight hover:brightness-110 transition-all">
+                    Request Quote
+                </button>
+</div>
+</nav>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section: Asymmetrical Layout -->
+<section class="relative pt-20 pb-32 overflow-hidden px-8 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-7">
+<span class="inline-block py-1 px-3 bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-[0.1em] mb-6">
+                        Industrial Equipment Registry
+                    </span>
+<h1 class="text-6xl md:text-8xl font-extrabold text-primary tracking-tighter leading-[0.9] mb-8">
+                        Product <br/>Catalog Hub
+                    </h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed mb-10">
+                        Access our comprehensive directory of maritime solutions, certified for international waters and Caribbean regional standards. Precision engineering for operational resilience.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-tertiary-container text-on-tertiary-container px-8 py-4 rounded-md font-headline font-extrabold flex items-center gap-3 hover:gap-5 transition-all">
+                            Download Master Catalog
+                            <span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-md font-headline font-extrabold">
+                            Technical Support
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<!-- Technical Inset Box -->
+<div class="bg-surface-container-high p-8 rounded-lg shadow-xl relative z-10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-sm font-bold uppercase tracking-widest text-primary mb-1">Global Inventory</h3>
+<p class="text-xs text-secondary">Updated: OCT 2023 / 14:00 AST</p>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="analytics">analytics</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="text-sm font-medium">Regional Hubs</span>
+<span class="text-sm font-bold">12</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-2">
+<span class="text-sm font-medium">SKU Count</span>
+<span class="text-sm font-bold">4,280+</span>
+</div>
+<div class="flex justify-between">
+<span class="text-sm font-medium">Certification Level</span>
+<span class="text-sm font-bold">SOLAS / IMO</span>
+</div>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-secondary-container/30 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Category Bento Grid -->
+<section class="px-8 max-w-screen-2xl mx-auto pb-32">
+<div class="mb-12">
+<h2 class="text-3xl font-black text-primary tracking-tight uppercase">Equipment Categories</h2>
+<div class="h-1 w-20 bg-on-tertiary-container mt-2"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Liferafts (Featured) -->
+<a class="lg:col-span-2 lg:row-span-2 group relative overflow-hidden rounded-lg bg-surface-container-low p-8 flex flex-col justify-end min-h-[400px]" href="#">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover mix-blend-overlay opacity-30 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="industrial orange inflatable liferaft on a ship deck under dramatic maritime sunset lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfaD5NVF-0VrbD8Gb3OG6yGnTO3cHR74vtiPnL7_jZFcBW912vFk8ccyvZyViIzlzElLll4A3A6BaiCpxmaXXE42_HsFvkkBqOWzt-kiTQA_a_z9uJ3_T8LpCqT6goqGSLdpqnoJ_RE_p7KaRT6h8nxiMzJTKbHC_eK4gReAVtyW_uMfUn6CkpWANe0xYngmcOpUNS43HAB-oBRW-RUKfkFZ46xUTqDzPV5P9I4uXDzPIey0pCwBSF4-NcEVNT8WLeB7tpe30xJZZb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+</div>
+<div class="relative z-10">
+<span class="text-xs font-bold text-on-tertiary-container uppercase tracking-widest mb-2 block">Critical Safety</span>
+<h3 class="text-4xl font-black text-white mb-4">Liferafts</h3>
+<p class="text-slate-300 mb-6 max-w-sm">SOLAS approved offshore life rafts with rapid deployment systems for extreme conditions.</p>
+<span class="inline-flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-all">
+                            View Category <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</div>
+</a>
+<!-- Lifeboats -->
+<a class="group bg-surface-container-low p-8 rounded-lg flex flex-col justify-between hover:bg-surface-bright hover:shadow-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-4xl text-on-primary-container" data-icon="directions_boat">directions_boat</span>
+<div>
+<h3 class="text-xl font-bold text-primary mt-6 mb-2">Lifeboats</h3>
+<p class="text-sm text-on-surface-variant">Totally enclosed and partially enclosed survival craft.</p>
+</div>
+</a>
+<!-- Marine Electronics -->
+<a class="group bg-surface-container-low p-8 rounded-lg flex flex-col justify-between hover:bg-surface-bright hover:shadow-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-4xl text-on-primary-container" data-icon="memory">memory</span>
+<div>
+<h3 class="text-xl font-bold text-primary mt-6 mb-2">Marine Electronics</h3>
+<p class="text-sm text-on-surface-variant">Sonar, radars, and bridge control integration systems.</p>
+</div>
+</a>
+<!-- Marine Safety -->
+<a class="group bg-surface-container-low p-8 rounded-lg flex flex-col justify-between hover:bg-surface-bright hover:shadow-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-4xl text-on-primary-container" data-icon="safety_check">safety_check</span>
+<div>
+<h3 class="text-xl font-bold text-primary mt-6 mb-2">Marine Safety</h3>
+<p class="text-sm text-on-surface-variant">Pyrotechnics, immersion suits, and personal gear.</p>
+</div>
+</a>
+<!-- Navigation Aids -->
+<a class="group bg-surface-container-low p-8 rounded-lg flex flex-col justify-between hover:bg-surface-bright hover:shadow-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-4xl text-on-primary-container" data-icon="explore">explore</span>
+<div>
+<h3 class="text-xl font-bold text-primary mt-6 mb-2">Navigation Aids</h3>
+<p class="text-sm text-on-surface-variant">Buoys, beacons, and satellite positioning hardware.</p>
+</div>
+</a>
+<!-- Chains & Rigging -->
+<a class="group bg-surface-container-low p-8 rounded-lg flex flex-col justify-between hover:bg-surface-bright hover:shadow-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-4xl text-on-primary-container" data-icon="link">link</span>
+<div>
+<h3 class="text-xl font-bold text-primary mt-6 mb-2">Chains &amp; Rigging</h3>
+<p class="text-sm text-on-surface-variant">Heavy-duty anchor chains, wire ropes, and shackles.</p>
+</div>
+</a>
+<!-- Fire Safety -->
+<a class="group bg-surface-container-low p-8 rounded-lg flex flex-col justify-between hover:bg-surface-bright hover:shadow-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-4xl text-on-primary-container" data-icon="fire_extinguisher">fire_extinguisher</span>
+<div>
+<h3 class="text-xl font-bold text-primary mt-6 mb-2">Fire Safety</h3>
+<p class="text-sm text-on-surface-variant">Detection systems and suppression technology.</p>
+</div>
+</a>
+<!-- Charts & Instruments -->
+<a class="group bg-surface-container-low p-8 rounded-lg flex flex-col justify-between hover:bg-surface-bright hover:shadow-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-4xl text-on-primary-container" data-icon="map">map</span>
+<div>
+<h3 class="text-xl font-bold text-primary mt-6 mb-2">Charts &amp; Instruments</h3>
+<p class="text-sm text-on-surface-variant">Digital ECDIS and physical admiralty charts.</p>
+</div>
+</a>
+<!-- Engines -->
+<a class="group bg-surface-container-low p-8 rounded-lg flex flex-col justify-between hover:bg-surface-bright hover:shadow-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-4xl text-on-primary-container" data-icon="settings_input_component">settings_input_component</span>
+<div>
+<h3 class="text-xl font-bold text-primary mt-6 mb-2">Engines</h3>
+<p class="text-sm text-on-surface-variant">Propulsion units and auxiliary power generators.</p>
+</div>
+</a>
+</div>
+</section>
+<!-- Request Custom Quote Section -->
+<section class="bg-primary-container py-24 px-8 text-on-primary overflow-hidden relative">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+<div>
+<h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">Request a <br/>Custom Quote</h2>
+<p class="text-on-primary-container text-lg mb-10 max-w-md">
+                        Our technical consultants are available to provide custom procurement solutions tailored to your fleet's specific operational requirements.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="verified_user">verified_user</span>
+                            Certified Technical Audit
+                        </li>
+<li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="schedule">schedule</span>
+                            24-Hour Proposal Turnaround
+                        </li>
+<li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="public">public</span>
+                            Regional Port Delivery
+                        </li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-lg shadow-2xl">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-outline mb-2">Full Name</label>
+<input class="w-full bg-surface-container-low border-none rounded focus:ring-2 focus:ring-primary h-12 px-4 text-on-surface" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-outline mb-2">Company Email</label>
+<input class="w-full bg-surface-container-low border-none rounded focus:ring-2 focus:ring-primary h-12 px-4 text-on-surface" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-outline mb-2">Primary Interest</label>
+<select class="w-full bg-surface-container-low border-none rounded focus:ring-2 focus:ring-primary h-12 px-4 text-on-surface">
+<option>Select a category...</option>
+<option>Safety Systems</option>
+<option>Navigation Hardware</option>
+<option>Full Fleet Outfitting</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-outline mb-2">Inquiry Details</label>
+<textarea class="w-full bg-surface-container-low border-none rounded focus:ring-2 focus:ring-primary p-4 text-on-surface" rows="4"></textarea>
+</div>
+<button class="w-full bg-tertiary-container text-on-tertiary-container py-4 rounded-md font-headline font-extrabold text-lg shadow-lg hover:shadow-orange-900/20 transition-all">
+                            Submit Quote Request
+                        </button>
+</form>
+</div>
+</div>
+<!-- Background Decorative Texture -->
+<div class="absolute bottom-0 right-0 w-1/2 h-full bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-primary/40 to-transparent pointer-events-none"></div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full pt-16 pb-8 bg-slate-100 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 max-w-screen-2xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-lg font-bold text-sky-900 dark:text-sky-100 mb-6">Marine Consultants Limited</div>
+<p class="text-slate-500 text-sm leading-relaxed mb-6">Providing technical maritime excellence and certified industrial safety solutions across the Caribbean and Atlantic corridors.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-['Inter'] text-sm uppercase tracking-widest font-bold text-sky-950 dark:text-sky-50">Products</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors underline underline-offset-4 font-['Inter'] text-sm uppercase tracking-widest" href="#">Product Catalog</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors underline underline-offset-4 font-['Inter'] text-sm uppercase tracking-widest" href="#">Service Map</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors underline underline-offset-4 font-['Inter'] text-sm uppercase tracking-widest" href="#">Safety Standards</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-['Inter'] text-sm uppercase tracking-widest font-bold text-sky-950 dark:text-sky-50">Company</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors underline underline-offset-4 font-['Inter'] text-sm uppercase tracking-widest" href="#">Regional Offices</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors underline underline-offset-4 font-['Inter'] text-sm uppercase tracking-widest" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors underline underline-offset-4 font-['Inter'] text-sm uppercase tracking-widest" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-['Inter'] text-sm uppercase tracking-widest font-bold text-sky-950 dark:text-sky-50">Headquarters</h4>
+<div class="text-slate-500 text-xs tracking-widest leading-relaxed">
+                    Port of Spain, Trinidad &amp; Tobago<br/>
+                    Suite 402, Maritime Financial Plaza<br/>
+                    OPS: +1 (868) 555-0192
+                </div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-900 px-12 max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-slate-500 text-[10px] uppercase tracking-[0.2em]">
+                © 2024 Marine Consultants Limited. Caribbean Maritime Excellence.
+            </div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-slate-400" data-icon="security">security</span>
+<span class="material-symbols-outlined text-slate-400" data-icon="language">language</span>
+</div>
+</div>
+</footer>
+</body></html>

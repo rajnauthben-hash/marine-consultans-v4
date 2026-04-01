@@ -1,137 +1,178 @@
-# Marine Consultants Stitch Export
+# Marine Consultants Final Consolidated Website
 
-This project preserves the downloaded Google Stitch export for the Marine Consultants website and runs it locally with only the minimum practical fixes needed to make the site usable as a multi-page static website.
+This repository contains the final cleaned website build consolidated from multiple Google Stitch exports. The active site is now a single production-ready static build with one approved version of each core page, consistent navigation and footer structure, deeper product/service routing, and regionally grounded Trinidad & Tobago / Caribbean marine supply and service positioning.
 
-## Project structure
+## What this project is
 
-- `stitch_about_positioning/`
-  - Original downloaded Stitch export.
-  - Each page remains in its original folder with the original `code.html` and `screen.png`.
-- `server.py`
-  - Lightweight Python server that serves the original exported HTML files as the source of truth.
-  - Applies minimal runtime fixes for routing, missing fallback pages, and client-side interactions.
+The site is positioned as a regional marine supply and service website for:
+
+- marine supply
+- marine safety products
+- inspections
+- maintenance support
+- certification support
+- technical procurement
+- vessel support
+- regional B2B inquiry flow
+
+The current build intentionally avoids unsupported global, multinational, or inflated business claims.
+
+## Final structure
+
+- `index.html`
+  - Home
+- `about.html`
+  - Main about page
+- `products.html`
+  - Product catalog overview
+- `services.html`
+  - Services overview
+- `resources.html`
+  - Catalogue / resources hub
+- `news.html`
+  - News / updates page
+- `contact.html`
+  - General contact page
+- `request-quote.html`
+  - Canonical request-a-quote page
+- `about/`
+  - `company-overview.html`
+  - `quality-compliance.html`
+  - `leadership.html`
+- `categories/`
+  - All active product category pages
+- `services/`
+  - All active service pages
+- `products/`
+  - Representative product detail page
+- `inquiries/`
+  - `product-inquiry.html`
+  - `service-inquiry.html`
+- `assets/`
+  - Shared CSS and JavaScript for the final live site
+- `canonical_sources/`
+  - The selected Stitch HTML pages kept as the final reference set used during consolidation
+- `archive/legacy-exports/`
+  - Raw and legacy Stitch exports removed from active use
 - `build_static.py`
-  - Generates deployable static HTML files at the repository root from the preserved Stitch export.
+  - Static generator for the final consolidated site
+- `server.py`
+  - Lightweight static dev server
 - `audit_static.py`
-  - Runs a browser-backed audit of the generated static site and validates routes plus internal browser-rendered links.
-- `*.html` at the repository root
-  - Static deployment artifacts generated from the runtime transform so platforms like Vercel can serve the site directly.
-- `stitch_about_positioning/*.html`
-  - Mirrored deployment artifacts so the site also works if a hosting platform is accidentally pointed at the export folder as the project root.
-- `favicon.ico`
-  - Generated favicon to prevent browser asset 404s on deployment.
-- `vercel.json`
-  - Minimal Vercel configuration for clean static serving.
-- `README.md`
-  - Project notes, setup steps, and documented fixes.
+  - Browser-backed verification script
 
-## Pages served
+## Canonical pages kept
 
-- `/index.html` -> `home_marine_consultants_limited_full_site_update/code.html`
-- `/about.html` -> `about_positioning_verified_content/code.html`
-- `/products.html` -> `product_catalog_verified_inventory/code.html`
-- `/services.html` -> `services_capabilities/code.html`
-- `/support.html` -> `service_coverage_operational_reach/code.html`
-- `/industries.html` -> `industries_we_support/code.html`
-- `/news.html` -> `news_updates/code.html`
-- `/contact.html` -> `contact_regional_reach/code.html`
-- `/quote.html` -> `request_a_quote/code.html`
-- `/privacy.html` and `/terms.html`
-  - Minimal fallback pages added because the export linked to legal pages that were not included in the downloaded Stitch files.
+The final active core pages are:
+
+- Home: `index.html`
+- About: `about.html`
+- Products: `products.html`
+- Services: `services.html`
+- Catalogue / Resources: `resources.html`
+- News / Updates: `news.html`
+- Contact: `contact.html`
+- Request a Quote: `request-quote.html`
 
 ## What was broken
 
-- The export was not a runnable site scaffold. It was a collection of standalone HTML page exports.
-- Internal navigation used unresolved Stitch placeholders such as `{{DATA:SCREEN:SCREEN_9}}`.
-- Many top-nav, footer, and CTA links were still `#`.
-- The export included forms and filter/search UI without working behavior.
-- Some pages were missing `<title>` tags or had generic titles.
-- The downloaded package did not include privacy or terms pages even though several pages linked to them.
-- Mobile header spacing needed a small responsive adjustment to avoid crowding on narrow screens.
+- The downloaded Stitch passes contained duplicate core-page concepts.
+- Different exports used conflicting home, about, product, service, contact, and quote variants.
+- Some pages still contained invented or unsupported wording such as global positioning, fake offices, fake dates, fake response claims, and inflated authority language.
+- Navigation and footer structures were inconsistent across variants.
+- Active routing still reflected old page concepts like `support` and `industries`.
+- Several actions looked interactive but had no working behavior.
+- Old deploy output and raw exports were mixed together, making it unclear which files were live.
 
 ## What was fixed
 
-- Built a small Python server that preserves the exported HTML and serves it as a coherent website.
-- Mapped Stitch screen placeholders to real routes.
-- Added runtime link wiring for unresolved nav/footer/CTA links while preserving the existing page markup.
-- Added lightweight client-side behavior for:
-  - quote and contact form confirmation states
-  - newsletter/demo form confirmation states
-  - product catalog search and filter controls
-  - contact/support CTA scrolling and related interaction fixes
-- Added consistent page titles for all served routes.
-- Added minimal fallback `privacy` and `terms` pages because those pages were not included in the export.
-- Added small responsive header adjustments for very narrow screens.
+- Consolidated the project into one active static site build.
+- Kept one canonical version of each required core page.
+- Added nested product category, service, about, and inquiry pages.
+- Standardized the shared header and footer.
+- Removed old active `support.html`, `industries.html`, and `quote.html` usage.
+- Added Vercel redirects for legacy routes:
+  - `/quote.html` -> `/request-quote.html`
+  - `/support.html` -> `/services/support-request.html`
+  - `/industries.html` -> `/about.html`
+- Replaced unsupported or invented marketing claims with grounded regional copy or explicit placeholders.
+- Archived raw and legacy Stitch exports out of the active root structure.
+- Added shared front-end behavior for:
+  - mobile navigation
+  - catalog/news filtering
+  - form confirmation states
+  - placeholder resource actions
+
+## Placeholder content still needing manual business input
+
+The following placeholder content remains intentionally unresolved because it was not verified in the source exports:
+
+- `Company Overview Placeholder`
+- `Leadership Placeholder`
+- `Contact Details Placeholder`
+- `Compliance Information Placeholder`
+- `Catalogue Download Placeholder`
+- `Product Description Placeholder`
+- `Service Description Placeholder`
+- approved supplier, stock, and technical specification details
+- approved legal copy for privacy and terms pages
 
 ## Assumptions and limitations
 
-- The original Stitch HTML files inside `stitch_about_positioning/` were treated as the source of truth and were not redesigned.
-- Since no backend was included in the export, form submissions are handled as client-side demo confirmations only.
-- Since article detail pages and legal pages were not included in the export, related CTAs were routed to the closest available page/section or to lightweight fallback pages.
-- External images and fonts still load from the original remote URLs used by Stitch.
+- The final site preserves the strongest visual direction from the selected Stitch references, but the codebase is now a consolidated static build rather than a runtime wrapper around every raw export.
+- No backend or CRM endpoint was present in the Stitch downloads, so forms are implemented as local confirmation flows only.
+- Product, service, compliance, and company-detail placeholders should be replaced with verified business information before public launch.
+- External images and fonts still load from the original hosted URLs used by Stitch.
 
 ## How to run locally
 
 Requirements:
 
-- Python 3.14+ (or a recent Python 3 version)
+- Python 3.10+ recommended
 
-For local development with the runtime wrapper:
+Start the local server:
 
 ```powershell
 python server.py
 ```
 
-Then open:
+Open:
 
 ```text
 http://127.0.0.1:8000
 ```
 
-To use a different port:
-
-```powershell
-python server.py --port 8010
-```
-
-To regenerate the static deployment files:
+## How to rebuild the site
 
 ```powershell
 python build_static.py
 ```
 
-This writes deployable files to both:
+This regenerates:
 
-- the repository root
-- `stitch_about_positioning/`
+- all active `.html` routes
+- `assets/site.css`
+- `assets/site.js`
+- `favicon.ico`
+- `vercel.json`
 
-That duplication is intentional so the deployment remains valid whether the host is configured to use the repo root or the export folder as its root directory.
+## How to verify the site
 
-You can also preview the static deployment output directly:
-
-```powershell
-python -m http.server 8000
-```
-
-To run the deeper browser-backed audit:
+Run the browser-backed audit:
 
 ```powershell
-python audit_static.py
+python audit_static.py --timeout 10
 ```
 
-## Verification performed
+The audit checks:
 
-- Confirmed the server wrapper compiles successfully with `python -m py_compile server.py`.
-- Confirmed all primary routes return `200` when served locally.
-- Verified Stitch placeholder routes are resolved in served output.
-- Confirmed the generated static files return `200` for `/`, `/index.html`, `/about.html`, `/products.html`, `/services.html`, `/support.html`, `/industries.html`, `/news.html`, `/contact.html`, `/quote.html`, `/privacy.html`, and `/terms.html`.
-- Confirmed `/favicon.ico` returns `200`.
-- Confirmed the browser-rendered DOM on all primary pages contains no unresolved Stitch placeholders and no live `href=\"#\"` links after JavaScript runs.
-- Confirmed all internal browser-rendered links resolve successfully through `python audit_static.py`.
-- Generated headless Chrome screenshots for the home page at desktop and mobile sizes to validate layout.
-- Confirmed there were no blocking runtime failures while rendering the site locally.
+- all active routes return `200`
+- internal browser-rendered links resolve
+- no live `href="#"` links remain
+- no unresolved Stitch placeholders remain
+- banned fake/global phrases are not present in the live output
 
-## GitHub readiness
+## Technical issues not fully resolved automatically
 
-- The project is committed locally and pushed to GitHub.
-- The generated static files are included so Vercel can serve the site directly instead of returning `404 NOT_FOUND`.
+- Real contact details, compliance approvals, supplier documentation, and legal copy were not verifiable from the Stitch exports and remain placeholders by design.
+- The representative product detail page keeps the structure of a detail template, but technical values should be inserted only after manual verification.

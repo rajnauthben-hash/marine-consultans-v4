@@ -1,4 +1,12 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/quote", "destination": "/request-quote.html", "permanent": true },
+    { "source": "/quote.html", "destination": "/request-quote.html", "permanent": true },
+    { "source": "/support", "destination": "/services/support-request.html", "permanent": true },
+    { "source": "/support.html", "destination": "/services/support-request.html", "permanent": true },
+    { "source": "/industries", "destination": "/about.html", "permanent": true },
+    { "source": "/industries.html", "destination": "/about.html", "permanent": true }
+  ]
 }

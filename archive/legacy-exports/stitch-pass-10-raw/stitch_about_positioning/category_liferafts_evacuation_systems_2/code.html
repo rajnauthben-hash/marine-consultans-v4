@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f4faff",
+              "on-primary-fixed-variant": "#1a4a6e",
+              "on-surface-variant": "#42474d",
+              "on-error": "#ffffff",
+              "inverse-surface": "#263238",
+              "surface-container": "#e3f0f8",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#a0cbf5",
+              "tertiary-container": "#481c00",
+              "primary": "#001628",
+              "tertiary-fixed-dim": "#ffb68f",
+              "primary-fixed": "#cee5ff",
+              "inverse-on-surface": "#e6f3fb",
+              "secondary-fixed-dim": "#afcbd8",
+              "surface-dim": "#cfdce4",
+              "on-tertiary": "#ffffff",
+              "outline": "#73777e",
+              "on-secondary-fixed-variant": "#304a55",
+              "background": "#f4faff",
+              "on-secondary-fixed": "#021f29",
+              "secondary-container": "#cbe7f5",
+              "primary-fixed-dim": "#a0cbf5",
+              "on-background": "#111d23",
+              "on-primary-fixed": "#001d32",
+              "on-secondary-container": "#4e6874",
+              "surface-bright": "#f4faff",
+              "tertiary-fixed": "#ffdbca",
+              "secondary": "#48626e",
+              "surface-tint": "#366287",
+              "on-primary-container": "#6a94bc",
+              "primary-container": "#002b47",
+              "on-tertiary-fixed": "#331200",
+              "outline-variant": "#c3c7ce",
+              "tertiary": "#280c00",
+              "on-tertiary-container": "#eb6a00",
+              "error": "#ba1a1a",
+              "surface-container-low": "#e9f6fd",
+              "error-container": "#ffdad6",
+              "on-surface": "#111d23",
+              "surface-container-high": "#ddeaf2",
+              "secondary-fixed": "#cbe7f5",
+              "on-error-container": "#93000a",
+              "surface-variant": "#d7e4ec",
+              "on-tertiary-fixed-variant": "#773200",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#d7e4ec",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-background antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-8xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-blue-900 uppercase">
+                Marine Consultants
+            </div>
+<nav class="hidden lg:flex items-center space-x-8">
+<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">Home</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">About</a>
+<a class="text-blue-900 font-bold border-b-2 border-orange-600 pb-1 text-sm" href="#">Products</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">Services</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">Industries</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">News</a>
+</nav>
+<div class="flex items-center space-x-4">
+<div class="relative hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none text-sm rounded-lg focus:ring-2 focus:ring-primary-container w-64" placeholder="Search catalog..." type="text"/>
+</div>
+<button class="bg-tertiary-container text-on-tertiary-container px-6 py-2 rounded text-sm font-bold uppercase tracking-wider hover:opacity-90 transition-opacity">
+                    Contact
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Category Hero -->
+<section class="relative h-[500px] flex items-center overflow-hidden bg-primary-container">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-50 mix-blend-overlay" data-alt="high-quality liferaft being deployed at sea during a safety drill, orange and white high-visibility colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFRtDaFsIMRQymlhNb-s68IoGuG_TVlaGDMeH99YnRezT-n_hZcOAV76NLTK0Em9d2lTPcC1XLofDezRgbXBQ-SE3S1omqB4VSs5fxS-wn0UetPIN3hSEiSuBphSybIFfgZKJuZbmyuBiAoR_rhby6EiQJA303buqSJ7VwD2b4y2pKsEOIVPRUYeX5bwgx2YGhERQl1lD7alYYt4d4MTlGiXNpscrHLik9nb9qucoV2ss0ZQiiQobCp3ARRSHUxTekpQIh_jjAO6Z8"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/70 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6">
+<div class="max-w-3xl">
+<div class="flex items-center gap-2 mb-4">
+<a class="text-on-primary-container/60 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest" href="#">Products</a>
+<span class="material-symbols-outlined text-white/30 text-sm">chevron_right</span>
+<span class="text-on-tertiary-container text-xs font-bold uppercase tracking-widest">Safety &amp; Survival</span>
+</div>
+<h1 class="text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+                        Liferafts &amp; <br/>Evacuation Systems
+                    </h1>
+<p class="text-on-primary-container text-lg mb-8 leading-relaxed max-w-2xl">
+                        SOLAS-compliant safety solutions for commercial shipping, offshore assets, and passenger vessels. Engineered for reliable deployment in regional waters.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-tertiary-container text-on-tertiary-container px-8 py-4 font-bold rounded flex items-center gap-2 group transition-all" href="/quote">
+                            Request a System Quote
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<div class="flex items-center gap-4 px-6 border-l border-white/20">
+<div class="text-center">
+<p class="text-white font-bold text-xl leading-none">STOW</p>
+<p class="text-on-primary-container text-[10px] uppercase tracking-widest">Compliant</p>
+</div>
+<div class="text-center">
+<p class="text-white font-bold text-xl leading-none">SOLAS</p>
+<p class="text-on-primary-container text-[10px] uppercase tracking-widest">MED / USCG</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Overview & Regional Support -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="lg:col-span-7">
+<h2 class="text-3xl font-extrabold text-on-background mb-6 tracking-tight">Regional Compliance &amp; Safety Performance</h2>
+<div class="space-y-6 text-on-surface-variant leading-relaxed text-lg">
+<p>Marine Consultants Limited provides a specialized range of SOLAS-approved liferafts and Marine Evacuation Systems (MES). Our portfolio is focused on regional maritime requirements, ensuring every unit meets local coast guard and international MED standards.</p>
+<p>We provide localized technical support for system integration on offshore platforms and passenger vessels. From rapid-deployment throw-over rafts to high-capacity evacuation chutes, our equipment is selected for its proven performance in regional environmental conditions.</p>
+</div>
+<div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="p-6 bg-surface-container rounded-lg border-l-4 border-on-tertiary-container">
+<h4 class="font-bold text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined">verified_user</span> Local Certification
+                                </h4>
+<p class="text-sm">Technical alignment with STOW requirements and regional port authority regulations to ensure seamless vessel clearance.</p>
+</div>
+<div class="p-6 bg-surface-container rounded-lg border-l-4 border-on-tertiary-container">
+<h4 class="font-bold text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined">build</span> Regional Service
+                                </h4>
+<p class="text-sm">Access to a regional network of certified stations for annual inspections, re-certification, and OEM-standard maintenance.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="bg-primary-container p-8 rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-white font-bold text-xl mb-6">Technical Certification Support</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3 text-on-primary-container text-sm">
+<span class="material-symbols-outlined text-on-tertiary-container">check_circle</span>
+<span>SOLAS / MED (Wheelmark) Approval</span>
+</li>
+<li class="flex items-start gap-3 text-on-primary-container text-sm">
+<span class="material-symbols-outlined text-on-tertiary-container">check_circle</span>
+<span>USCG Approval for Regional Waters</span>
+</li>
+<li class="flex items-start gap-3 text-on-primary-container text-sm">
+<span class="material-symbols-outlined text-on-tertiary-container">check_circle</span>
+<span>ISO 9650-1 Commercial Standards</span>
+</li>
+<li class="flex items-start gap-3 text-on-primary-container text-sm">
+<span class="material-symbols-outlined text-on-tertiary-container">check_circle</span>
+<span>Stowage Planning &amp; Davit Layout Support</span>
+</li>
+</ul>
+<button class="mt-8 w-full bg-white text-primary py-3 rounded font-bold text-sm uppercase tracking-widest hover:bg-slate-100 transition-colors">
+                                    Download Compliance Guide
+                                </button>
+</div>
+<span class="material-symbols-outlined absolute -bottom-10 -right-10 text-[200px] text-white/5 pointer-events-none">gavel</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Subcategories / Groupings -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl font-extrabold text-on-background mb-4">Deployment Configurations</h2>
+<p class="text-on-surface-variant">Practical evacuation solutions tailored for specific vessel types and freeboard heights.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Subcategory 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="davit-launched liferaft being lowered from a ship deck" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2iUW4pjSeJTkaJ-JHS7eeh0roehZhQI9boC8BudU3RkEpfv0ZLO5Gm-SqkWD42hfTYh9DiX38720foi9PRcL_lYIamIGMKKeQczjTMfwqm85n5w_vtyB8pBlgviN5X78pVcgNOT6BbdRuNMAcaufPBBefKV0YXqWS421dYqFR1SRK1egHrlbk0O2vpD2tZ2GA1WRt-3ms-XC4lnlt9NGpY5fRZtUlAAEQU7qa6JK7AWGprzO8b2rfjMIRNf-Gah-MM0YB-smAbrUP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-white text-xl font-bold">Davit-Launched</h3>
+</div>
+</div>
+<div class="p-6">
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Boarded at deck level and lowered to the water by crane or davit. Essential for high-freeboard vessels to ensure safe, dry boarding for crew and passengers.</p>
+<a class="text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                                View Specifications <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Subcategory 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="throw-overboard liferaft container on a ship rail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxcTQytKlrOR2vU8o2lZelLcn4PdL9Gwi7NzIxi56GxyfrN7k_lxU-U7Q7bzmiut045I9RsLQTQSdK5pNAh6YCtZFD07Dl2o7wtV5ck6rrbKzDc2vzRO2wsoaisZPredw3Q7Bn6EFs7zGQxbVQu52Nit-TRpfYEi1nNIotTsSmRwPCjvOsqhTp4NIeESSa70OErPDqax-cvFFmsN4d5KREDIQEsqnitFoxlMnl3kasVpiOJc9xA2x6N0FelnQhTslcIzibifxGkyzC"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-white text-xl font-bold">Throw-Overboard</h3>
+</div>
+</div>
+<div class="p-6">
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">The standard for general commercial craft. Manually released or hydrostatic release units that inflate automatically upon water contact.</p>
+<a class="text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                                View Specifications <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Subcategory 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Marine Evacuation System (MES) slide deployed on a large cruise ship" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_MXjFuNOfhm2k6IoI6LCJkrvJ6_TEa6D1wl9jN-OnctZ4t36zF8jpjhRqywkkVBajxwTqgqoclMJWqqH9XIid0N8NHMS0ztTFUADcTazv5dxuyhpAEMY9dEfuTVpi-3S_Asmb5xjKKREek-qhu197kpOAT8hQhEG__RLMSQBomLhQ6IJcbnWCixnnay5C3eyTM0PdFVDtViEhw-yxlrvh6FH01avozJ9-gAdpRvEX6eCMF8Rvm_9Q0HoPHNWuzWggfc9-TU-mIKDU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-white text-xl font-bold">Evacuation Systems (MES)</h3>
+</div>
+</div>
+<div class="p-6">
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Integrated slide or chute systems designed for the mass evacuation of large passenger complements or offshore personnel in minimum timeframes.</p>
+<a class="text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                                View Specifications <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Representative Products / Partner Brands -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<span class="text-on-tertiary-container text-[10px] font-bold uppercase tracking-[0.2em] mb-4 block">Regional Distribution</span>
+<h2 class="text-3xl font-extrabold text-on-background tracking-tight">Technical Partner Brands</h2>
+</div>
+<a class="text-primary font-bold text-sm uppercase tracking-widest flex items-center gap-2 mt-4 md:mt-0" href="#">
+                        Technical Catalog <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<!-- Brand Card 1 -->
+<div class="bg-white p-8 rounded-lg border border-outline-variant flex flex-col items-center justify-center text-center group hover:border-primary transition-colors cursor-pointer">
+<div class="h-12 w-full flex items-center justify-center mb-4">
+<span class="text-2xl font-black text-slate-800 tracking-tighter uppercase italic">SURVITEC</span>
+</div>
+<p class="text-xs text-on-surface-variant font-medium">Specialized survival technology partner.</p>
+</div>
+<!-- Brand Card 2 -->
+<div class="bg-white p-8 rounded-lg border border-outline-variant flex flex-col items-center justify-center text-center group hover:border-primary transition-colors cursor-pointer">
+<div class="h-12 w-full flex items-center justify-center mb-4">
+<span class="text-2xl font-black text-blue-900 tracking-tighter uppercase">VIKING</span>
+</div>
+<p class="text-xs text-on-surface-variant font-medium">Life-saving equipment technical specialist.</p>
+</div>
+<!-- Brand Card 3 -->
+<div class="bg-white p-8 rounded-lg border border-outline-variant flex flex-col items-center justify-center text-center group hover:border-primary transition-colors cursor-pointer">
+<div class="h-12 w-full flex items-center justify-center mb-4">
+<span class="text-2xl font-black text-slate-800 tracking-tighter uppercase italic">ZODIAC</span>
+</div>
+<p class="text-xs text-on-surface-variant font-medium">Durable marine engineering solutions.</p>
+</div>
+<!-- Brand Card 4 -->
+<div class="bg-white p-8 rounded-lg border border-outline-variant flex flex-col items-center justify-center text-center group hover:border-primary transition-colors cursor-pointer">
+<div class="h-12 w-full flex items-center justify-center mb-4">
+<span class="text-2xl font-black text-blue-950 tracking-tighter uppercase italic">RFD</span>
+</div>
+<p class="text-xs text-on-surface-variant font-medium">Marine inflatable equipment experts.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Prominent Quote CTA -->
+<section class="py-24 bg-primary text-white">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-white/5 border border-white/10 rounded-3xl p-12 lg:p-20 relative overflow-hidden">
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-4xl lg:text-5xl font-extrabold mb-6 tracking-tight">Need a technical survival plan?</h2>
+<p class="text-on-primary-container text-lg mb-10 leading-relaxed">
+                                Our regional technical engineers provide stowage calculations, vessel-specific compliance audits, and multi-unit procurement packages tailored to your operational area.
+                            </p>
+<div class="flex flex-wrap gap-6 items-center">
+<a class="bg-on-tertiary-container text-tertiary-container px-10 py-5 font-bold rounded-lg uppercase tracking-widest text-sm hover:scale-105 transition-transform" href="/quote">
+                                    Request a System Quote
+                                </a>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-tertiary-container">phone_in_talk</span>
+<span class="font-mono text-lg">+44 (0) 20 7946 0123</span>
+</div>
+</div>
+</div>
+<div class="hidden lg:block">
+<div class="aspect-square bg-surface-container-high/10 backdrop-blur-xl rounded-full p-12 border border-white/10 flex items-center justify-center">
+<div class="text-center">
+<span class="material-symbols-outlined text-8xl text-on-tertiary-container mb-4">support_agent</span>
+<h4 class="text-2xl font-bold">Regional Support</h4>
+<p class="text-on-primary-container text-sm">Direct technical assistance available</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative background elements -->
+<div class="absolute -bottom-20 -right-20 w-96 h-96 bg-on-tertiary-container/10 rounded-full blur-3xl"></div>
+<div class="absolute -top-20 -left-20 w-96 h-96 bg-primary-container/30 rounded-full blur-3xl"></div>
+</div>
+</div>
+</section>
+<!-- Technical Resource Download -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-surface-container rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-8 border border-outline-variant">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-primary-container rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-3xl">description</span>
+</div>
+<div>
+<h3 class="font-bold text-xl text-primary">Master Safety Catalog</h3>
+<p class="text-sm text-on-surface-variant">Download technical specs for all Liferaft &amp; MES systems (PDF, 18MB)</p>
+</div>
+</div>
+<button class="flex items-center gap-2 bg-primary text-white px-8 py-3 rounded font-bold uppercase tracking-widest text-xs hover:opacity-90 transition-opacity">
+                        Download Catalog <span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-blue-950 text-white w-full pt-16 pb-8 border-t border-blue-900">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 px-6 max-w-8xl mx-auto">
+<div class="col-span-2 lg:col-span-1">
+<div class="text-2xl font-black text-white mb-6 uppercase tracking-tighter">Marine Consultants</div>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">Technical engineering and regional procurement for demanding maritime environments.</p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full border border-blue-800 flex items-center justify-center hover:bg-white/10 transition-colors" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+<a class="w-8 h-8 rounded-full border border-blue-800 flex items-center justify-center hover:bg-white/10 transition-colors" href="#"><span class="material-symbols-outlined text-sm">mail</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-[10px] font-bold uppercase tracking-widest text-orange-500 mb-6">Explore</h5>
+<ul class="space-y-4">
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Home</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">About</a></li>
+<li><a class="text-sm text-orange-500 font-bold" href="#">Products</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Services</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-[10px] font-bold uppercase tracking-widest text-orange-500 mb-6">Industries</h5>
+<ul class="space-y-4">
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Offshore</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Commercial</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Ports</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Manufacturing</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-[10px] font-bold uppercase tracking-widest text-orange-500 mb-6">Support</h5>
+<ul class="space-y-4">
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Support</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-2 lg:col-span-1">
+<h5 class="text-[10px] font-bold uppercase tracking-widest text-orange-500 mb-6">Headquarters</h5>
+<p class="text-sm text-slate-400 mb-2">102 Maritime Plaza, Docklands</p>
+<p class="text-sm text-slate-400 mb-4">London, E14 9GE, United Kingdom</p>
+<div class="bg-blue-900/40 p-4 rounded border border-blue-800">
+<p class="text-[10px] text-orange-500 font-bold uppercase mb-1">Technical Support Hotline</p>
+<p class="text-lg font-mono">+44 (0) 20 7946 0123</p>
+</div>
+</div>
+</div>
+<div class="max-w-8xl mx-auto px-6 pt-16 mt-16 border-t border-blue-900 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">© 2024 Marine Consultants Limited. Technical Engineering.</p>
+<div class="flex gap-8">
+<span class="text-[10px] text-slate-500 uppercase tracking-widest">ISO 9001:2015</span>
+<span class="text-[10px] text-slate-500 uppercase tracking-widest">DNV Certified</span>
+</div>
+</div>
+</footer>
+</body></html>

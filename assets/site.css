@@ -1,0 +1,13 @@
+:root { color-scheme: light; }
+body { font-family: "Inter", sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: "Manrope", sans-serif; }
+.material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; line-height: 1; vertical-align: middle; }
+.hero-gradient { background: linear-gradient(135deg, rgba(0, 22, 40, 0.98), rgba(0, 43, 71, 0.9)), radial-gradient(circle at top right, rgba(235, 106, 0, 0.18), transparent 28%); }
+.panel-glow { box-shadow: 0 30px 70px rgba(0, 22, 40, 0.18); }
+.menu-panel { opacity: 0; pointer-events: none; transform: translateY(10px); transition: opacity 0.18s ease, transform 0.18s ease; }
+.menu-group:hover .menu-panel, .menu-group:focus-within .menu-panel { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.mobile-menu[hidden] { display: none !important; }
+.filter-chip-active { background: #001628; color: white; border-color: #001628; }
+.is-hidden { display: none !important; }
+.toast { position: fixed; right: 1rem; bottom: 1rem; z-index: 100; max-width: 24rem; border-left: 4px solid #eb6a00; background: rgba(255, 255, 255, 0.96); color: #111d23; padding: 1rem 1.125rem; box-shadow: 0 24px 50px rgba(17, 29, 35, 0.18); }
+.toast strong { display: block; margin-bottom: 0.25rem; font-family: "Manrope", sans-serif; }

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | Marine Consultants Limited</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              "error": "#ba1a1a",
+              "surface": "#f4faff",
+              "surface-container-highest": "#d7e4ec",
+              "on-primary-fixed-variant": "#1a4a6e",
+              "surface-container-high": "#ddeaf2",
+              "on-tertiary-fixed-variant": "#773200",
+              "on-primary": "#ffffff",
+              "primary-container": "#002b47",
+              "outline-variant": "#c3c7ce",
+              "on-primary-fixed": "#001d32",
+              "tertiary-fixed": "#ffdbca",
+              "inverse-on-surface": "#e6f3fb",
+              "primary": "#001628",
+              "on-secondary-fixed-variant": "#304a55",
+              "secondary-container": "#cbe7f5",
+              "surface-bright": "#f4faff",
+              "tertiary-container": "#481c00",
+              "surface-container-lowest": "#ffffff",
+              "on-background": "#111d23",
+              "on-secondary-fixed": "#021f29",
+              "surface-dim": "#cfdce4",
+              "surface-container": "#e3f0f8",
+              "outline": "#73777e",
+              "inverse-primary": "#a0cbf5",
+              "on-tertiary-fixed": "#331200",
+              "primary-fixed-dim": "#a0cbf5",
+              "on-error": "#ffffff",
+              "on-secondary-container": "#4e6874",
+              "on-error-container": "#93000a",
+              "on-tertiary-container": "#eb6a00",
+              "inverse-surface": "#263238",
+              "primary-fixed": "#cee5ff",
+              "surface-variant": "#d7e4ec",
+              "tertiary": "#280c00",
+              "secondary": "#48626e",
+              "on-surface": "#111d23",
+              "background": "#f4faff",
+              "on-primary-container": "#6a94bc",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#ffb68f",
+              "surface-tint": "#366287",
+              "surface-container-low": "#e9f6fd",
+              "secondary-fixed-dim": "#afcbd8",
+              "secondary-fixed": "#cbe7f5",
+              "on-surface-variant": "#42474d",
+              "on-secondary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        background: rgba(244, 250, 255, 0.8);
+        backdrop-filter: blur(24px);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm h-20">
+<div class="flex justify-between items-center px-8 h-full max-w-full mx-auto">
+<div class="text-xl font-bold tracking-tighter text-sky-900 dark:text-white font-headline">
+                Marine Consultants
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-800 dark:hover:text-sky-100 transition-colors font-headline tracking-tight font-bold" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-800 dark:hover:text-sky-100 transition-colors font-headline tracking-tight font-bold" href="#">About</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-800 dark:hover:text-sky-100 transition-colors font-headline tracking-tight font-bold" href="#">Products</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-800 dark:hover:text-sky-100 transition-colors font-headline tracking-tight font-bold" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-800 dark:hover:text-sky-100 transition-colors font-headline tracking-tight font-bold" href="#">Industries</a>
+<a class="text-sky-600 dark:text-sky-400 border-b-2 border-sky-600 dark:border-sky-400 pb-1 font-headline tracking-tight font-bold" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 bg-tertiary-container text-on-tertiary-container rounded-md font-headline font-bold text-sm transition-all hover:opacity-90">
+                    Regional Services
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Section 1: Contact Hero with Map Focus -->
+<section class="relative bg-primary overflow-hidden min-h-[500px] flex items-center">
+<div class="absolute inset-0 opacity-40 mix-blend-overlay">
+<img class="w-full h-full object-cover" data-alt="Technical blueprint style map overlay of the Caribbean sea with architectural drafting lines and nautical coordinates" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbE41DlK_J0jC1AAoYLvcgGSnhKOdEzCQjaZyq00tSbVrt1aKGuajEA7seEQnNxrghA8VlnoDtReUhpH7Nr28CNghY7n5r75i_WyL1HFkExiAFM1AQ-zMwQN02Z8St1VNc9DIuxmDljuOu_qqli9eEKbv4xH6O1y11lLyvjcANZshyUvzgLbhhKtSsxDjigg6MjD-iyHoJgJkHLeDhtxy-LeRH_QAks0zUTcGRQ-hUDVePpvZ4j9ZqenA9JPB6tBhgDHeeUsD0FRtX"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-container/80 to-transparent"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<div class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase rounded">
+                        Operations Hub
+                    </div>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold text-white leading-tight -ml-1">
+                        Regional Support <br/><span class="text-on-tertiary-container">Hub &amp; Contact</span>
+</h1>
+<p class="text-lg text-on-primary-container max-w-lg leading-relaxed font-medium">
+                        Strategically positioned in Trinidad &amp; Tobago to serve the wider Caribbean marine and industrial sectors with precision engineering and technical supply.
+                    </p>
+</div>
+<div class="hidden md:block">
+<div class="bg-surface-container-high/10 backdrop-blur-md p-1 rounded-xl">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden shadow-2xl relative">
+<img class="w-full h-full object-cover grayscale opacity-80 contrast-125" data-alt="Detailed satellite style map highlighting the island of Trinidad with focus on the Gulf of Paria coastline" data-location="Trinidad and Tobago" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9kyHmL7u9SjOfW6drnAT4ur6eWe0RMNUfA2BkDKf6cH0wI6tXT-8E2_3kLOK07M18nsaHbWoNzCQp6UYlc0rftaXyZIiEN3ZQIP09cNCa07qWbQOnif9pVe4J0DPyT57EpsLHeDo86jXZqfP4FJcumLmY-JGkOZSuhibQvrpywhKCL3s8V_OkiLP26mRWmzM1V50e7dL5XRaptaCVzdJPKCSyddsuo-SQ_RMqF4ZusDaYYnuKf6mtK9KbpcnzqeIdPFWoRJeLcmVk"/>
+<div class="absolute top-1/2 left-1/3 w-4 h-4 bg-on-tertiary-container rounded-full animate-pulse shadow-[0_0_20px_rgba(235,106,0,0.8)]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Regional Office Details -->
+<section class="py-24 bg-surface px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-4">
+<h2 class="text-3xl font-headline font-bold text-on-surface">Primary Facilities</h2>
+<div class="h-[2px] flex-grow bg-surface-container-highest mx-8 hidden md:block"></div>
+<span class="text-label-sm font-bold uppercase tracking-widest text-outline">Trinidad &amp; Tobago</span>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Office 1 -->
+<div class="group bg-surface-container-lowest p-10 rounded-xl transition-all duration-300 hover:bg-surface-bright border-transparent hover:shadow-[0_20px_40px_rgba(17,29,35,0.06)]">
+<div class="flex items-start justify-between mb-8">
+<div>
+<h3 class="text-2xl font-headline font-extrabold text-primary mb-2">Chaguaramas Office</h3>
+<p class="text-secondary font-bold text-sm tracking-wide uppercase">Marine Operations &amp; Shipyard Hub</p>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container text-3xl" data-icon="anchor">anchor</span>
+</div>
+<div class="space-y-4 text-on-surface-variant leading-relaxed">
+<p class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+                                Western Main Road, Chaguaramas,<br/>Trinidad, W.I.
+                            </p>
+<p class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="call">call</span>
+                                +1 (868) 634-4567
+                            </p>
+<p class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
+                                ops.chag@marineconsultants.tt
+                            </p>
+</div>
+<div class="mt-10 pt-8 border-t border-surface-container">
+<button class="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all">
+                                VIEW LOGISTICS MAP <span class="material-symbols-outlined" data-icon="trending_flat">trending_flat</span>
+</button>
+</div>
+</div>
+<!-- Office 2 -->
+<div class="group bg-surface-container-lowest p-10 rounded-xl transition-all duration-300 hover:bg-surface-bright border-transparent hover:shadow-[0_20px_40px_rgba(17,29,35,0.06)]">
+<div class="flex items-start justify-between mb-8">
+<div>
+<h3 class="text-2xl font-headline font-extrabold text-primary mb-2">Port of Spain Office</h3>
+<p class="text-secondary font-bold text-sm tracking-wide uppercase">Corporate &amp; Industrial Services</p>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container text-3xl" data-icon="corporate_fare">corporate_fare</span>
+</div>
+<div class="space-y-4 text-on-surface-variant leading-relaxed">
+<p class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+                                Independence Square, Port of Spain,<br/>Trinidad, W.I.
+                            </p>
+<p class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="call">call</span>
+                                +1 (868) 625-1234
+                            </p>
+<p class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
+                                corporate@marineconsultants.tt
+                            </p>
+</div>
+<div class="mt-10 pt-8 border-t border-surface-container">
+<button class="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all">
+                                CONTACT ADMINISTRATION <span class="material-symbols-outlined" data-icon="trending_flat">trending_flat</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Service & Quote Inquiry Form -->
+<section class="py-24 bg-surface-container-low px-8">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16">
+<div class="lg:col-span-5 space-y-8">
+<h2 class="text-4xl font-headline font-extrabold text-on-surface leading-tight">
+                        Technical Inquiry &amp; <br/><span class="text-on-tertiary-container">Quote Request</span>
+</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                        Our engineering team provides comprehensive assessments for marine and industrial projects. Please specify your service requirements to receive a formal quotation within 24 hours.
+                    </p>
+<div class="space-y-6">
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="engineering">engineering</span>
+</div>
+<div>
+<p class="font-bold text-primary">Field Support</p>
+<p class="text-sm text-on-surface-variant">On-site technical inspection services</p>
+</div>
+</div>
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+</div>
+<div>
+<p class="font-bold text-primary">Parts Procurement</p>
+<p class="text-sm text-on-surface-variant">Global supply chain access</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<form class="bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-sm space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-outline">Full Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-md focus:ring-2 focus:ring-primary transition-all p-3 text-on-surface" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-outline">Company</label>
+<input class="w-full bg-surface-container-low border-none rounded-md focus:ring-2 focus:ring-primary transition-all p-3 text-on-surface" placeholder="Vessel Management Ltd." type="text"/>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-outline">Email Address</label>
+<input class="w-full bg-surface-container-low border-none rounded-md focus:ring-2 focus:ring-primary transition-all p-3 text-on-surface" placeholder="john@company.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-outline">Service Type</label>
+<select class="w-full bg-surface-container-low border-none rounded-md focus:ring-2 focus:ring-primary transition-all p-3 text-on-surface">
+<option>Marine Supply</option>
+<option>Industrial Engineering</option>
+<option>Field Survey</option>
+<option>General Inquiry</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-outline">Project Details</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-md focus:ring-2 focus:ring-primary transition-all p-3 text-on-surface" placeholder="Describe your requirements..." rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-tertiary-container text-on-tertiary-container font-headline font-extrabold rounded-md shadow-lg shadow-tertiary-container/20 hover:scale-[1.01] transition-transform" type="submit">
+                            SUBMIT INQUIRY
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Section 4: Product Inquiry CTA -->
+<section class="py-20 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="relative rounded-2xl overflow-hidden bg-primary p-8 md:p-16">
+<div class="absolute inset-0 opacity-20">
+<img class="w-full h-full object-cover" data-alt="Close up of heavy duty marine industrial hardware and steel components in a warehouse setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2OBFETxInEezYFhA2AGpiFY0pd9mUddtQRlQnb-NP2e0vPzXVh_rOrRLUPxfNDOpHPo07zmnCmFvJBB8dGtqTQ0KCLWSGsNVC2XtvyKgFz9DakA55vqV3jnxqmHNN5cYVYUTHZApK1zEOT8MOU488lyu_Dmi85muL9ltxMlduWxpEtarLbm62AONP4iQAgwmQLCLWKf03dp91JA_mCE8-EPIZ-4allenJKCITCydm0JkhlxtHkfTNermeNJ_1vCojOvkrQsvky32r"/>
+</div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="space-y-4 text-center md:text-left">
+<h2 class="text-3xl font-headline font-bold text-white">Looking for specific Marine Supply?</h2>
+<p class="text-on-primary-container max-w-xl">Browse our digital catalog of industrial components, navigational tools, and safety equipment ready for regional dispatch.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="px-8 py-4 bg-white text-primary font-headline font-bold rounded-md hover:bg-surface-container-low transition-colors">
+                                View Catalog
+                            </button>
+<button class="px-8 py-4 border border-on-primary-container text-white font-headline font-bold rounded-md hover:bg-white/10 transition-colors">
+                                Parts Request
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-900 w-full pt-16 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-lg font-black text-sky-900 dark:text-sky-100 font-headline">Marine Consultants</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                    Providing world-class marine engineering and industrial solutions across Trinidad &amp; Tobago and the Caribbean since 2024.
+                </p>
+</div>
+<div>
+<h4 class="text-sky-900 dark:text-sky-100 font-bold mb-6 text-sm uppercase tracking-widest">Solutions</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-sky-700 dark:hover:text-sky-300 transition-all duration-300 text-sm" href="#">Marine Supply</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-sky-700 dark:hover:text-sky-300 transition-all duration-300 text-sm" href="#">Industrial Services</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-sky-700 dark:hover:text-sky-300 transition-all duration-300 text-sm" href="#">Regional Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sky-900 dark:text-sky-100 font-bold mb-6 text-sm uppercase tracking-widest">Resources</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-sky-700 dark:hover:text-sky-300 transition-all duration-300 text-sm" href="#">Sitemap</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-sky-700 dark:hover:text-sky-300 transition-all duration-300 text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-sky-700 dark:hover:text-sky-300 transition-all duration-300 text-sm" href="#">News</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sky-900 dark:text-sky-100 font-bold mb-6 text-sm uppercase tracking-widest">Contact Information</h4>
+<div class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<p class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="mail">mail</span> info@marineconsultants.tt
+                    </p>
+<p class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="call">call</span> +1 (868) 634-4567
+                    </p>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 px-8 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-inter text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+                © 2024 Marine Consultants Limited. Trinidad &amp; Tobago.
+            </p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors" data-icon="share">share</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors" data-icon="public">public</span>
+</div>
+</div>
+</footer>
+</body></html>

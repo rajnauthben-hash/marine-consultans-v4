@@ -1,697 +1,270 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Contact &amp; Regional Reach | Marine Consultants</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "surface": "#f4faff",
-              "on-primary-fixed-variant": "#1a4a6e",
-              "on-surface-variant": "#42474d",
-              "on-error": "#ffffff",
-              "inverse-surface": "#263238",
-              "surface-container": "#e3f0f8",
-              "on-secondary": "#ffffff",
-              "inverse-primary": "#a0cbf5",
-              "tertiary-container": "#481c00",
-              "primary": "#001628",
-              "tertiary-fixed-dim": "#ffb68f",
-              "primary-fixed": "#cee5ff",
-              "inverse-on-surface": "#e6f3fb",
-              "secondary-fixed-dim": "#afcbd8",
-              "surface-dim": "#cfdce4",
-              "on-tertiary": "#ffffff",
-              "outline": "#73777e",
-              "on-secondary-fixed-variant": "#304a55",
-              "background": "#f4faff",
-              "on-secondary-fixed": "#021f29",
-              "secondary-container": "#cbe7f5",
-              "primary-fixed-dim": "#a0cbf5",
-              "on-background": "#111d23",
-              "on-primary-fixed": "#001d32",
-              "on-secondary-container": "#4e6874",
-              "surface-bright": "#f4faff",
-              "tertiary-fixed": "#ffdbca",
-              "secondary": "#48626e",
-              "surface-tint": "#366287",
-              "on-primary-container": "#6a94bc",
-              "primary-container": "#002b47",
-              "on-tertiary-fixed": "#331200",
-              "outline-variant": "#c3c7ce",
-              "tertiary": "#280c00",
-              "on-tertiary-container": "#eb6a00",
-              "error": "#ba1a1a",
-              "surface-container-low": "#e9f6fd",
-              "error-container": "#ffdad6",
-              "on-surface": "#111d23",
-              "surface-container-high": "#ddeaf2",
-              "secondary-fixed": "#cbe7f5",
-              "on-error-container": "#93000a",
-              "surface-variant": "#d7e4ec",
-              "on-tertiary-fixed-variant": "#773200",
-              "on-primary": "#ffffff",
-              "surface-container-highest": "#d7e4ec",
-              "surface-container-lowest": "#ffffff"
-            },
-            fontFamily: {
-              "headline": ["Manrope"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-          },
-        },
+        <html class="scroll-smooth" lang="en">
+          <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Contact | Marine Consultants</title>
+            <meta name="description" content="Canonical contact page for the final consolidated Marine Consultants site." />
+            <link rel="icon" href="/favicon.ico" />
+            <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+            <script>tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface": "#f4faff",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#e9f6fd",
+        "surface-container": "#e3f0f8",
+        "surface-container-high": "#ddeaf2",
+        "surface-container-highest": "#d7e4ec",
+        "surface-variant": "#d7e4ec",
+        "background": "#f4faff",
+        "primary": "#001628",
+        "primary-container": "#002b47",
+        "secondary": "#48626e",
+        "secondary-container": "#cbe7f5",
+        "tertiary": "#280c00",
+        "tertiary-container": "#481c00",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#6a94bc",
+        "on-secondary": "#ffffff",
+        "on-secondary-container": "#304a55",
+        "on-surface": "#111d23",
+        "on-surface-variant": "#42474d",
+        "on-tertiary-container": "#eb6a00",
+        "outline": "#73777e",
+        "outline-variant": "#c3c7ce"
+      },
+      fontFamily: {
+        "headline": ["Manrope"],
+        "body": ["Inter"],
+        "label": ["Inter"]
+      },
+      boxShadow: {
+        "soft": "0 18px 48px rgba(17, 29, 35, 0.08)",
+        "hero": "0 30px 70px rgba(0, 22, 40, 0.28)"
       }
-    </script>
-<style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      .glass-nav {
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
-      }
-    </style>
-<link rel="icon" href="/favicon.ico" />
-<style id="codex-runtime-style">
-  [hidden] { display: none !important; }
-  @media (max-width: 640px) {
-    nav > div:first-child,
-    header > nav:first-child {
-      gap: 0.5rem;
-    }
-    nav .text-xl {
-      font-size: 0.95rem !important;
-      line-height: 1.1 !important;
-      max-width: 13rem;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    nav .bg-tertiary-container,
-    nav button.bg-tertiary-container,
-    nav a.bg-tertiary-container {
-      padding: 0.5rem 0.8rem !important;
-      font-size: 0.72rem !important;
-      white-space: nowrap;
     }
   }
-  @media (max-width: 400px) {
-    nav .bg-tertiary-container,
-    nav button.bg-tertiary-container,
-    nav a.bg-tertiary-container {
-      display: none !important;
-    }
-  }
-  .codex-toast {
-    margin-top: 1.5rem;
-    padding: 1rem 1.25rem;
-    border-left: 4px solid #eb6a00;
-    background: rgba(255,255,255,0.92);
-    color: #111d23;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    box-shadow: 0 20px 40px rgba(17, 29, 35, 0.08);
-  }
-  .codex-toast strong {
-    display: block;
-    margin-bottom: 0.25rem;
-    font-family: "Manrope", sans-serif;
-  }
-  .codex-chip-active {
-    background: #001628 !important;
-    color: white !important;
-  }
-  .codex-hidden-card {
-    display: none !important;
-  }
-</style>
-</head>
-<body class="bg-surface font-body text-on-surface">
-<!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm">
-<div class="flex justify-between items-center w-full px-6 py-4 max-w-8xl mx-auto">
-<div class="text-xl font-extrabold tracking-tighter text-blue-900 uppercase">
-                Marine Consultants
+}</script>
+            <link rel="stylesheet" href="/assets/site.css" />
+          </head>
+          <body class="bg-surface text-on-surface">
+            <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-slate-50/85 backdrop-blur-xl">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
+    <a class="text-xl font-extrabold uppercase tracking-tighter text-primary" href="/index.html">Marine Consultants</a>
+    <nav class="hidden xl:flex items-center gap-7">
+      <a class="text-on-surface-variant hover:text-primary text-sm font-bold tracking-tight transition-colors" href="/index.html">Home</a>
+      <a class="text-on-surface-variant hover:text-primary text-sm font-bold tracking-tight transition-colors" href="/about.html">About</a>
+      <div class="menu-group relative">
+        <a class="text-on-surface-variant hover:text-primary text-sm font-bold tracking-tight transition-colors" href="/products.html">Products</a>
+        <div class="menu-panel absolute left-0 top-full mt-3 w-[21rem] rounded-xl border border-outline-variant bg-white p-4 shadow-soft">
+          <a class="mb-3 block rounded-md bg-surface-container-low px-3 py-2 text-sm font-bold text-primary" href="/products.html">Product Catalog Overview</a>
+          <div class="grid gap-1"><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/liferafts-evacuation-systems.html">Liferafts &amp; Evacuation Systems</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/lifeboats-davits-rescue-craft.html">Lifeboats, Davits &amp; Rescue Craft</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/marine-safety-products.html">Marine Safety Products</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/navigation-aids.html">Navigation Aids</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/marine-electronics.html">Marine Electronics</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/chains-ropes-rigging.html">Chains, Ropes &amp; Rigging</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/charts-publications-instruments.html">Charts, Publications &amp; Instruments</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/fire-safety-equipment.html">Fire Safety Equipment</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/engines-marine-power-systems.html">Engines / Marine Power Systems</a></div>
+        </div>
+      </div>
+      <div class="menu-group relative">
+        <a class="text-on-surface-variant hover:text-primary text-sm font-bold tracking-tight transition-colors" href="/services.html">Services</a>
+        <div class="menu-panel absolute left-0 top-full mt-3 w-[21rem] rounded-xl border border-outline-variant bg-white p-4 shadow-soft">
+          <a class="mb-3 block rounded-md bg-surface-container-low px-3 py-2 text-sm font-bold text-primary" href="/services.html">Services Overview</a>
+          <div class="grid gap-1"><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services/inspection-services.html">Inspection Services</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services/maintenance-support.html">Maintenance Support</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services/certification-support.html">Certification Support</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services/safety-equipment-servicing.html">Safety Equipment Servicing</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services/procurement-supply-support.html">Procurement / Supply Support</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services/technical-assistance.html">Technical Assistance</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services/support-request.html">Support Request / Service Inquiry</a></div>
+        </div>
+      </div>
+      <a class="text-on-surface-variant hover:text-primary text-sm font-bold tracking-tight transition-colors" href="/resources.html">Resources</a>
+      <a class="text-on-surface-variant hover:text-primary text-sm font-bold tracking-tight transition-colors" href="/news.html">News</a>
+      <a class="text-primary border-b-2 border-on-tertiary-container pb-1 text-sm font-bold tracking-tight transition-colors" href="/contact.html">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a class="hidden rounded-md bg-primary px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-primary-container md:inline-flex" href="/request-quote.html">Request a Quote</a>
+      <button aria-expanded="false" aria-label="Toggle mobile menu" class="inline-flex h-11 w-11 items-center justify-center rounded-md border border-outline-variant text-primary xl:hidden" data-mobile-toggle type="button">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu border-t border-outline-variant bg-white xl:hidden" data-mobile-menu hidden>
+    <div class="mx-auto max-w-7xl space-y-6 px-6 py-5">
+      <div class="grid gap-1">
+        <a class="block rounded-md px-3 py-2 text-sm font-semibold text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/index.html">Home</a><a class="block rounded-md px-3 py-2 text-sm font-semibold text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/about.html">About</a><a class="block rounded-md px-3 py-2 text-sm font-semibold text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/resources.html">Resources</a><a class="block rounded-md px-3 py-2 text-sm font-semibold text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/news.html">News</a><a class="block rounded-md px-3 py-2 text-sm font-semibold text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/contact.html">Contact</a>
+        <a class="block rounded-md px-3 py-2 text-sm font-semibold text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/products.html">Products</a>
+        <a class="block rounded-md px-3 py-2 text-sm font-semibold text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services.html">Services</a>
+      </div>
+      <div>
+        <div class="mb-2 px-3 text-[11px] font-bold uppercase tracking-[0.18em] text-secondary">Product Categories</div>
+        <div class="grid gap-1"><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/liferafts-evacuation-systems.html">Liferafts &amp; Evacuation Systems</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/lifeboats-davits-rescue-craft.html">Lifeboats, Davits &amp; Rescue Craft</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/marine-safety-products.html">Marine Safety Products</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/navigation-aids.html">Navigation Aids</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/marine-electronics.html">Marine Electronics</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/chains-ropes-rigging.html">Chains, Ropes &amp; Rigging</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/charts-publications-instruments.html">Charts, Publications &amp; Instruments</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/fire-safety-equipment.html">Fire Safety Equipment</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/categories/engines-marine-power-systems.html">Engines / Marine Power Systems</a></div>
+      </div>
+      <div>
+        <div class="mb-2 px-3 text-[11px] font-bold uppercase tracking-[0.18em] text-secondary">Service Links</div>
+        <div class="grid gap-1"><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services/inspection-services.html">Inspection Services</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services/maintenance-support.html">Maintenance Support</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services/certification-support.html">Certification Support</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services/safety-equipment-servicing.html">Safety Equipment Servicing</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services/procurement-supply-support.html">Procurement / Supply Support</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services/technical-assistance.html">Technical Assistance</a><a class="block rounded-md px-3 py-2 text-sm text-on-surface-variant hover:bg-surface-container-low hover:text-primary" href="/services/support-request.html">Support Request / Service Inquiry</a></div>
+      </div>
+      <a class="inline-flex w-full items-center justify-center rounded-md bg-primary px-5 py-3 text-sm font-bold text-white" href="/request-quote.html">Request a Quote</a>
+    </div>
+  </div>
+</header>
+            <main class="pt-20"><section class="hero-gradient relative overflow-hidden py-24 md:py-32">
+  <div class="absolute inset-0 opacity-25"><img alt="" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbE41DlK_J0jC1AAoYLvcgGSnhKOdEzCQjaZyq00tSbVrt1aKGuajEA7seEQnNxrghA8VlnoDtReUhpH7Nr28CNghY7n5r75i_WyL1HFkExiAFM1AQ-zMwQN02Z8St1VNc9DIuxmDljuOu_qqli9eEKbv4xH6O1y11lLyvjcANZshyUvzgLbhhKtSsxDjigg6MjD-iyHoJgJkHLeDhtxy-LeRH_QAks0zUTcGRQ-hUDVePpvZ4j9ZqenA9JPB6tBhgDHeeUsD0FRtX" /></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent"></div>
+  <div class="relative z-10 mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-12">
+    <div class="lg:col-span-7">
+      <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-1.5">
+        <span class="material-symbols-outlined text-sm text-on-tertiary-container">location_on</span>
+        <span class="text-xs font-bold uppercase tracking-[0.22em] text-white">Regional contact route</span>
+      </div>
+      <h1 class="mb-6 text-5xl font-extrabold leading-[1.05] tracking-tight text-white md:text-7xl">Contact Marine Consultants</h1>
+      <p class="max-w-3xl text-lg leading-relaxed text-on-primary-container md:text-xl">The contact page now uses simple regional framing, explicit placeholders for unverified details, and clean links into general, product, service, and quote inquiries.</p>
+      <div class="mt-10 flex flex-wrap gap-4"><a class="inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-bold tracking-wide transition-all bg-tertiary-container text-on-tertiary-container hover:brightness-110" href="/inquiries/product-inquiry.html" >Product Inquiry</a><a class="inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-bold tracking-wide transition-all border border-white/20 text-white hover:bg-white/10" href="/inquiries/service-inquiry.html" >Service Inquiry</a></div>
+    </div>
+    <div class="lg:col-span-5">
+      <div class="panel-glow rounded-2xl border border-white/10 bg-white/8 p-7 backdrop-blur-md">
+        <div class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-on-tertiary-container">Contact Notes</div>
+        <div class="flex items-center justify-between gap-4 border-b border-white/10 py-3 last:border-b-0"><span class="text-xs font-bold uppercase tracking-[0.18em] text-on-primary-container">Region</span><span class="text-right text-sm font-semibold text-white">Trinidad &amp; Tobago / Caribbean</span></div><div class="flex items-center justify-between gap-4 border-b border-white/10 py-3 last:border-b-0"><span class="text-xs font-bold uppercase tracking-[0.18em] text-on-primary-container">Details</span><span class="text-right text-sm font-semibold text-white">Contact Details Placeholder</span></div><div class="flex items-center justify-between gap-4 border-b border-white/10 py-3 last:border-b-0"><span class="text-xs font-bold uppercase tracking-[0.18em] text-on-primary-container">Quote Route</span><span class="text-right text-sm font-semibold text-white">Request a Quote page</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-surface px-6 py-24">
+                  <div class="mx-auto max-w-7xl">
+                    <div class="max-w-3xl mb-12"><div class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-secondary">Contact</div><h2 class="mb-4 text-3xl font-extrabold tracking-tight text-primary md:text-4xl">Editable Contact Details</h2><p class="text-base leading-relaxed text-on-surface-variant md:text-lg">The exported contact variants included invented phone numbers, emails, and office listings. The final page keeps the layout but marks those items as placeholders until the business confirms them.</p></div>
+                    <div class="grid gap-6 md:grid-cols-3"><div class="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-7 shadow-soft">
+  <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-surface-container text-primary">
+    <span class="material-symbols-outlined text-2xl">location_on</span>
+  </div>
+  <h3 class="mb-3 text-xl font-bold text-primary">Regional Base</h3>
+  <p class="text-sm leading-relaxed text-on-surface-variant">Contact Details Placeholder</p>
+</div><div class="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-7 shadow-soft">
+  <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-surface-container text-primary">
+    <span class="material-symbols-outlined text-2xl">mail</span>
+  </div>
+  <h3 class="mb-3 text-xl font-bold text-primary">Commercial Email</h3>
+  <p class="text-sm leading-relaxed text-on-surface-variant">Contact Details Placeholder</p>
+</div><div class="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-7 shadow-soft">
+  <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-surface-container text-primary">
+    <span class="material-symbols-outlined text-2xl">call</span>
+  </div>
+  <h3 class="mb-3 text-xl font-bold text-primary">Telephone</h3>
+  <p class="text-sm leading-relaxed text-on-surface-variant">Contact Details Placeholder</p>
+</div></div>
+                  </div>
+                </section>
+<section class="bg-surface px-6 py-24">
+          <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr,1.1fr]">
+            <div class="rounded-2xl border border-outline-variant/40 bg-primary p-8 text-white shadow-hero">
+              <div class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-on-tertiary-container">Inquiry Form</div>
+              <h2 class="mb-4 text-3xl font-extrabold tracking-tight">General Inquiry</h2>
+              <p class="text-sm leading-relaxed text-on-primary-container">Use the general inquiry form when the request does not fit neatly into product or service routing.</p>
+              <div class="mt-8 space-y-4 text-sm text-on-primary-container">
+                <div><strong class="text-white">Contact Details:</strong> Contact Details Placeholder</div>
+                <div><strong class="text-white">Regional Coverage:</strong> Trinidad & Tobago / Caribbean</div>
+                <div><strong class="text-white">Documentation:</strong> Compliance Information Placeholder</div>
+              </div>
             </div>
-<div class="hidden md:flex items-center space-x-8">
-<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">Home</a>
-<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">About</a>
-<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">Products</a>
-<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">Services</a>
-<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">Industries</a>
-<a class="text-slate-600 hover:text-blue-900 transition-colors text-sm font-medium" href="#">News</a>
-</div>
-<div class="flex items-center space-x-4">
-<button class="p-2 text-slate-600 hover:bg-slate-100/50 rounded-full transition-all">
-<span class="material-symbols-outlined">search</span>
-</button>
-<a class="text-blue-900 font-bold border-b-2 border-orange-600 pb-1 text-sm tracking-tight" href="#contact">Contact</a>
-</div>
-</div>
-</nav>
-<main class="pt-20">
-<!-- Contact Hero Section -->
-<section class="relative min-h-[614px] flex items-center overflow-hidden bg-primary-container">
-<div class="absolute inset-0 opacity-40">
-<img alt="" class="w-full h-full object-cover" data-alt="dramatic aerial view of a large container ship navigating deep blue ocean waters with white wake patterns and soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8CO6Onw8Ivp9ZxfmU2ljIGeXRUpq3UH0X6sgFKrKy7GRPs0yRdjcgfMrtwupNOkuZJvD2-h1cPJD9q1iO1x2zcpVjscAaTAtlr0pAdZ9wde_zH9BP-BphOg2TGOdtTp16Zaa78geDxdBemFX1a6iGzZUfpochx6oExwPVOYWDMJEOaLe-2ZxLgdmnd8lLokMcahTyV1w2lV9hZ_p-GzPagk2nF3eAgQow_EDm0wKaKE90b_pbXN_wchYz5uh8CPggTlkB8_wkySdi"/>
-</div>
-<div class="absolute inset-0 bg-gradient-to-br from-primary via-primary/80 to-transparent"></div>
-<div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-<div class="lg:col-span-7">
-<div class="inline-block px-3 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] uppercase tracking-widest font-bold mb-6 rounded-sm">Global Operations</div>
-<h1 class="text-5xl md:text-7xl font-headline font-extrabold text-white tracking-tight mb-8 leading-[1.1]">
-                        Precision Support <br/> Across Every <span class="text-on-primary-container">Latitude.</span>
-</h1>
-<p class="text-lg text-slate-300 max-w-xl mb-10 leading-relaxed font-light">
-                        Connecting maritime expertise with industrial requirements. Our global network ensures rapid response and technical excellence in every major shipping corridor.
-                    </p>
-<div class="flex flex-wrap gap-4">
-<a class="bg-tertiary-container text-on-tertiary-container px-8 py-4 font-bold text-sm tracking-wide rounded-md hover:bg-opacity-90 transition-all flex items-center gap-2" href="#form">
-                            SUBMIT INQUIRY <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-<a class="border border-white/20 text-white px-8 py-4 font-bold text-sm tracking-wide rounded-md hover:bg-white/10 transition-all" href="#locations">
-                            VIEW REGIONAL HUBS
-                        </a>
-</div>
-</div>
-<!-- Technical Inset -->
-<div class="hidden lg:block lg:col-span-5">
-<div class="bg-surface-container-high p-8 rounded-lg border-l-4 border-orange-600 shadow-2xl">
-<div class="flex items-center justify-between mb-6">
-<span class="text-[10px] font-bold uppercase tracking-widest text-secondary">System Status</span>
-<span class="flex items-center gap-2 text-[10px] font-bold text-green-600">
-<span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> FULLY OPERATIONAL
-                            </span>
-</div>
-<div class="space-y-4">
-<div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
-<span class="text-xs text-on-surface-variant uppercase tracking-tighter">Response Time</span>
-<span class="font-headline font-bold text-primary">&lt; 12 Hours</span>
-</div>
-<div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
-<span class="text-xs text-on-surface-variant uppercase tracking-tighter">Global Hubs</span>
-<span class="font-headline font-bold text-primary">14 Locations</span>
-</div>
-<div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
-<span class="text-xs text-on-surface-variant uppercase tracking-tighter">Technical Staff</span>
-<span class="font-headline font-bold text-primary">450+ Certified</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Essential Contacts Grid -->
-<section class="py-24 max-w-7xl mx-auto px-6">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Info -->
-<div class="bg-surface-container-lowest p-10 group hover:bg-surface-bright transition-all duration-300">
-<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center mb-6 group-hover:bg-primary-container group-hover:text-white transition-colors">
-<span class="material-symbols-outlined">mail</span>
-</div>
-<h3 class="font-headline font-bold text-xl mb-2 text-primary">Technical Inquiries</h3>
-<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">For project specifications, technical documentation, and general support.</p>
-<a class="text-orange-600 font-bold text-sm hover:underline decoration-2 underline-offset-4" href="mailto:info@marineconsultants.com">info@marineconsultants.com</a>
-</div>
-<!-- Phone -->
-<div class="bg-surface-container-lowest p-10 group hover:bg-surface-bright transition-all duration-300">
-<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center mb-6 group-hover:bg-primary-container group-hover:text-white transition-colors">
-<span class="material-symbols-outlined">call</span>
-</div>
-<h3 class="font-headline font-bold text-xl mb-2 text-primary">Emergency Support</h3>
-<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">24/7 technical hotline for urgent operational maritime assistance.</p>
-<a class="text-orange-600 font-bold text-sm hover:underline decoration-2 underline-offset-4" href="tel:+10000000000">+1 (000) 000-0000</a>
-</div>
-<!-- Headquarters -->
-<div class="bg-surface-container-lowest p-10 group hover:bg-surface-bright transition-all duration-300">
-<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center mb-6 group-hover:bg-primary-container group-hover:text-white transition-colors">
-<span class="material-symbols-outlined">location_on</span>
-</div>
-<h3 class="font-headline font-bold text-xl mb-2 text-primary">Global Headquarters</h3>
-<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">88 Maritime Way, North Harbor District, Singapore 018989</p>
-<a class="text-orange-600 font-bold text-sm hover:underline decoration-2 underline-offset-4 flex items-center gap-1" href="#">
-                        VIEW ON MAP <span class="material-symbols-outlined text-[14px]">open_in_new</span>
-</a>
-</div>
-</div>
-</section>
-<!-- Regional Reach: Map and List -->
-<section class="bg-surface-container-low py-24" id="locations">
-<div class="max-w-7xl mx-auto px-6">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-<div class="max-w-2xl">
-<div class="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary mb-4">Regional Reach</div>
-<h2 class="text-4xl font-headline font-extrabold text-primary mb-6">Strategic Global Hubs</h2>
-<p class="text-on-surface-variant leading-relaxed">Our physical presence in key trade hubs ensures that no vessel or industrial site is beyond our rapid technical reach.</p>
-</div>
-<div class="flex gap-4">
-<button class="bg-surface-container-lowest p-4 text-primary hover:bg-primary hover:text-white transition-all">
-<span class="material-symbols-outlined">west</span>
-</button>
-<button class="bg-surface-container-lowest p-4 text-primary hover:bg-primary hover:text-white transition-all">
-<span class="material-symbols-outlined">east</span>
-</button>
-</div>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-<!-- Map Visualization -->
-<div class="lg:col-span-2 relative aspect-video bg-surface-container-high overflow-hidden shadow-inner group">
-<img alt="Global map showing strategic maritime routes" class="w-full h-full object-cover opacity-80" data-alt="abstract stylized world map with glowing dots on major coastal cities and thin lines connecting them like nautical charts" data-location="Global" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5vifSEf7NUpfeanBiVTrVdPSAo--9RFrs-WqOGOFRlmzPtTZXgWg6U29OV77x9FWdtSlkRz1muzyXNxhWLxsGfjKEUAZtFqdwWaaYYW6G7QyEvvmWsSMHYkHU3_EUXRMpbCFRdk6BEBG78ZA7DUQ1TlDiRa162ePsr5WCW2P_bxpwMc86YjtXOkRhHg0LNoDyRKEINwOB5u0QSHzBtGZh4S_0D3ptCejb6-E6LQGCz83EziwDr9V4aNgoIEROw4wj-B9Ulom9xQIA"/>
-<div class="absolute inset-0 bg-primary/10"></div>
-<!-- Interactive Pins (Visual placeholders) -->
-<div class="absolute top-[30%] left-[20%] w-3 h-3 bg-orange-600 rounded-full border-4 border-white shadow-lg animate-pulse"></div>
-<div class="absolute top-[45%] left-[55%] w-3 h-3 bg-orange-600 rounded-full border-4 border-white shadow-lg"></div>
-<div class="absolute top-[60%] left-[80%] w-3 h-3 bg-orange-600 rounded-full border-4 border-white shadow-lg"></div>
-</div>
-<!-- Region List -->
-<div class="space-y-4">
-<div class="bg-surface-container-lowest p-6 border-l-4 border-primary">
-<h4 class="font-headline font-bold text-primary mb-1">Asia Pacific Hub</h4>
-<p class="text-xs text-on-surface-variant mb-4 uppercase tracking-widest font-bold">Singapore / Tokyo / Sydney</p>
-<p class="text-sm text-on-surface-variant mb-4 italic">Primary operations center for dredging and port infrastructure.</p>
-<button class="text-[10px] font-bold text-orange-600 uppercase tracking-widest flex items-center gap-2">Contact Hub <span class="material-symbols-outlined text-xs">chevron_right</span></button>
-</div>
-<div class="bg-white/40 p-6 border-l-4 border-outline-variant hover:bg-surface-container-lowest hover:border-primary transition-all cursor-pointer">
-<h4 class="font-headline font-bold text-primary mb-1">European Corridor</h4>
-<p class="text-xs text-on-surface-variant mb-4 uppercase tracking-widest font-bold">Rotterdam / Hamburg / Oslo</p>
-<button class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest flex items-center gap-2">Contact Hub <span class="material-symbols-outlined text-xs">chevron_right</span></button>
-</div>
-<div class="bg-white/40 p-6 border-l-4 border-outline-variant hover:bg-surface-container-lowest hover:border-primary transition-all cursor-pointer">
-<h4 class="font-headline font-bold text-primary mb-1">Americas Division</h4>
-<p class="text-xs text-on-surface-variant mb-4 uppercase tracking-widest font-bold">Houston / Panama / Vancouver</p>
-<button class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest flex items-center gap-2">Contact Hub <span class="material-symbols-outlined text-xs">chevron_right</span></button>
-</div>
-<div class="bg-white/40 p-6 border-l-4 border-outline-variant hover:bg-surface-container-lowest hover:border-primary transition-all cursor-pointer">
-<h4 class="font-headline font-bold text-primary mb-1">ME &amp; Africa Hub</h4>
-<p class="text-xs text-on-surface-variant mb-4 uppercase tracking-widest font-bold">Dubai / Cape Town / Lagos</p>
-<button class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest flex items-center gap-2">Contact Hub <span class="material-symbols-outlined text-xs">chevron_right</span></button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Form and Inquiry Section -->
-<section class="py-24 max-w-7xl mx-auto px-6" id="form">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
-<div>
-<h2 class="text-4xl font-headline font-extrabold text-primary mb-8">Technical Project Inquiry</h2>
-<p class="text-on-surface-variant mb-12 leading-relaxed text-lg font-light">
-                        Provide us with the details of your marine engineering requirements or industrial consultation needs. Our expert team will review and respond with a preliminary assessment.
-                    </p>
-<div class="space-y-8">
-<div class="flex gap-6 items-start">
-<div class="bg-surface-container text-primary p-3">
-<span class="material-symbols-outlined">verified</span>
-</div>
-<div>
-<h4 class="font-headline font-bold text-primary mb-2">Class-Approved Consultation</h4>
-<p class="text-sm text-on-surface-variant">All technical advice adheres to global maritime classification society standards.</p>
-</div>
-</div>
-<div class="flex gap-6 items-start">
-<div class="bg-surface-container text-primary p-3">
-<span class="material-symbols-outlined">schedule</span>
-</div>
-<div>
-<h4 class="font-headline font-bold text-primary mb-2">Priority Response</h4>
-<p class="text-sm text-on-surface-variant">Contracted partners receive a dedicated account manager and 4-hour response SLA.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="bg-surface-container-low p-8 md:p-12 relative">
-<div class="absolute -top-4 -right-4 w-24 h-24 bg-tertiary-container/5 -z-10"></div>
-<form class="space-y-6">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="space-y-2">
-<label class="text-[10px] font-bold uppercase tracking-widest text-outline">Full Name</label>
-<input class="w-full bg-surface-container-lowest border-none py-4 px-6 focus:ring-0 focus:border-b-2 focus:border-primary transition-all placeholder:text-slate-300" placeholder="Johnathan Doe" type="text"/>
+            <form class="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-8 shadow-soft" data-demo-form data-success-body="This local build confirms the form behavior and leaves final delivery routing ready for backend integration." data-success-title="General inquiry captured">
+              <div class="grid gap-6 md:grid-cols-2"><div class="space-y-2">
+  <label class="block text-[11px] font-bold uppercase tracking-[0.18em] text-secondary">Full Name</label>
+  <input class="w-full rounded-xl border-none bg-surface-container-low px-4 py-3 text-sm text-on-surface shadow-soft focus:ring-2 focus:ring-primary-container" type="text" placeholder="Name" required name="full_name" />
 </div>
 <div class="space-y-2">
-<label class="text-[10px] font-bold uppercase tracking-widest text-outline">Email Address</label>
-<input class="w-full bg-surface-container-lowest border-none py-4 px-6 focus:ring-0 focus:border-b-2 focus:border-primary transition-all placeholder:text-slate-300" placeholder="john@company.com" type="email"/>
-</div>
-</div>
-<div class="space-y-2">
-<label class="text-[10px] font-bold uppercase tracking-widest text-outline">Inquiry Type</label>
-<select class="w-full bg-surface-container-lowest border-none py-4 px-6 focus:ring-0 focus:border-b-2 focus:border-primary transition-all text-on-surface-variant">
-<option>Structural Engineering</option>
-<option>Logistics &amp; Supply Chain</option>
-<option>Dredging &amp; Reclamation</option>
-<option>Technical Maintenance</option>
-<option>General Inquiry</option>
-</select>
+  <label class="block text-[11px] font-bold uppercase tracking-[0.18em] text-secondary">Company</label>
+  <input class="w-full rounded-xl border-none bg-surface-container-low px-4 py-3 text-sm text-on-surface shadow-soft focus:ring-2 focus:ring-primary-container" type="text" placeholder="Company name" required name="company" />
 </div>
 <div class="space-y-2">
-<label class="text-[10px] font-bold uppercase tracking-widest text-outline">Message Details</label>
-<textarea class="w-full bg-surface-container-lowest border-none py-4 px-6 focus:ring-0 focus:border-b-2 focus:border-primary transition-all placeholder:text-slate-300" placeholder="Briefly describe your project requirements..." rows="4"></textarea>
+  <label class="block text-[11px] font-bold uppercase tracking-[0.18em] text-secondary">Email</label>
+  <input class="w-full rounded-xl border-none bg-surface-container-low px-4 py-3 text-sm text-on-surface shadow-soft focus:ring-2 focus:ring-primary-container" type="email" placeholder="Email address" required name="email" />
 </div>
-<button class="w-full bg-primary text-white font-bold py-5 tracking-[0.1em] hover:bg-primary-container transition-all flex items-center justify-center gap-2 group" type="submit">
-                            SEND TECHNICAL BRIEF <span class="material-symbols-outlined text-sm group-hover:translate-x-2 transition-transform">send</span>
-</button>
-</form>
+<div class="space-y-2">
+  <label class="block text-[11px] font-bold uppercase tracking-[0.18em] text-secondary">Phone</label>
+  <input class="w-full rounded-xl border-none bg-surface-container-low px-4 py-3 text-sm text-on-surface shadow-soft focus:ring-2 focus:ring-primary-container" type="tel" placeholder="Contact number" name="phone" />
 </div>
+<div class="space-y-2">
+  <label class="block text-[11px] font-bold uppercase tracking-[0.18em] text-secondary">Category</label>
+  <select class="w-full rounded-xl border-none bg-surface-container-low px-4 py-3 text-sm text-on-surface shadow-soft focus:ring-2 focus:ring-primary-container" required name="category"><option value="">Select one</option><option>General Contact</option><option>Product Inquiry</option><option>Service Inquiry</option><option>Request a Quote</option></select>
 </div>
-</section>
-<!-- Quick CTA Grid -->
-<section class="bg-primary py-12">
-<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="flex items-center justify-between p-6 bg-primary-container group cursor-pointer hover:bg-slate-900 transition-all">
-<div class="space-y-1">
-<span class="text-[10px] font-bold text-on-primary-container tracking-widest">ESTIMATION</span>
-<h4 class="text-white font-bold">Request a Quote</h4>
-</div>
-<span class="material-symbols-outlined text-on-primary-container group-hover:text-white">request_quote</span>
-</div>
-<div class="flex items-center justify-between p-6 bg-primary-container group cursor-pointer hover:bg-slate-900 transition-all">
-<div class="space-y-1">
-<span class="text-[10px] font-bold text-on-primary-container tracking-widest">MAINTENANCE</span>
-<h4 class="text-white font-bold">Service Support</h4>
-</div>
-<span class="material-symbols-outlined text-on-primary-container group-hover:text-white">handyman</span>
-</div>
-<div class="flex items-center justify-between p-6 bg-primary-container group cursor-pointer hover:bg-slate-900 transition-all">
-<div class="space-y-1">
-<span class="text-[10px] font-bold text-on-primary-container tracking-widest">COVERAGE</span>
-<h4 class="text-white font-bold">Service Reach</h4>
-</div>
-<span class="material-symbols-outlined text-on-primary-container group-hover:text-white">public</span>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-blue-950 dark:bg-slate-950 text-white pt-16 pb-8 border-t border-blue-900">
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 px-6 max-w-8xl mx-auto mb-16">
-<div class="col-span-2 lg:col-span-1">
-<div class="text-2xl font-black text-white mb-6">Marine Consultants</div>
-<p class="text-slate-400 text-sm leading-relaxed max-w-xs">Global leaders in precision maritime engineering and industrial solutions for over 25 years.</p>
-</div>
-<div>
-<h5 class="text-[10px] uppercase tracking-widest font-bold mb-6">Navigation</h5>
-<ul class="space-y-3">
-<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="#">Home</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="#">About</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="#">Products</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="#">Services</a></li>
-</ul>
-</div>
-<div>
-<h5 class="text-[10px] uppercase tracking-widest font-bold mb-6">Industries</h5>
-<ul class="space-y-3">
-<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="#">Oil &amp; Gas</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="#">Shipping</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="#">Port Infrastructure</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="#">Renewables</a></li>
-</ul>
-</div>
-<div>
-<h5 class="text-[10px] uppercase tracking-widest font-bold mb-6">Resources</h5>
-<ul class="space-y-3">
-<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="#">News</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="#">Case Studies</a></li>
-<li><a class="text-slate-400 hover:text-white transition-colors text-sm hover:translate-x-1 inline-block transition-transform duration-200" href="#">Support</a></li>
-<li><a class="text-orange-500 font-bold text-sm" href="#">Contact</a></li>
-</ul>
-</div>
-<div class="col-span-2 md:col-span-1">
-<h5 class="text-[10px] uppercase tracking-widest font-bold mb-6">Newsletter</h5>
-<div class="flex gap-2">
-<input class="bg-blue-900/30 border-none text-white text-xs py-2 px-3 focus:ring-1 focus:ring-orange-500 rounded-sm w-full" placeholder="Email" type="email"/>
-<button class="bg-orange-600 p-2 text-white">
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-<div class="border-t border-blue-900 pt-8 px-6 max-w-8xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="text-[10px] uppercase tracking-widest text-slate-500">© 2024 Marine Consultants Limited. Precision Engineering.</p>
-<div class="flex gap-6">
-<a class="text-[10px] uppercase tracking-widest text-slate-500 hover:text-white transition-colors" href="#">Privacy Policy</a>
-<a class="text-[10px] uppercase tracking-widest text-slate-500 hover:text-white transition-colors" href="#">Terms of Service</a>
-</div>
-</div>
+<div class="space-y-2">
+  <label class="block text-[11px] font-bold uppercase tracking-[0.18em] text-secondary">Project / Vessel Context</label>
+  <textarea class="min-h-[10rem] w-full rounded-xl border-none bg-surface-container-low px-4 py-3 text-sm text-on-surface shadow-soft focus:ring-2 focus:ring-primary-container" placeholder="Share the vessel, product, service scope, location, and any schedule notes." required name="message"></textarea>
+</div></div>
+              <div class="mt-8"><button class="rounded-md bg-primary px-6 py-3 text-sm font-bold text-white hover:bg-primary-container" type="submit">Submit Inquiry</button></div>
+            </form>
+          </div>
+        </section>
+<section class="bg-surface px-6 py-24">
+          <div class="mx-auto max-w-7xl">
+            <div class="mx-auto max-w-3xl text-center mb-12"><div class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-secondary">Inquiry Paths</div><h2 class="mb-4 text-3xl font-extrabold tracking-tight text-primary md:text-4xl">Choose the Right Contact Route</h2><p class="text-base leading-relaxed text-on-surface-variant md:text-lg">The final build keeps the B2B inquiry flow clear so product, service, and quote requests do not compete with each other.</p></div>
+            <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4"><a class="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-6 shadow-soft transition-all hover:-translate-y-1 hover:shadow-xl" href="/contact.html">
+  <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-surface-container text-primary">
+    <span class="material-symbols-outlined text-2xl">mail</span>
+  </div>
+  <h3 class="mb-3 text-xl font-bold text-primary">General Contact</h3>
+  <p class="text-sm leading-relaxed text-on-surface-variant">Share a general company, project, or procurement question with the regional team.</p>
+</a><a class="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-6 shadow-soft transition-all hover:-translate-y-1 hover:shadow-xl" href="/inquiries/product-inquiry.html">
+  <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-surface-container text-primary">
+    <span class="material-symbols-outlined text-2xl">inventory</span>
+  </div>
+  <h3 class="mb-3 text-xl font-bold text-primary">Product Inquiry</h3>
+  <p class="text-sm leading-relaxed text-on-surface-variant">Use this route when you already know the product category or need technical sourcing support.</p>
+</a><a class="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-6 shadow-soft transition-all hover:-translate-y-1 hover:shadow-xl" href="/inquiries/service-inquiry.html">
+  <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-surface-container text-primary">
+    <span class="material-symbols-outlined text-2xl">support_agent</span>
+  </div>
+  <h3 class="mb-3 text-xl font-bold text-primary">Service Inquiry</h3>
+  <p class="text-sm leading-relaxed text-on-surface-variant">Use this route for inspections, maintenance, servicing, or open technical support needs.</p>
+</a><a class="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-6 shadow-soft transition-all hover:-translate-y-1 hover:shadow-xl" href="/request-quote.html">
+  <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-surface-container text-primary">
+    <span class="material-symbols-outlined text-2xl">description</span>
+  </div>
+  <h3 class="mb-3 text-xl font-bold text-primary">Request a Quote</h3>
+  <p class="text-sm leading-relaxed text-on-surface-variant">Use the main quote form for product, service, or bundled support requests.</p>
+</a></div>
+          </div>
+        </section></main>
+            <footer class="mt-20 border-t border-primary-container bg-primary text-white">
+  <div class="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-2 xl:grid-cols-5">
+    <div class="xl:col-span-2">
+      <div class="mb-4 text-xl font-extrabold uppercase tracking-tighter">Marine Consultants</div>
+      <p class="max-w-lg text-sm leading-relaxed text-on-primary-container">
+        Trinidad & Tobago and regional marine supply, service support, inspections, maintenance coordination, and B2B inquiry management.
+      </p>
+      <div class="mt-6 space-y-2 text-sm text-on-primary-container">
+        <div><strong class="text-white">Regional Base:</strong> Trinidad & Tobago / Caribbean support</div>
+        <div><strong class="text-white">Contact Details:</strong> Contact Details Placeholder</div>
+        <div><strong class="text-white">Compliance Notes:</strong> Compliance Information Placeholder</div>
+      </div>
+    </div>
+    <div class="space-y-3 text-sm">
+      <div class="text-xs font-bold uppercase tracking-[0.18em] text-on-tertiary-container">Site</div>
+      <a class="text-on-primary-container hover:text-white transition-colors" href="/index.html">Home</a>
+      <a class="text-on-primary-container hover:text-white transition-colors" href="/about.html">About</a>
+      <a class="text-on-primary-container hover:text-white transition-colors" href="/products.html">Products</a>
+      <a class="text-on-primary-container hover:text-white transition-colors" href="/services.html">Services</a>
+      <a class="text-on-primary-container hover:text-white transition-colors" href="/resources.html">Catalogue / Resources</a>
+      <a class="text-on-primary-container hover:text-white transition-colors" href="/news.html">News / Updates</a>
+      <a class="text-on-primary-container hover:text-white transition-colors" href="/contact.html">Contact</a>
+      <a class="text-on-primary-container hover:text-white transition-colors" href="/request-quote.html">Request a Quote</a>
+    </div>
+    <div class="space-y-3 text-sm">
+      <div class="text-xs font-bold uppercase tracking-[0.18em] text-on-tertiary-container">Products</div>
+      <a class="text-on-primary-container hover:text-white transition-colors" href="/categories/liferafts-evacuation-systems.html">Liferafts &amp; Evacuation Systems</a><a class="text-on-primary-container hover:text-white transition-colors" href="/categories/lifeboats-davits-rescue-craft.html">Lifeboats, Davits &amp; Rescue Craft</a><a class="text-on-primary-container hover:text-white transition-colors" href="/categories/marine-safety-products.html">Marine Safety Products</a><a class="text-on-primary-container hover:text-white transition-colors" href="/categories/navigation-aids.html">Navigation Aids</a><a class="text-on-primary-container hover:text-white transition-colors" href="/categories/marine-electronics.html">Marine Electronics</a><a class="text-on-primary-container hover:text-white transition-colors" href="/categories/chains-ropes-rigging.html">Chains, Ropes &amp; Rigging</a><a class="text-on-primary-container hover:text-white transition-colors" href="/categories/charts-publications-instruments.html">Charts, Publications &amp; Instruments</a><a class="text-on-primary-container hover:text-white transition-colors" href="/categories/fire-safety-equipment.html">Fire Safety Equipment</a><a class="text-on-primary-container hover:text-white transition-colors" href="/categories/engines-marine-power-systems.html">Engines / Marine Power Systems</a>
+    </div>
+    <div class="space-y-3 text-sm">
+      <div class="text-xs font-bold uppercase tracking-[0.18em] text-on-tertiary-container">Services</div>
+      <a class="text-on-primary-container hover:text-white transition-colors" href="/services/inspection-services.html">Inspection Services</a><a class="text-on-primary-container hover:text-white transition-colors" href="/services/maintenance-support.html">Maintenance Support</a><a class="text-on-primary-container hover:text-white transition-colors" href="/services/certification-support.html">Certification Support</a><a class="text-on-primary-container hover:text-white transition-colors" href="/services/safety-equipment-servicing.html">Safety Equipment Servicing</a><a class="text-on-primary-container hover:text-white transition-colors" href="/services/procurement-supply-support.html">Procurement / Supply Support</a><a class="text-on-primary-container hover:text-white transition-colors" href="/services/technical-assistance.html">Technical Assistance</a><a class="text-on-primary-container hover:text-white transition-colors" href="/services/support-request.html">Support Request / Service Inquiry</a>
+      <a class="text-on-primary-container hover:text-white transition-colors" href="/inquiries/product-inquiry.html">Product Inquiry</a>
+      <a class="text-on-primary-container hover:text-white transition-colors" href="/inquiries/service-inquiry.html">Service Inquiry</a>
+    </div>
+  </div>
+  <div class="border-t border-primary-container/80">
+    <div class="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-5 text-xs text-on-primary-container md:flex-row md:items-center md:justify-between">
+      <div>Final consolidated build generated from selected Stitch references and cleaned of duplicate active page variants.</div>
+      <div class="flex gap-4">
+        <a class="hover:text-white transition-colors" href="/privacy.html">Privacy</a>
+        <a class="hover:text-white transition-colors" href="/terms.html">Terms</a>
+      </div>
+    </div>
+  </div>
 </footer>
-<script id="codex-runtime-script">
-(() => {
-  const routes = {"home": "/index.html", "about": "/about.html", "products": "/products.html", "services": "/services.html", "support": "/support.html", "industries": "/industries.html", "news": "/news.html", "contact": "/contact.html", "quote": "/quote.html", "privacy": "/privacy.html", "terms": "/terms.html"};
-  const path = location.pathname === "/" ? "/index.html" : location.pathname;
-
-  const labelRoute = (text) => {
-    const label = text.replace(/\s+/g, " ").trim().toLowerCase();
-    if (!label) return null;
-    if (label === "home") return routes.home;
-    if (label === "about") return routes.about;
-    if (label === "products") return routes.products;
-    if (label === "services") return routes.services;
-    if (label === "industries") return routes.industries;
-    if (label === "news") return routes.news;
-    if (label === "contact") return routes.contact;
-    if (label === "support" || label === "support portal") return routes.support;
-    if (label === "get a quote" || label === "request pricing" || label === "request quote" || label === "start quote") return routes.quote;
-    if (label.includes("inquire now")) return routes.quote;
-    if (label.includes("browse catalog") || label.includes("view catalog") || label.includes("see products") || label.includes("specifications")) return routes.products;
-    if (label.includes("browse products")) return routes.products;
-    if (label.includes("catalog details")) return routes.products;
-    if (label.includes("chains & ropes") || label.includes("engines") || label.includes("navigation") || label.includes("safety")) return routes.products + "#catalog";
-    if (label.includes("view services")) return routes.services;
-    if (label.includes("our services")) return routes.services;
-    if (label.includes("explore capabilities")) return routes.services;
-    if (label.includes("view all capabilities")) return routes.services;
-    if (label.includes("service overview")) return routes.services;
-    if (label.includes("request service support") || label.includes("view sourcing capabilities")) return routes.support;
-    if (label.includes("technical resources") || label.includes("safety standards") || label.includes("view technical specs")) return routes.support;
-    if (label.includes("technical capability deck")) return routes.services;
-    if (label.includes("regional directory") || label.includes("view service support") || label.includes("request regional support")) return routes.support;
-    if (label.includes("immediate consultation")) return routes.contact + "#form";
-    if (label.includes("location & contact") || label.includes("contact our team") || label.includes("contact sales team") || label.includes("contact regional hub")) return routes.contact + "#form";
-    if (label.includes("submit inquiry")) return "#form";
-    if (label.includes("all news") || label.includes("read full report")) return routes.news;
-    if (label.includes("view details") || label.includes("read more") || label.includes("learn more")) return routes.news + "#updates";
-    if (label.includes("download pdf") || label.includes("download resource") || label.includes("read abstract") || label.includes("view statement")) return routes.news + "#resources";
-    if (label.includes("inquire now")) return routes.quote;
-    if (label.includes("privacy")) return routes.privacy;
-    if (label.includes("terms")) return routes.terms;
-    if (label.includes("case studies")) return routes.about;
-    if (label.includes("oil & gas") || label.includes("commercial marine") || label.includes("national security") || label.includes("pleasure crafts") || label.includes("shipping") || label.includes("port infrastructure") || label.includes("renewables")) return routes.industries;
-    if (label.includes("americas & caribbean") || label.includes("europe & mediterranean") || label.includes("asia-pacific & oceania") || label.includes("middle east & africa")) return "#service-request";
-    return null;
-  };
-
-  const assignLinkTargets = () => {
-    document.querySelectorAll('a[href="#"]').forEach((anchor) => {
-      const target = labelRoute(anchor.textContent || "");
-      if (target) anchor.setAttribute("href", target);
-    });
-
-    document.querySelectorAll('button:not([type="submit"])').forEach((button) => {
-      const target = labelRoute(button.textContent || "");
-      if (!target) return;
-      button.dataset.route = target;
-      button.type = "button";
-      button.addEventListener("click", () => {
-        if (target.startsWith("#")) {
-          const section = document.querySelector(target);
-          if (section) {
-            section.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-          return;
-        }
-        location.href = target;
-      });
-    });
-  };
-
-  const showToast = (form, title, body) => {
-    const existing = form.parentElement.querySelector(".codex-toast");
-    if (existing) existing.remove();
-    const toast = document.createElement("div");
-    toast.className = "codex-toast";
-    toast.innerHTML = `<strong>${title}</strong><span>${body}</span>`;
-    form.insertAdjacentElement("afterend", toast);
-  };
-
-  const wireForms = () => {
-    document.querySelectorAll("form").forEach((form) => {
-      if (form.dataset.codexBound === "true") return;
-      form.dataset.codexBound = "true";
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const emailInput = form.querySelector('input[type="email"]');
-        const hasQuoteField = form.textContent.toLowerCase().includes("technical specification form");
-        const hasProjectField = form.textContent.toLowerCase().includes("project inquiry");
-
-        if (hasQuoteField) {
-          showToast(form, "Quote request captured", "This static demo now records the submission locally and shows the expected confirmation state. No backend endpoint was included in the Stitch export.");
-        } else if (hasProjectField) {
-          showToast(form, "Inquiry submitted", "Your regional support inquiry has been validated in the browser and the form has been reset for another submission.");
-        } else if (emailInput) {
-          showToast(form, "Subscription received", "The email capture works locally for demo purposes. A mailing backend was not part of the downloaded export.");
-        } else {
-          showToast(form, "Form submitted", "This form is functioning as a local static demo with client-side validation and confirmation.");
-        }
-        form.reset();
-      });
-    });
-  };
-
-  const wireMapLink = () => {
-    document.querySelectorAll('a[href="#"]').forEach((anchor) => {
-      const text = anchor.textContent.replace(/\s+/g, " ").trim().toLowerCase();
-      if (!text.includes("view on map")) return;
-      anchor.href = "https://www.google.com/maps/search/?api=1&query=88%20Maritime%20Way%20North%20Harbor%20District%20Singapore%20018989";
-      anchor.target = "_blank";
-      anchor.rel = "noopener noreferrer";
-    });
-  };
-
-  const wireSocialLinks = () => {
-    document.querySelectorAll('a[href="#"]').forEach((anchor) => {
-      const icon = anchor.querySelector(".material-symbols-outlined");
-      if (!icon) return;
-      const iconName = icon.textContent.trim().toLowerCase();
-      if (iconName === "mail") {
-        anchor.href = "mailto:info@marineconsultants.com";
-      } else if (iconName === "location_on") {
-        anchor.href = routes.contact;
-      } else if (iconName === "language" || iconName === "public") {
-        anchor.href = routes.home;
-      } else if (iconName === "share") {
-        anchor.href = routes.contact;
-      } else if (iconName === "account_circle") {
-        anchor.href = routes.support;
-      }
-    });
-  };
-
-  const wireNewsPage = () => {
-    const search = document.querySelector('input[placeholder*="Search News"]');
-    const cards = Array.from(document.querySelectorAll("article"));
-    const updatesSection = document.querySelectorAll("section")[0];
-    if (updatesSection && !updatesSection.id) updatesSection.id = "updates";
-    const resourcesSection = Array.from(document.querySelectorAll("section")).find((section) => section.textContent.includes("Technical Resources"));
-    if (resourcesSection && !resourcesSection.id) resourcesSection.id = "resources";
-    if (!search || !cards.length) return;
-
-    search.addEventListener("input", () => {
-      const query = search.value.trim().toLowerCase();
-      cards.forEach((card) => {
-        const match = !query || card.textContent.toLowerCase().includes(query);
-        card.classList.toggle("codex-hidden-card", !match);
-      });
-    });
-
-    const navButtons = Array.from(document.querySelectorAll("button")).filter((button) => {
-      const icon = button.querySelector(".material-symbols-outlined");
-      return icon && ["chevron_left", "chevron_right"].includes(icon.textContent.trim());
-    });
-    const firstCard = cards[0];
-    const lastCard = cards[cards.length - 1];
-    if (navButtons.length >= 2 && firstCard && lastCard) {
-      navButtons[0].addEventListener("click", () => firstCard.scrollIntoView({ behavior: "smooth", block: "center" }));
-      navButtons[1].addEventListener("click", () => lastCard.scrollIntoView({ behavior: "smooth", block: "center" }));
-    }
-  };
-
-  const wireProductPage = () => {
-    const search = document.querySelector('input[placeholder*="Search catalog"]');
-    const sidebar = Array.from(document.querySelectorAll("aside")).find((node) => node.textContent.includes("Filters"));
-    const cards = Array.from(document.querySelectorAll("main a, main div")).filter((node) => {
-      return node.querySelector && node.querySelector('a[href$="quote.html"], a[href*="quote.html"], a[href="/quote.html"]');
-    });
-    if (!search || !sidebar || !cards.length) return;
-
-    const cardData = cards.map((card) => {
-      const title = (card.querySelector("h3, h4")?.textContent || "").trim();
-      const category = (Array.from(card.querySelectorAll("p")).map((p) => p.textContent.trim()).find((value) => /rigging|instruments|engines|fire|davits|safety/i.test(value)) || title).trim();
-      return { card, title: (title + " " + category).toLowerCase(), category: category.toLowerCase() };
-    });
-
-    const checkboxLabels = Array.from(sidebar.querySelectorAll("label")).filter((label) => label.querySelector('input[type="checkbox"]'));
-    const applyFilters = () => {
-      const query = search.value.trim().toLowerCase();
-      const selected = checkboxLabels
-        .filter((label) => label.querySelector("input").checked)
-        .map((label) => label.textContent.trim().toLowerCase());
-
-      cardData.forEach(({ card, title, category }) => {
-        const matchesQuery = !query || title.includes(query);
-        const matchesCategory = !selected.length || selected.some((entry) => category.includes(entry) || entry.includes(category));
-        card.classList.toggle("codex-hidden-card", !(matchesQuery && matchesCategory));
-      });
-    };
-
-    search.addEventListener("input", applyFilters);
-    checkboxLabels.forEach((label) => label.querySelector("input").addEventListener("change", applyFilters));
-
-    document.querySelectorAll('button').forEach((button) => {
-      const icon = button.querySelector(".material-symbols-outlined");
-      if (!icon || icon.textContent.trim().toLowerCase() !== "info") return;
-      button.type = "button";
-      button.addEventListener("click", () => location.href = routes.quote);
-    });
-  };
-
-  const wireContactPage = () => {
-    const formSection = document.querySelector("#form");
-    if (!formSection) return;
-
-    const hubButtons = Array.from(document.querySelectorAll("button")).filter((button) => button.textContent.toLowerCase().includes("contact hub"));
-    hubButtons.forEach((button) => {
-      button.type = "button";
-      button.addEventListener("click", () => formSection.scrollIntoView({ behavior: "smooth", block: "start" }));
-    });
-
-    const navButtons = Array.from(document.querySelectorAll("button")).filter((button) => {
-      const icon = button.querySelector(".material-symbols-outlined");
-      return icon && ["west", "east"].includes(icon.textContent.trim());
-    });
-
-    const hubCards = Array.from(document.querySelectorAll("#locations .space-y-4 > div"));
-    let activeIndex = 0;
-    const setActiveHub = (index) => {
-      activeIndex = (index + hubCards.length) % hubCards.length;
-      hubCards.forEach((card, current) => {
-        const active = current === activeIndex;
-        card.classList.toggle("codex-chip-active", active);
-        card.classList.toggle("text-white", active);
-      });
-    };
-
-    if (hubCards.length) setActiveHub(0);
-    if (navButtons[0]) navButtons[0].addEventListener("click", () => setActiveHub(activeIndex - 1));
-    if (navButtons[1]) navButtons[1].addEventListener("click", () => setActiveHub(activeIndex + 1));
-  };
-
-  const wireSupportPage = () => {
-    const form = document.querySelector("form");
-    const buttons = Array.from(document.querySelectorAll("button")).filter((button) => button.textContent.toLowerCase().includes("request regional support") || button.textContent.toLowerCase().includes("regional directory"));
-    if (!form) return;
-    if (!form.id) form.id = "service-request";
-    buttons.forEach((button) => {
-      button.type = "button";
-      button.addEventListener("click", () => form.scrollIntoView({ behavior: "smooth", block: "start" }));
-    });
-  };
-
-  assignLinkTargets();
-  wireForms();
-  wireMapLink();
-  wireSocialLinks();
-  wireProductPage();
-  wireNewsPage();
-  wireContactPage();
-  wireSupportPage();
-})();
-</script>
-</body></html>
+            <script src="/assets/site.js"></script>
+          </body>
+        </html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#e6f3fb",
+              "outline-variant": "#c3c7ce",
+              "on-primary-fixed-variant": "#1a4a6e",
+              "surface-container-highest": "#d7e4ec",
+              "on-secondary-container": "#4e6874",
+              "background": "#f4faff",
+              "tertiary-container": "#481c00",
+              "inverse-primary": "#a0cbf5",
+              "tertiary": "#280c00",
+              "surface-container-high": "#ddeaf2",
+              "primary": "#001628",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#f4faff",
+              "secondary-container": "#cbe7f5",
+              "on-tertiary-container": "#eb6a00",
+              "on-error": "#ffffff",
+              "tertiary-fixed-dim": "#ffb68f",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#6a94bc",
+              "on-secondary-fixed": "#021f29",
+              "on-background": "#111d23",
+              "primary-fixed": "#cee5ff",
+              "tertiary-fixed": "#ffdbca",
+              "surface": "#f4faff",
+              "on-surface": "#111d23",
+              "on-surface-variant": "#42474d",
+              "inverse-surface": "#263238",
+              "secondary": "#48626e",
+              "error": "#ba1a1a",
+              "surface-container": "#e3f0f8",
+              "on-error-container": "#93000a",
+              "surface-tint": "#366287",
+              "on-secondary-fixed-variant": "#304a55",
+              "error-container": "#ffdad6",
+              "outline": "#73777e",
+              "primary-fixed-dim": "#a0cbf5",
+              "surface-dim": "#cfdce4",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#331200",
+              "secondary-fixed": "#cbe7f5",
+              "on-tertiary-fixed-variant": "#773200",
+              "surface-variant": "#d7e4ec",
+              "surface-container-low": "#e9f6fd",
+              "primary-container": "#002b47",
+              "on-secondary": "#ffffff",
+              "secondary-fixed-dim": "#afcbd8",
+              "on-primary-fixed": "#001d32"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .technical-gradient {
+            background: linear-gradient(135deg, #001628 0%, #002b47 100%);
+        }
+        .glass-nav {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 w-full bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-xl font-black text-sky-950 dark:text-white tracking-tighter uppercase font-headline">
+                Marine Consultants Limited
+            </div>
+<div class="hidden lg:flex items-center space-x-8">
+<a class="font-headline font-bold tracking-tight text-slate-600 dark:text-slate-400 hover:text-sky-900 dark:hover:text-sky-100 transition-colors" href="#">Home</a>
+<a class="font-headline font-bold tracking-tight text-sky-900 dark:text-sky-100 border-b-2 border-orange-600 pb-1" href="#">Products</a>
+<a class="font-headline font-bold tracking-tight text-slate-600 dark:text-slate-400 hover:text-sky-900 dark:hover:text-sky-100 transition-colors" href="#">Services</a>
+<a class="font-headline font-bold tracking-tight text-slate-600 dark:text-slate-400 hover:text-sky-900 dark:hover:text-sky-100 transition-colors" href="#">Technical Specs</a>
+<a class="font-headline font-bold tracking-tight text-slate-600 dark:text-slate-400 hover:text-sky-900 dark:hover:text-sky-100 transition-colors" href="#">About Us</a>
+<a class="font-headline font-bold tracking-tight text-slate-600 dark:text-slate-400 hover:text-sky-900 dark:hover:text-sky-100 transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-tertiary-container text-on-tertiary-container px-6 py-2 rounded-md font-headline font-bold text-sm uppercase tracking-wider hover:brightness-110 transition-all">
+                    Request Quote
+                </button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section: Asymmetrical Layout -->
+<section class="relative overflow-hidden technical-gradient pt-24 pb-32 text-on-primary">
+<div class="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<span class="inline-block px-3 py-1 bg-on-tertiary-container/20 text-on-tertiary-container text-xs font-bold tracking-[0.2em] uppercase mb-6">
+                        Navigation Resources
+                    </span>
+<h1 class="font-headline text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8">
+                        Charts, Publications <br/>&amp; Instruments
+                    </h1>
+<p class="text-on-primary-container text-xl max-w-2xl font-light leading-relaxed mb-10">
+                        The definitive suite of maritime navigation tools. Certified Admiralty charts, comprehensive technical publications, and precision-engineered instruments for global operational safety.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-tertiary-container text-on-tertiary-container px-8 py-4 rounded-md font-headline font-bold uppercase tracking-widest text-sm flex items-center gap-2">
+                            Explore Catalog <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="border border-on-primary/20 text-on-primary px-8 py-4 rounded-md font-headline font-bold uppercase tracking-widest text-sm hover:bg-on-primary/10 transition-all">
+                            Technical Support
+                        </button>
+</div>
+</div>
+<!-- Technical Inset -->
+<div class="lg:col-span-5 relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+<div class="bg-surface-container-low/10 backdrop-blur-md p-1 border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-[500px] object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-700" data-alt="Close-up of a professional brass sextant resting on top of high-detail maritime navigation charts in a well-lit technical office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMJPR8JnD7pvDPCDLyQXDhyj6Hwx7ThwRjL4jgvcFD_a-PVk6ItPhsVy4oh5HeB9ooB6JNxonNjCGgNQITPn-mjxfZK9I2Gi3QjvTltD9JnZGfHBfDkQvoZhEwCdvEywmiqiLE22JJNeFhI3IjuvVocRwwWKuznNmhDCH7XbsdglOMnKTlvIMaLrxTAKoPemoh0dFXqxSShXS35i4-24tsmnzaVi4beA74ejs6M_-E691PY6V00a8WiAkjmJT2eeH7CnqtyHHqj5pa"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-surface-container-high p-6 w-56 shadow-xl hidden md:block">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary text-sm">location_searching</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline">Reference Data</span>
+</div>
+<div class="font-headline font-bold text-lg text-primary">ADM-NAV-2024</div>
+<div class="text-xs text-on-surface-variant font-mono mt-1">LAT: 10.6667° N<br/>LON: 61.5167° W</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Grid: Bento Layout -->
+<section class="py-24 bg-surface px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline text-3xl font-bold text-on-surface mb-2">Technical Categories</h2>
+<div class="h-1 w-24 bg-on-tertiary-container"></div>
+</div>
+<p class="text-on-surface-variant max-w-sm text-sm uppercase tracking-wider">
+                        Select a specialized category to view our complete range of certified equipment.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-6">
+<!-- Standard Charts -->
+<div class="lg:col-span-8 bg-surface-container-low group overflow-hidden flex flex-col md:flex-row transition-all hover:bg-surface-bright">
+<div class="md:w-1/2 p-10 flex flex-col justify-center">
+<span class="material-symbols-outlined text-on-tertiary-container mb-4 text-4xl">map</span>
+<h3 class="font-headline text-2xl font-bold mb-4">Admiralty Standard Charts</h3>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+                                High-precision paper charts meeting SOLAS requirements. We provide current editions and weekly correction services for all global maritime zones.
+                            </p>
+<a class="inline-flex items-center gap-2 font-bold text-primary hover:text-on-tertiary-container transition-colors group-hover:translate-x-1 transition-transform" href="#">
+                                VIEW CHART INDEX <span class="material-symbols-outlined">east</span>
+</a>
+</div>
+<div class="md:w-1/2 relative overflow-hidden h-64 md:h-auto">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Detailed close-up of a blue and white nautical map showing depth contours and navigational markings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw8lF7FZefmswaCxOA6PK6lwZfU5Y3aB7xk2uuXOIWT2xoGSbolXVM0OTWa5McvgKv3ThT-pl7xMvy-CjimeiMEtr8O-XZQq8F7YjYdPyZcZgY25H6rbiLI_AY9PzUUdoRrs8mWJlEG-iI0zRurQcaDeqOPIFeprxWsQB7IVQPf4rDV3GqbjoKQVu0NKL03StIxi_pbvQcIt30QFH4BpWsFEXThatQ9YHOoyEPOoqU5tewnsfpR_DLqGvfASkyElbHDqpdLZmaR6kN"/>
+</div>
+</div>
+<!-- Precision Instruments -->
+<div class="lg:col-span-4 bg-primary text-on-primary p-10 flex flex-col justify-between group">
+<div>
+<span class="material-symbols-outlined text-on-tertiary-container text-4xl mb-4">architecture</span>
+<h3 class="font-headline text-2xl font-bold mb-4">Precision Instruments</h3>
+<p class="text-on-primary/70 text-sm leading-relaxed">
+                                Professional grade dividers, parallel rulers, and optical navigation tools for precise manual plotting.
+                            </p>
+</div>
+<div class="mt-8">
+<img class="w-full h-40 object-cover grayscale opacity-50 group-hover:opacity-100 transition-all rounded" data-alt="Set of professional stainless steel nautical dividers and parallel rulers on a technical drawing surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVM77nf7JYBbjsaoYZFwxX5xRwNeSXV7zaKiLszmSzuw3PRq0zT4p9AT92TKSMEBXx_cn3XGfPIwo9ieoEEXeHkx8RKdy3ELx-BEKmXnAF9n8lXLI54CKYfxyR0ATmdgZwX982-qE_zT3-rl1gOvw-FGL9zQEXFga8zjlYRCi55_5vUxZMc9JN7fGputCqT3b-1bQsflQp_bJ1wGq7HOB9-KzfRv9NSHxEQIDqYgRzO62hA8HK6gxSt56V8u1ArPrvIdv7WJZG1H7s"/>
+</div>
+</div>
+<!-- Nautical Publications -->
+<div class="lg:col-span-4 bg-surface-container-highest p-10 flex flex-col group hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" data-weight="fill">menu_book</span>
+<h3 class="font-headline text-2xl font-bold mb-4">Nautical Publications</h3>
+<p class="text-on-surface-variant text-sm mb-12">
+                            Almanacs, pilot books, and tidal stream atlases. Essential documentation for passage planning.
+                        </p>
+<div class="mt-auto flex justify-between items-center">
+<span class="text-xs font-bold tracking-widest text-outline">342 TITLES</span>
+<div class="p-2 bg-primary rounded-full text-on-primary group-hover:bg-on-tertiary-container transition-colors">
+<span class="material-symbols-outlined">add</span>
+</div>
+</div>
+</div>
+<!-- Digital Updates -->
+<div class="lg:col-span-8 bg-surface-container p-10 flex items-center relative overflow-hidden border-l-4 border-on-tertiary-container">
+<div class="relative z-10 lg:w-2/3">
+<h3 class="font-headline text-2xl font-bold mb-2">Digital Subscription Service</h3>
+<p class="text-on-surface-variant text-sm mb-6">
+                                Streamline your compliance with automated digital chart updates and notice-to-mariners integration.
+                            </p>
+<button class="bg-primary text-on-primary px-6 py-3 text-xs font-bold uppercase tracking-widest">Register Vessel</button>
+</div>
+<div class="absolute right-0 top-0 bottom-0 w-1/3 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[200px]">sync</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Grid: No-Line Technical Cards -->
+<section class="py-24 bg-surface-container-low px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-12">
+<h2 class="font-headline text-2xl font-bold uppercase tracking-tight text-primary">Featured Inventory</h2>
+<p class="text-on-surface-variant text-sm mt-2 font-medium uppercase tracking-widest">Admiralty &amp; Professional Standard</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest p-6 group hover:shadow-xl transition-all duration-300">
+<div class="aspect-square bg-surface-container mb-6 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Cover of the Admiralty Mariners Handbook showing a large vessel in rough seas with technical typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv0ZUMudD4VXKDhVsKo4Cu4rHOiR2w7_CNG-lWky8RHRXd0wgmpfxZggSl9OYwOcQLXCbFMrjXTg2tJOg9mdLZbUoig0Ecgg-2-PKHyHFHbvhij8fzOhBvXyCoAG8C5kiYUPML1XabJZt2SATiFJC_Cmh92Mzj3KqV2o96ddU0aDGMFvYDdbRJogqwGku_GJMfvA_WoPLcPkQ6xoVDxX9BI1fT25get-Lu37TRgC0YZxt0Bd3PkDNHxZfYH6mIoNxwjNx7Jk3zUFRZ"/>
+</div>
+<div class="space-y-1">
+<div class="text-[10px] font-bold text-on-tertiary-container tracking-widest uppercase">Publication</div>
+<h4 class="font-headline font-bold text-lg text-primary">Mariners Handbook (NP100)</h4>
+<p class="text-on-surface-variant text-xs line-clamp-2">The core reference for professional mariners navigating international waters.</p>
+</div>
+<div class="mt-6 flex justify-between items-center pt-4 border-t border-outline-variant/15">
+<span class="font-headline font-extrabold text-primary">Enquire</span>
+<span class="material-symbols-outlined text-secondary">info</span>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest p-6 group hover:shadow-xl transition-all duration-300">
+<div class="aspect-square bg-surface-container mb-6 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Nautical chart of the English Channel with detailed bathymetric shading and navigation buoys" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK7VDsA-6bE3mTBF2Q2tHF55ybzLHa0fxzXC03bnTNKE0usocm-cjbauxAWWfeOXLsP0sDAkHbKkTV_E2W9xCk2AWwDZHhdt9M8JPvmUn7HgW8vd8AGKOD04tNqy_8EDno2OY_ihda43-4vLhZYwfqTTy7aZGcqVhUXnV1DLblDOAwz9hmZWQfYSEmkSmci0fJAxzX7LL1ZSwswVWJGjQoLCXzkPBRwlKzcPv18rMM-7ufXfs6Iaw43ATJL10Z6Vo9L057y9kzYHFm"/>
+</div>
+<div class="space-y-1">
+<div class="text-[10px] font-bold text-on-tertiary-container tracking-widest uppercase">Chart</div>
+<h4 class="font-headline font-bold text-lg text-primary">English Channel Central</h4>
+<p class="text-on-surface-variant text-xs line-clamp-2">Admiralty Standard Nautical Chart covering key shipping lanes.</p>
+</div>
+<div class="mt-6 flex justify-between items-center pt-4 border-t border-outline-variant/15">
+<span class="font-headline font-extrabold text-primary">Enquire</span>
+<span class="material-symbols-outlined text-secondary">info</span>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest p-6 group hover:shadow-xl transition-all duration-300">
+<div class="aspect-square bg-surface-container mb-6 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Professional grade brass navigation dividers for map measurement on a technical wood table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpwvQ3iBIxq3fiYb3pR0tAClT1HDM8CJcVrmSbfWZusANrc1r1CJcpWst9wfGTLo9Eu6V0RcCBxmd0PmlmchEqY-WOwpG3jVZVXrnRfvQwgvbbCJm58vM_mMy7J8R0o0HxlWtZ38JLO2PE4Tdj5t1KYNh5uLw3DonFWww0DMxKXvVBKmHtW7qgyIdtZBKocRiV4i0TKUppptwnyBE8d_iVjBMxdLqr088zQlUbws70YfABxmykfa9nHkCYaLYGAGJRi3_1lVXIwAhj"/>
+</div>
+<div class="space-y-1">
+<div class="text-[10px] font-bold text-on-tertiary-container tracking-widest uppercase">Instrument</div>
+<h4 class="font-headline font-bold text-lg text-primary">7" Straight Dividers</h4>
+<p class="text-on-surface-variant text-xs line-clamp-2">High-polish brass and stainless steel precision plotting instrument.</p>
+</div>
+<div class="mt-6 flex justify-between items-center pt-4 border-t border-outline-variant/15">
+<span class="font-headline font-extrabold text-primary">Enquire</span>
+<span class="material-symbols-outlined text-secondary">info</span>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest p-6 group hover:shadow-xl transition-all duration-300">
+<div class="aspect-square bg-surface-container mb-6 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Cover of Admiralty Tide Tables for the Atlantic Ocean with coastal landscape photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXpiS-9nISW8d5c0pR6NC-RFNPJoJElEG5Jdtjff592ttpzzA_fZ5zwqMWu2kvN9WwjrHXXVrd8GqMtbarCBuZqlmxAIwDlPq22VvtMIEwD2gIhPCFx8meMLaK-YIu7zzyG248VYeeDxxEh9q-8NAX-KJCj91W95YI0m5FqmcJowqSZQKXk5GTQBgp1XwmY2vPiuRe9aTzjqKqTH93DLFrk6kqPeIvruGNh1oGGe-QTAoVUurQ8_ECeBuMlgHhIevbXe_08BFNBvz1"/>
+</div>
+<div class="space-y-1">
+<div class="text-[10px] font-bold text-on-tertiary-container tracking-widest uppercase">Publication</div>
+<h4 class="font-headline font-bold text-lg text-primary">Admiralty Tide Tables</h4>
+<p class="text-on-surface-variant text-xs line-clamp-2">Essential data for port entry and coastal transit planning.</p>
+</div>
+<div class="mt-6 flex justify-between items-center pt-4 border-t border-outline-variant/15">
+<span class="font-headline font-extrabold text-primary">Enquire</span>
+<span class="material-symbols-outlined text-secondary">info</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Inquiry Section -->
+<section class="py-20 px-8">
+<div class="max-w-screen-2xl mx-auto bg-surface-container rounded-none lg:rounded-xl overflow-hidden shadow-sm">
+<div class="grid lg:grid-cols-2">
+<div class="p-16 flex flex-col justify-center">
+<h2 class="font-headline text-4xl font-extrabold text-primary mb-6">Need a Custom Fleet Quotation?</h2>
+<p class="text-on-surface-variant mb-10 leading-relaxed max-w-lg">
+                            Our consultants specialize in provisioning complete bridge libraries for new builds and fleet upgrades. Contact us for bulk pricing and technical compliance audits.
+                        </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 font-headline font-bold uppercase tracking-widest text-xs flex items-center gap-2">
+                                Contact Specialist <span class="material-symbols-outlined text-sm">person</span>
+</button>
+<button class="bg-surface-container-lowest text-primary border border-outline-variant/30 px-8 py-4 font-headline font-bold uppercase tracking-widest text-xs">
+                                Download Price List
+                            </button>
+</div>
+</div>
+<div class="relative bg-secondary overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60" data-alt="A shelf of neatly organized blue nautical publication binders in a clean maritime office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjGx7WFyDc07ZXNRXP5K_TgjqJibyiPCZ5TAjj_k6czFIDZLfZYak_lGK21wnXlo6qyYjXKEJOTFZwM7gkWfIJAJcQQYYfHfrrfRyhaUSxb_MjvCciojTg1QSBAwNTrPffAE6qB2jOFuL5IDriw8HTMMJj4NXqByhh8P837R8bdRf8V38MNYW4KV6j_xoBUDMx4ko978KvJcx-laf995XP3zSJH_xatFKb75iZt73YOFHy2emxfm56Q32hRU2IP9j-rUbXTYWHwPte"/>
+<div class="relative z-10 h-full flex items-center justify-center p-12">
+<div class="bg-primary-container/80 backdrop-blur-md p-8 border border-white/10 max-w-xs text-on-primary">
+<div class="text-4xl font-headline font-bold mb-4">15k+</div>
+<div class="text-xs font-bold uppercase tracking-[0.2em] mb-4">Inventory Units</div>
+<p class="text-sm opacity-80">Ready for immediate dispatch from our regional logistics hub.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-950 w-full pt-16 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 max-w-screen-2xl mx-auto">
+<div class="space-y-6">
+<div class="text-lg font-bold text-sky-900 dark:text-sky-100 font-headline">Marine Consultants Limited</div>
+<p class="text-slate-500 text-sm leading-relaxed lowercase">PRECISION NAVIGATIONAL TOOLS AND TECHNICAL ADVISORY SERVICES FOR THE CARIBBEAN MARITIME SECTOR.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-on-tertiary-container">public</span>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-on-tertiary-container">mail</span>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-on-tertiary-container">call</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline font-bold text-primary mb-2 text-sm uppercase tracking-widest">Solutions</h4>
+<a class="font-body text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors underline underline-offset-4" href="#">Product Catalog</a>
+<a class="font-body text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors underline underline-offset-4" href="#">Service Map</a>
+<a class="font-body text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors underline underline-offset-4" href="#">Safety Standards</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline font-bold text-primary mb-2 text-sm uppercase tracking-widest">Network</h4>
+<a class="font-body text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors underline underline-offset-4" href="#">Regional Offices</a>
+<a class="font-body text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors underline underline-offset-4" href="#">Privacy Policy</a>
+<a class="font-body text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:text-orange-500 transition-colors underline underline-offset-4" href="#">Careers</a>
+</div>
+<div>
+<h4 class="font-headline font-bold text-primary mb-4 text-sm uppercase tracking-widest">Headquarters</h4>
+<div class="text-sm text-slate-500 leading-loose">
+                    14 Maritime Drive, <br/>
+                    Port of Spain, Trinidad and Tobago <br/>
+<span class="text-primary font-bold">compliance@marineconsultants.com</span>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="font-body text-sm uppercase tracking-widest text-slate-400">© 2024 Marine Consultants Limited. Caribbean Maritime Excellence.</p>
+</div>
+</footer>
+</body></html>
