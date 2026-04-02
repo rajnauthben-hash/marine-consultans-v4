@@ -24,20 +24,41 @@
     button.addEventListener('click', (event) => {
       event.preventDefault();
       showToast(
-        button.getAttribute('data-toast-title') || 'Action captured',
-        button.getAttribute('data-toast-body') || 'This placeholder action is ready for real business input.'
+        button.getAttribute('data-toast-title') || 'Action ready',
+        button.getAttribute('data-toast-body') || 'This action is ready for the final business content or document link.'
       );
     });
   });
 
-  document.querySelectorAll('form[data-demo-form]').forEach((form) => {
+  const humanizeField = (value) =>
+    value
+      .replace(/_/g, ' ')
+      .replace(/\b\w/g, (match) => match.toUpperCase());
+
+  document.querySelectorAll('form[data-email-form]').forEach((form) => {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       if (!form.reportValidity()) return;
+      const to = form.getAttribute('data-email-to') || '';
+      const subject = form.getAttribute('data-email-subject') || 'Marine Consultants website inquiry';
+      const entries = Array.from(new FormData(form).entries()).map(([key, value]) => `${humanizeField(key)}: ${String(value || '').trim() || 'N/A'}`);
+      const body = [
+        'Inquiry prepared from the Marine Consultants website.',
+        '',
+        ...entries,
+        '',
+        `Page: ${window.location.href}`,
+      ].join('\n');
       showToast(
         form.getAttribute('data-success-title') || 'Form submitted',
-        form.getAttribute('data-success-body') || 'This local demo captures the expected submission state without a backend endpoint.'
+        form.getAttribute('data-success-body') || 'Your email client should open with a prepared inquiry draft.'
       );
+      if (to) {
+        const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.setTimeout(() => {
+          window.location.href = mailto;
+        }, 120);
+      }
       form.reset();
     });
   });

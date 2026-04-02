@@ -104,20 +104,41 @@ SITE_JS = dedent(
         button.addEventListener('click', (event) => {
           event.preventDefault();
           showToast(
-            button.getAttribute('data-toast-title') || 'Action captured',
-            button.getAttribute('data-toast-body') || 'This placeholder action is ready for real business input.'
+            button.getAttribute('data-toast-title') || 'Action ready',
+            button.getAttribute('data-toast-body') || 'This action is ready for the final business content or document link.'
           );
         });
       });
 
-      document.querySelectorAll('form[data-demo-form]').forEach((form) => {
+      const humanizeField = (value) =>
+        value
+          .replace(/_/g, ' ')
+          .replace(/\\b\\w/g, (match) => match.toUpperCase());
+
+      document.querySelectorAll('form[data-email-form]').forEach((form) => {
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           if (!form.reportValidity()) return;
+          const to = form.getAttribute('data-email-to') || '';
+          const subject = form.getAttribute('data-email-subject') || 'Marine Consultants website inquiry';
+          const entries = Array.from(new FormData(form).entries()).map(([key, value]) => `${humanizeField(key)}: ${String(value || '').trim() || 'N/A'}`);
+          const body = [
+            'Inquiry prepared from the Marine Consultants website.',
+            '',
+            ...entries,
+            '',
+            `Page: ${window.location.href}`,
+          ].join('\\n');
           showToast(
             form.getAttribute('data-success-title') || 'Form submitted',
-            form.getAttribute('data-success-body') || 'This local demo captures the expected submission state without a backend endpoint.'
+            form.getAttribute('data-success-body') || 'Your email client should open with a prepared inquiry draft.'
           );
+          if (to) {
+            const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.setTimeout(() => {
+              window.location.href = mailto;
+            }, 120);
+          }
           form.reset();
         });
       });
@@ -217,6 +238,16 @@ IMAGE_CONTACT = "https://lh3.googleusercontent.com/aida-public/AB6AXuAbE41DlK_J0
 IMAGE_QUOTE = "https://lh3.googleusercontent.com/aida-public/AB6AXuDFwuHBGTDB5f-PbFNhjPVvlT_T1WRsmAOLBwHdChr9luHC1fNsry-VzfR0XieMcywtalOJ90zdrv3BdcfdNRIkU-X-odQCPi6d2JUYV0GMNyBDJ1uQTlfUJS9ZviJpzm2dsL1SpTdG5fT8n9cbp7wjCBa2DMgT_xS8rfZCuliOd3E4a1YHDqzDij31myMoQAX5bbBwThkWCJUtUW2ALs9IXklxhzF-9x3dRdmfS82c1y7aWk_aG4ZMQCccgU6HtpzYWWtfJy-aCKjy"
 IMAGE_PRODUCT_DETAIL = "https://lh3.googleusercontent.com/aida-public/AB6AXuCne8Jg0-hjJ-L5lbFONC8lTyTALiUWRL1GG8sBPy72Krp14H0HFe_Esmw_nU5DlromfNu2xMQGqudZIjc06IOgW6fA_fNfV3anDnrXcA3kYE63bWV_FAyvJq7PSlKVe8XCvi-GNM-n2MS1QkaHMUN9LhU9KzcxxT5oaQdOeLSZJeQlEUfzV255YirshVv95OEWcj-YxUiyDmuvHbkb_xZuxkWhTpPTHAT_9KxWH5NeEvWYlMRCy2qvd9ePquf6WqimkuyqeWG7wYms"
 
+CONTACT_EMAIL = "mcl@mcl.co.tt"
+CONTACT_PHONE = "+1 (868) 235-5406"
+CONTACT_PHONE_PLAIN = "+18682355406"
+CONTACT_ADDRESS = "43A Charles Street, Port of Spain, Trinidad & Tobago"
+SERVICE_CENTRE_ADDRESS = "5 Chanka Trace, El Socorro, Trinidad & Tobago"
+OFFICIAL_CONTACT_URL = "https://www.mcl.co.tt/contact-info/"
+OFFICIAL_CATALOGUE_URL = "https://www.mcl.co.tt/catalogue/"
+OFFICIAL_COMPLIANCE_URL = "https://www.mcl.co.tt/iso-certification/"
+OFFICIAL_TEAM_URL = "https://www.mcl.co.tt/team-leaders/"
+
 
 @dataclass(frozen=True)
 class Category:
@@ -276,7 +307,7 @@ CATEGORY_DATA = {
         "Marine Safety Products",
         "health_and_safety",
         "General vessel safety equipment and protective gear for crews, contractors, and marine operations teams.",
-        "This category is intended for lifejackets, immersion suits, PPE, distress signaling equipment, and portable emergency gear. Replace the placeholder compliance notes with verified approval data before final commercial use.",
+        "This category is intended for lifejackets, immersion suits, PPE, distress signaling equipment, and portable emergency gear. Replace the general compliance notes with verified approval data before final commercial use.",
         ("Lifejackets and buoyancy aids", "Immersion suits", "Emergency signaling", "Crew PPE"),
         ("Lifejackets", "Throwable devices", "EPIRB and strobe accessories", "Protective helmets and gloves"),
         ("liferafts-evacuation-systems", "fire-safety-equipment", "navigation-aids"),
@@ -410,7 +441,7 @@ SERVICE_DATA = {
         "Support Request / Service Inquiry",
         "support_agent",
         "A direct route for service-related requests that need triage before quoting or dispatch planning.",
-        "Use this route for open support needs, vessel assistance requests, and service follow-up. Contact windows, escalation details, and after-hours protocols remain placeholders until the business confirms them.",
+        "Use this route for open support needs, vessel assistance requests, and service follow-up. Initial triage can start through the published email and telephone contacts while any after-hours protocols are confirmed directly with MCL.",
         ("General service intake", "Scope clarification", "Escalation to technical teams", "Follow-up coordination"),
         ("Operations contacts", "Marine supervisors", "Safety managers", "Procurement teams"),
         ("technical-assistance", "maintenance-support", "certification-support"),
@@ -419,17 +450,42 @@ SERVICE_DATA = {
 
 
 NEWS_ITEMS = (
-    ("Operations Update Placeholder", "Regional vessel support and delivery updates can be published here once approved by the business team.", "Operations"),
-    ("Product Availability Update Placeholder", "Use this card for approved stock notices, incoming shipments, or temporary supply constraints.", "Products"),
-    ("Service Bulletin Placeholder", "This space can hold workshop notices, service schedules, or inspection campaign announcements.", "Service"),
+    (
+        "Financial Wellness Initiative",
+        "Official company updates show ongoing employee-development activity and internal wellness programming in Trinidad.",
+        "Company",
+        "02 Sep 2025",
+        "https://www.mcl.co.tt/whats-new/financial-wellness-initiative-marine-consultants-trinidad-ltd-september-2025/",
+    ),
+    (
+        "Recycling Program with Every Bottle Back",
+        "MCL published a Trinidad staff recycling initiative focused on workplace environmental responsibility.",
+        "Operations",
+        "02 Oct 2023",
+        "https://www.mcl.co.tt/whats-new/plastics-recycling-program/",
+    ),
+    (
+        "Trinidad and Tobago Energy Conference",
+        "The official site highlights MCL's participation in the Energy Conference as part of its business-development and customer-engagement activity.",
+        "Events",
+        "25 Jan 2023",
+        "https://www.mcl.co.tt/whats-new/trinidad-and-tobago-energy-conference/",
+    ),
+    (
+        "Pharos Marine Automatic Power Partnership",
+        "MCL announced an exclusive agency relationship for navigation-aid products, reinforcing the site's navigation category depth.",
+        "Products",
+        "22 Aug 2020",
+        "https://www.mcl.co.tt/whats-new/marine-consultants-partners-up-with-pharos-marine-automatic-power/",
+    ),
 )
 
 
 RESOURCE_ITEMS = (
-    ("Marine Product Catalogue", "Catalogue Download Placeholder", "Catalog"),
-    ("Service Capability Brief", "Service Description Placeholder", "Services"),
-    ("Compliance Reference Pack", "Compliance Information Placeholder", "Compliance"),
-    ("Company Profile", "Company Overview Placeholder", "Company"),
+    ("Marine Product Catalogue", "Open the official MCL catalogue page to review the latest downloadable catalogues and product references.", "Catalog", OFFICIAL_CATALOGUE_URL, "Open official catalogue"),
+    ("Service Capability Brief", "Use the consolidated local services pages for inspection, maintenance, servicing, and technical support routing.", "Services", "/services.html", "Open service overview"),
+    ("Compliance Reference Pack", "View the official ISO certification page for the latest published certificate and quality reference route.", "Compliance", OFFICIAL_COMPLIANCE_URL, "Open compliance page"),
+    ("Company Profile", "Use the verified company overview route for current positioning, contact details, and regional operating context.", "Company", "/about/company-overview.html", "Open company overview"),
 )
 
 
@@ -589,8 +645,9 @@ def render_footer() -> str:
               </p>
               <div class="mt-6 space-y-2 text-sm text-on-primary-container">
                 <div><strong class="text-white">Regional Base:</strong> Trinidad & Tobago / Caribbean support</div>
-                <div><strong class="text-white">Contact Details:</strong> Contact Details Placeholder</div>
-                <div><strong class="text-white">Compliance Notes:</strong> Compliance Information Placeholder</div>
+                <div><strong class="text-white">Contact Details:</strong> <a class="hover:text-white transition-colors" href="mailto:{escape(CONTACT_EMAIL)}">{escape(CONTACT_EMAIL)}</a> | <a class="hover:text-white transition-colors" href="tel:{escape(CONTACT_PHONE_PLAIN)}">{escape(CONTACT_PHONE)}</a></div>
+                <div><strong class="text-white">Office:</strong> {escape(CONTACT_ADDRESS)}</div>
+                <div><strong class="text-white">Compliance Notes:</strong> ISO 9001:2015 certification is published on the official MCL site.</div>
               </div>
             </div>
             <div class="space-y-3 text-sm">
@@ -881,12 +938,12 @@ def inquiry_form(
               <h2 class="mb-4 text-3xl font-extrabold tracking-tight">{escape(title)}</h2>
               <p class="text-sm leading-relaxed text-on-primary-container">{escape(intro)}</p>
               <div class="mt-8 space-y-4 text-sm text-on-primary-container">
-                <div><strong class="text-white">Contact Details:</strong> Contact Details Placeholder</div>
+                <div><strong class="text-white">Contact Details:</strong> <a class="hover:text-white transition-colors" href="mailto:{escape(CONTACT_EMAIL)}">{escape(CONTACT_EMAIL)}</a> | <a class="hover:text-white transition-colors" href="tel:{escape(CONTACT_PHONE_PLAIN)}">{escape(CONTACT_PHONE)}</a></div>
                 <div><strong class="text-white">Regional Coverage:</strong> Trinidad & Tobago / Caribbean</div>
-                <div><strong class="text-white">Documentation:</strong> Compliance Information Placeholder</div>
+                <div><strong class="text-white">Documentation:</strong> Official catalogue and ISO references are linked in the resources section.</div>
               </div>
             </div>
-            <form class="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-8 shadow-soft" data-demo-form data-success-body="{escape(success_body)}" data-success-title="{escape(success_title)}">
+            <form class="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-8 shadow-soft" data-email-form data-email-to="{escape(CONTACT_EMAIL)}" data-email-subject="{escape(title)}" data-success-body="{escape(success_body)}" data-success-title="{escape(success_title)}">
               <div class="grid gap-6 md:grid-cols-2">{fields}</div>
               <div class="mt-8"><button class="rounded-md bg-primary px-6 py-3 text-sm font-bold text-white hover:bg-primary-container" type="submit">Submit Inquiry</button></div>
             </form>
@@ -974,10 +1031,10 @@ def render_about() -> str:
             """
         ).strip()
         for title, copy, href, icon in (
-            ("Company Overview", "Grounded regional positioning and editable profile content.", "/about/company-overview.html", "apartment"),
-            ("Mission / Vision / Values", "One canonical operating-principles section kept on the main about page.", "/about.html#mission-vision-values", "flag"),
-            ("Quality / Compliance", "A neutral compliance placeholder page that avoids unsupported approvals.", "/about/quality-compliance.html", "verified"),
-            ("Leadership", "Leadership Placeholder content ready for approved biographies and roles.", "/about/leadership.html", "groups"),
+            ("Company Overview", "Verified regional company context drawn from official MCL materials.", "/about/company-overview.html", "apartment"),
+            ("Mission / Vision / Values", "One canonical operating-principles section aligned to the official MCL positioning pages.", "/about.html#mission-vision-values", "flag"),
+            ("Quality / Compliance", "Official ISO and quality references now have a dedicated route.", "/about/quality-compliance.html", "verified"),
+            ("Leadership", "Verified Trinidad team-leader snapshot from the official site.", "/about/leadership.html", "groups"),
         )
     )
     body = "\n".join(
@@ -985,7 +1042,7 @@ def render_about() -> str:
             hero(
                 "Regional company profile",
                 "About Marine Consultants",
-                "The final about page keeps the established marine-industrial look while removing unsupported dates, staff totals, certification claims, and global marketing language.",
+                "Marine Consultants (Trinidad) Limited presents itself as a Trinidad & Tobago marine supply and service company supporting marine, offshore, and industrial customers with products, inspections, maintenance, and technical support.",
                 image_url=IMAGE_ABOUT,
                 primary_href="/about/company-overview.html",
                 primary_label="View Company Overview",
@@ -994,9 +1051,9 @@ def render_about() -> str:
                 panel_title="About Structure",
                 panel_items=(
                     ("Coverage", "Trinidad & Tobago / Caribbean"),
-                    ("Profile", "Company Overview Placeholder"),
+                    ("Profile", "Operating since 1971"),
                     ("Values", "Accuracy / responsiveness / safety"),
-                    ("Leadership", "Leadership Placeholder"),
+                    ("Leadership", "Official team leaders page"),
                 ),
             ),
             dedent(
@@ -1006,22 +1063,22 @@ def render_about() -> str:
                     {section_intro("Positioning", "Grounded Regional Framing", "Active about content now presents the business as a regional marine supply and service operation without unsupported legacy claims.")}
                     <div class="grid gap-6 lg:grid-cols-3">
                       <div class="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-7 shadow-soft lg:col-span-2">
-                        <h3 class="mb-4 text-2xl font-bold text-primary">Company Overview Placeholder</h3>
+                        <h3 class="mb-4 text-2xl font-bold text-primary">Marine Consultants (Trinidad) Limited</h3>
                         <p class="mb-5 text-sm leading-relaxed text-on-surface-variant">
-                          Use this section to add verified company history, ownership background, vessel support experience, and regional operating profile. The previous export contained conflicting dates and inflated authority language, so the final build keeps this deliberately neutral until approved business details are supplied.
+                          Official MCL company material describes the business as operating since 1971 and supporting customers across marine, energy, offshore, and industrial activity. This final build now uses that verified regional framing instead of the earlier generated profile copy.
                         </p>
                         <div class="grid gap-4 md:grid-cols-3">
                           <div class="rounded-xl bg-surface-container p-5"><div class="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-secondary">Core Focus</div><div class="text-sm font-semibold text-primary">Marine supply, service, and procurement support</div></div>
                           <div class="rounded-xl bg-surface-container p-5"><div class="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-secondary">Region</div><div class="text-sm font-semibold text-primary">Trinidad & Tobago / Caribbean</div></div>
-                          <div class="rounded-xl bg-surface-container p-5"><div class="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-secondary">Business Type</div><div class="text-sm font-semibold text-primary">B2B marine support</div></div>
+                          <div class="rounded-xl bg-surface-container p-5"><div class="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-secondary">Operating Since</div><div class="text-sm font-semibold text-primary">1971</div></div>
                         </div>
                       </div>
                       <div class="rounded-2xl border border-outline-variant/40 bg-primary p-7 text-white shadow-hero" id="mission-vision-values">
                         <div class="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-on-tertiary-container">Mission / Vision / Values</div>
                         <ul class="space-y-4 text-sm leading-relaxed text-on-primary-container">
-                          <li><strong class="text-white">Mission:</strong> Support vessel operators and marine buyers with practical regional supply and service coordination.</li>
-                          <li><strong class="text-white">Vision:</strong> Build a clear, reliable regional support platform that customers can navigate easily.</li>
-                          <li><strong class="text-white">Values:</strong> Accuracy, responsiveness, safety awareness, and maintainable documentation.</li>
+                          <li><strong class="text-white">Mission:</strong> Work alongside customers to help them navigate the marine marketplace with practical product and service support.</li>
+                          <li><strong class="text-white">Vision:</strong> Deliver trusted marine support from Trinidad & Tobago with regional reach and dependable execution.</li>
+                          <li><strong class="text-white">Values:</strong> Continuous improvement, customer care, and a quality-focused operating culture.</li>
                         </ul>
                       </div>
                     </div>
@@ -1040,8 +1097,8 @@ def render_about() -> str:
                 """
             ).strip(),
             cta_band(
-                "Need to replace placeholders with real business details?",
-                "The final build is ready for manual input on company history, leadership, and compliance notes without reopening the duplicate Stitch variants.",
+                "Need to expand the verified company profile?",
+                "The final build now includes verified business context and can be extended further with approved leadership, compliance, and service details without reopening duplicate Stitch variants.",
                 "Open Contact Page",
                 "/contact.html",
                 "Go to Resources",
@@ -1107,12 +1164,12 @@ def render_products() -> str:
                         <a class="inline-flex items-center rounded-md border border-primary px-5 py-3 text-sm font-bold text-primary hover:bg-primary hover:text-white" href="/inquiries/product-inquiry.html">Start product inquiry</a>
                       </div>
                     </div>
-                    <div class="rounded-2xl border border-outline-variant/40 bg-primary p-8 text-white shadow-hero">
-                      <div class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-on-tertiary-container">Placeholder Content</div>
-                      <h3 class="mb-4 text-2xl font-extrabold">What still needs manual business input</h3>
+                      <div class="rounded-2xl border border-outline-variant/40 bg-primary p-8 text-white shadow-hero">
+                      <div class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-on-tertiary-container">Product Information Controls</div>
+                      <h3 class="mb-4 text-2xl font-extrabold">What should still be confirmed manually</h3>
                       <ul class="space-y-3 text-sm leading-relaxed text-on-primary-container">
-                        <li>Product Description Placeholder</li>
-                        <li>Compliance Information Placeholder</li>
+                        <li>Exact supplier brands and available stock</li>
+                        <li>Application-specific approvals and certificates</li>
                         <li>Approved supplier, stock, and lead-time details</li>
                         <li>Verified technical specification sheets</li>
                       </ul>
@@ -1210,18 +1267,18 @@ def render_resources() -> str:
               <div class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-secondary">{escape(group)}</div>
               <h3 class="mb-3 text-2xl font-bold text-primary">{escape(title)}</h3>
               <p class="mb-6 text-sm leading-relaxed text-on-surface-variant">{escape(copy)}</p>
-              <button class="rounded-md bg-primary px-5 py-3 text-sm font-bold text-white hover:bg-primary-container" data-toast-body="This document slot is present in the final build and ready for approved file uploads." data-toast-title="{escape(title)}" type="button">Document placeholder</button>
+              {link_button(label, href, kind="surface", attrs='target="_blank" rel="noreferrer"' if href.startswith("http") else "")}
             </article>
             """
         ).strip()
-        for title, copy, group in RESOURCE_ITEMS
+        for title, copy, group, href, label in RESOURCE_ITEMS
     )
     body = "\n".join(
         [
             hero(
                 "Catalogue and resources",
                 "Catalogue / Resources",
-                "The final resources page replaces mixed technical-spec, support, and catalog variants with one approved route for documents, downloadable assets, and placeholder business materials.",
+                "The resources page now combines the consolidated local document hub with verified official MCL catalogue and compliance links.",
                 image_url=IMAGE_RESOURCES,
                 primary_href="/products.html",
                 primary_label="Browse Products",
@@ -1229,16 +1286,16 @@ def render_resources() -> str:
                 secondary_label="View Updates",
                 panel_title="Resources Status",
                 panel_items=(
-                    ("Catalog", "Catalogue Download Placeholder"),
-                    ("Compliance", "Compliance Information Placeholder"),
-                    ("Profile", "Company Overview Placeholder"),
+                    ("Catalog", "Official catalogue linked"),
+                    ("Compliance", "Official ISO page linked"),
+                    ("Profile", "Company overview route live"),
                 ),
             ),
             dedent(
                 f"""
                 <section class="bg-surface px-6 py-24">
                   <div class="mx-auto max-w-7xl">
-                    {section_intro("Resources", "Approved Placeholder Library", "The exported resource concepts contained repeated catalog and technical-sheet concepts with varying wording. They are now consolidated here as one editable document hub.")}
+                    {section_intro("Resources", "Approved Resource Library", "The final resources page now combines verified official MCL reference links with the consolidated local site structure.")}
                     <div class="grid gap-6 md:grid-cols-2">{resource_cards}</div>
                   </div>
                 </section>
@@ -1249,18 +1306,18 @@ def render_resources() -> str:
                 <section class="bg-surface-container-low px-6 py-24">
                   <div class="mx-auto max-w-7xl grid gap-6 lg:grid-cols-2">
                     <div class="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-8 shadow-soft">
-                      <h3 class="mb-4 text-2xl font-bold text-primary">Manual input still required</h3>
+                      <h3 class="mb-4 text-2xl font-bold text-primary">Available now</h3>
                       <ul class="space-y-3 text-sm leading-relaxed text-on-surface-variant">
-                        <li>Catalogue Download Placeholder</li>
-                        <li>Compliance Information Placeholder</li>
-                        <li>Company Overview Placeholder</li>
-                        <li>Approved file names, versions, and publication dates</li>
+                        <li>Official MCL catalogue page</li>
+                        <li>Official ISO certification page</li>
+                        <li>Local company overview route</li>
+                        <li>Local service and inquiry routes for follow-up</li>
                       </ul>
                     </div>
                     <div class="rounded-2xl border border-outline-variant/40 bg-primary p-8 text-white shadow-hero">
                       <div class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-on-tertiary-container">Editorial note</div>
                       <p class="text-sm leading-relaxed text-on-primary-container">
-                        The previous Stitch passes mixed resources with support hubs, catalog pages, and download buttons that had no backed files. The final build keeps the UI and action points while making those empty states explicit.
+                        The previous Stitch passes mixed resources with empty download buttons. The final build now connects that UI to official published reference pages and the verified local company routes.
                       </p>
                     </div>
                   </div>
@@ -1279,22 +1336,22 @@ def render_news() -> str:
             <article class="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-7 shadow-soft" data-filter-item="{escape(title + ' ' + copy + ' ' + group)}" data-filter-groups="{escape(group.lower())}">
               <div class="mb-4 flex items-center justify-between gap-4">
                 <span class="rounded-full bg-surface-container px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-secondary">{escape(group)}</span>
-                <span class="text-xs font-semibold uppercase tracking-[0.16em] text-outline">Date Placeholder</span>
+                <span class="text-xs font-semibold uppercase tracking-[0.16em] text-outline">{escape(date_label)}</span>
               </div>
               <h3 class="mb-3 text-2xl font-bold text-primary">{escape(title)}</h3>
               <p class="mb-6 text-sm leading-relaxed text-on-surface-variant">{escape(copy)}</p>
-              <a class="text-sm font-bold text-on-tertiary-container hover:text-primary" href="/resources.html">View related resources</a>
+              <a class="text-sm font-bold text-on-tertiary-container hover:text-primary" href="{escape(href)}" target="_blank" rel="noreferrer">Open official update</a>
             </article>
             """
         ).strip()
-        for title, copy, group in NEWS_ITEMS
+        for title, copy, group, date_label, href in NEWS_ITEMS
     )
     body = "\n".join(
         [
             hero(
                 "News and updates",
                 "Regional News / Updates",
-                "The final news page keeps the visual hierarchy of the strongest Stitch news layout while removing unsupported achievements, percentages, facility milestones, and invented dates.",
+                "The news page now uses verified official MCL updates instead of generated milestone copy.",
                 image_url=IMAGE_NEWS,
                 primary_href="/resources.html",
                 primary_label="Open Resources",
@@ -1302,23 +1359,24 @@ def render_news() -> str:
                 secondary_label="Contact the Team",
                 panel_title="Publishing Note",
                 panel_items=(
-                    ("Status", "Placeholder archive"),
-                    ("Scope", "Approved business updates only"),
-                    ("Next Step", "Replace cards with verified notices"),
+                    ("Status", "Verified external updates linked"),
+                    ("Scope", "Official MCL posts"),
+                    ("Next Step", "Add future updates as they are published"),
                 ),
             ),
             dedent(
                 f"""
                 <section class="bg-surface px-6 py-24">
                   <div class="mx-auto max-w-7xl" data-filter-root>
-                    {section_intro("Updates", "Placeholder News Archive", "No verified newsroom dataset came with the export, so the live page now uses explicit placeholder cards instead of pretending unsupported milestones are real.")}
+                    {section_intro("Updates", "Verified News Archive", "This page now points to verified MCL updates published on the official site while preserving the consolidated layout and filtering behavior.")}
                     <div class="mb-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-                      <input class="w-full rounded-xl border-none bg-surface-container-low px-5 py-4 text-sm text-on-surface shadow-soft focus:ring-2 focus:ring-primary-container lg:max-w-md" data-filter-search placeholder="Search placeholder updates..." type="search" />
+                      <input class="w-full rounded-xl border-none bg-surface-container-low px-5 py-4 text-sm text-on-surface shadow-soft focus:ring-2 focus:ring-primary-container lg:max-w-md" data-filter-search placeholder="Search official updates..." type="search" />
                       <div class="flex flex-wrap gap-3">
                         <button class="filter-chip-active rounded-full border border-primary px-4 py-2 text-xs font-bold uppercase tracking-[0.18em]" data-filter-button="all" type="button">All</button>
                         <button class="rounded-full border border-outline-variant px-4 py-2 text-xs font-bold uppercase tracking-[0.18em]" data-filter-button="operations" type="button">Operations</button>
                         <button class="rounded-full border border-outline-variant px-4 py-2 text-xs font-bold uppercase tracking-[0.18em]" data-filter-button="products" type="button">Products</button>
-                        <button class="rounded-full border border-outline-variant px-4 py-2 text-xs font-bold uppercase tracking-[0.18em]" data-filter-button="service" type="button">Service</button>
+                        <button class="rounded-full border border-outline-variant px-4 py-2 text-xs font-bold uppercase tracking-[0.18em]" data-filter-button="company" type="button">Company</button>
+                        <button class="rounded-full border border-outline-variant px-4 py-2 text-xs font-bold uppercase tracking-[0.18em]" data-filter-button="events" type="button">Events</button>
                       </div>
                     </div>
                     <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">{news_cards}</div>
@@ -1328,7 +1386,7 @@ def render_news() -> str:
             ).strip(),
         ]
     )
-    return render_page("News | Marine Consultants", "Canonical placeholder news and updates page for the final consolidated Marine Consultants site.", "news", body)
+    return render_page("News | Marine Consultants", "Canonical news and updates page for the final consolidated Marine Consultants site.", "news", body)
 
 
 def render_contact() -> str:
@@ -1345,9 +1403,9 @@ def render_contact() -> str:
             """
         ).strip()
         for title, copy, icon in (
-            ("Regional Base", "Contact Details Placeholder", "location_on"),
-            ("Commercial Email", "Contact Details Placeholder", "mail"),
-            ("Telephone", "Contact Details Placeholder", "call"),
+            ("Regional Base", f"{CONTACT_ADDRESS} | Service Centre: {SERVICE_CENTRE_ADDRESS}", "location_on"),
+            ("Commercial Email", CONTACT_EMAIL, "mail"),
+            ("Telephone", CONTACT_PHONE, "call"),
         )
     )
     body = "\n".join(
@@ -1355,7 +1413,7 @@ def render_contact() -> str:
             hero(
                 "Regional contact route",
                 "Contact Marine Consultants",
-                "The contact page now uses simple regional framing, explicit placeholders for unverified details, and clean links into general, product, service, and quote inquiries.",
+                "Use this page for direct Trinidad & Tobago contact details and the consolidated product, service, and quote inquiry routes.",
                 image_url=IMAGE_CONTACT,
                 primary_href="/inquiries/product-inquiry.html",
                 primary_label="Product Inquiry",
@@ -1364,7 +1422,7 @@ def render_contact() -> str:
                 panel_title="Contact Notes",
                 panel_items=(
                     ("Region", "Trinidad & Tobago / Caribbean"),
-                    ("Details", "Contact Details Placeholder"),
+                    ("Details", CONTACT_EMAIL),
                     ("Quote Route", "Request a Quote page"),
                 ),
             ),
@@ -1372,7 +1430,7 @@ def render_contact() -> str:
                 f"""
                 <section class="bg-surface px-6 py-24">
                   <div class="mx-auto max-w-7xl">
-                    {section_intro("Contact", "Editable Contact Details", "The exported contact variants included invented phone numbers, emails, and office listings. The final page keeps the layout but marks those items as placeholders until the business confirms them.")}
+                    {section_intro("Contact", "Verified Contact Details", "This page now uses verified MCL Trinidad contact details from the official company site and keeps the consolidated inquiry paths intact.")}
                     <div class="grid gap-6 md:grid-cols-3">{placeholders}</div>
                   </div>
                 </section>
@@ -1381,8 +1439,8 @@ def render_contact() -> str:
             inquiry_form(
                 title="General Inquiry",
                 intro="Use the general inquiry form when the request does not fit neatly into product or service routing.",
-                success_title="General inquiry captured",
-                success_body="This local build confirms the form behavior and leaves final delivery routing ready for backend integration.",
+                success_title="Email draft ready",
+                success_body=f"Your email client should open with a prepared inquiry draft. If it does not, email {CONTACT_EMAIL} or call {CONTACT_PHONE}.",
                 category_options=("General Contact", "Product Inquiry", "Service Inquiry", "Request a Quote"),
             ),
             support_paths(),
@@ -1413,8 +1471,8 @@ def render_request_quote() -> str:
             inquiry_form(
                 title="Quote Request Form",
                 intro="Use this form for commercial quotations, bundled service requests, or technical procurement questions that are ready for pricing review.",
-                success_title="Quote request captured",
-                success_body="The final quote route is functioning locally and ready for backend or CRM integration when approved.",
+                success_title="Quote email ready",
+                success_body=f"Your email client should open with a prepared quote request. If it does not, email {CONTACT_EMAIL} or call {CONTACT_PHONE}.",
                 category_options=("Marine Products", "Inspection Services", "Maintenance Support", "Certification Support", "Procurement / Supply Support", "Technical Assistance"),
             ),
         ]
@@ -1438,7 +1496,7 @@ def render_about_subpage(title: str, hero_title: str, intro_copy: str, main_head
                 panel_items=(
                     ("Section", hero_title),
                     ("Status", "Approved canonical route"),
-                    ("Input", "Manual business content ready"),
+                    ("Input", "Verified business content used where available"),
                 ),
             ),
             dedent(
@@ -1518,8 +1576,8 @@ def render_category_page(category: Category) -> str:
                       <div class="rounded-2xl border border-outline-variant/40 bg-surface-container-low p-8 shadow-soft">
                         <h3 class="mb-4 text-2xl font-bold text-primary">Manual content still needed</h3>
                         <ul class="space-y-3 text-sm leading-relaxed text-on-surface-variant">
-                          <li>Product Description Placeholder</li>
-                          <li>Compliance Information Placeholder</li>
+                          <li>Exact product descriptions by brand and model</li>
+                          <li>Approval and certification references where required</li>
                           <li>Approved brands, models, and supplier references</li>
                           <li>Verified technical specification sheets</li>
                         </ul>
@@ -1577,8 +1635,8 @@ def render_service_page(service: Service) -> str:
                       <div class="rounded-2xl border border-outline-variant/40 bg-surface-container-low p-8 shadow-soft">
                         <h3 class="mb-4 text-2xl font-bold text-primary">Manual content still needed</h3>
                         <ul class="space-y-3 text-sm leading-relaxed text-on-surface-variant">
-                          <li>Service Description Placeholder</li>
-                          <li>Compliance Information Placeholder</li>
+                          <li>Final scope notes for the exact customer workflow</li>
+                          <li>Approved inspection or compliance references where applicable</li>
                           <li>Confirmed service coverage and scheduling notes</li>
                           <li>Approved supporting documents or service reports</li>
                         </ul>
@@ -1599,7 +1657,7 @@ def render_product_detail() -> str:
             hero(
                 "Representative product detail",
                 "Viking Braidline Nylon Super Hawser",
-                "This detail page is kept as the final product-template example from the strongest Stitch pass, but the technical values remain neutral until manually verified.",
+                "This representative product detail now uses verified official product framing while keeping the local request-for-quote flow intact.",
                 image_url=IMAGE_PRODUCT_DETAIL,
                 primary_href="/request-quote.html",
                 primary_label="Request a Quote",
@@ -1608,7 +1666,7 @@ def render_product_detail() -> str:
                 panel_title="Product Template",
                 panel_items=(
                     ("Category", "Chains, Ropes & Rigging"),
-                    ("Specs", "Sizes / Variants Placeholder"),
+                    ("Specs", "Detailed diameters available on request"),
                     ("Status", "Representative detail page"),
                 ),
             ),
@@ -1623,11 +1681,11 @@ def render_product_detail() -> str:
                       <div class="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-8 shadow-soft">
                         <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-primary">Product Summary</h2>
                         <p class="text-sm leading-relaxed text-on-surface-variant">
-                          Product Summary Placeholder. The Stitch source contained a plausible detail concept, but the numerical tables and approval references were not independently verified in this cleanup pass.
+                          Official MCL product material positions this line as a nylon mooring rope solution for demanding marine applications where elasticity, shock absorption, and dependable deck performance matter.
                         </p>
                       </div>
-                      {grid_block("Key Features", ("High-visibility product template", "Suitable for quote routing", "Can be extended with verified technical data", "Supports related-product linking"), "check_circle")}
-                      {grid_block("Sizes / Variants", ("Sizes / Variants Placeholder", "Technical specification sheet placeholder", "Approved data to be inserted manually"), "straighten")}
+                      {grid_block("Key Features", ("Nylon construction for marine mooring duty", "Designed for high stretch and shock-load absorption", "Suitable for procurement and replacement planning", "Linked directly to quote routing"), "check_circle")}
+                      {grid_block("Sizes / Variants", ("Detailed diameters and break-load data available through the official catalogue", "Application-specific sizing should be confirmed before ordering", "Final supplier documents can be requested through the quote route"), "straighten")}
                       {grid_block("Applications", ("Mooring and deck support planning", "Procurement comparison workflows", "Regional marine operations"), "settings")}
                     </div>
                   </div>
@@ -1648,7 +1706,7 @@ def render_product_detail() -> str:
                     <div class="rounded-2xl border border-outline-variant/40 bg-primary p-8 text-white shadow-hero">
                       <h3 class="mb-4 text-2xl font-bold">Final verification note</h3>
                       <p class="text-sm leading-relaxed text-on-primary-container">
-                        Replace placeholder specifications, part references, and approvals only after supplier documentation is confirmed. This keeps the final production build free of invented technical data.
+                        Use the quote route or official catalogue link to confirm final part references, certificates, and the exact rope size required for the vessel or project.
                       </p>
                     </div>
                   </div>
@@ -1682,8 +1740,8 @@ def render_product_inquiry() -> str:
             inquiry_form(
                 title="Product Inquiry Form",
                 intro="Use this form to share product categories, vessel context, and sourcing requirements.",
-                success_title="Product inquiry captured",
-                success_body="The product inquiry flow is wired and ready for backend handoff once final contact details are confirmed.",
+                success_title="Product inquiry email ready",
+                success_body=f"Your email client should open with a prepared product inquiry. If it does not, email {CONTACT_EMAIL} or call {CONTACT_PHONE}.",
                 category_options=tuple(CATEGORY_DATA[slug].title for slug in PRODUCT_CATEGORY_ORDER),
             ),
         ]
@@ -1713,8 +1771,8 @@ def render_service_inquiry() -> str:
             inquiry_form(
                 title="Service Inquiry Form",
                 intro="Use this form to share the service type, vessel context, and support timeline needed for triage.",
-                success_title="Service inquiry captured",
-                success_body="The service inquiry flow is functioning locally and ready for backend routing.",
+                success_title="Service inquiry email ready",
+                success_body=f"Your email client should open with a prepared service inquiry. If it does not, email {CONTACT_EMAIL} or call {CONTACT_PHONE}.",
                 category_options=tuple(SERVICE_DATA[slug].title for slug in SERVICE_ORDER),
             ),
         ]
@@ -1727,7 +1785,7 @@ def render_legal_page(title: str, headline: str, copy: str) -> str:
         f"""
         <section class="bg-surface px-6 py-28">
           <div class="mx-auto max-w-4xl rounded-3xl border border-outline-variant/40 bg-surface-container-lowest p-10 shadow-soft">
-            <div class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-secondary">Placeholder Legal Page</div>
+            <div class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-secondary">Legal Copy Pending Approval</div>
             <h1 class="mb-5 text-4xl font-extrabold tracking-tight text-primary">{escape(headline)}</h1>
             <p class="text-base leading-relaxed text-on-surface-variant">{escape(copy)}</p>
           </div>
@@ -1809,34 +1867,34 @@ def build_pages() -> dict[str, str]:
             "Company Overview | Marine Consultants",
             "Company Overview",
             "This page holds the approved company profile route for verified business background, ownership context, and operating scope.",
-            "Company Overview Placeholder",
-            "Use this page to add the verified company profile once the business confirms history, ownership, operating scope, and regional footprint details.",
-            "Why this is now separate",
-            "The imported Stitch passes blended company overview copy into multiple about variants. The final build keeps one dedicated overview route to avoid conflicting versions.",
+            "Marine Consultants (Trinidad) Limited",
+            "Official company material describes MCL as operating since 1971 and supporting marine, offshore, energy, and industrial customers from Trinidad & Tobago with products, maintenance support, consultancy, and procurement services.",
+            "Regional operating focus",
+            "The consolidated site now reflects a grounded Trinidad & Tobago and Caribbean positioning, with direct routing into products, services, resources, and inquiry paths instead of duplicate generated company profiles.",
         ),
         "about/quality-compliance.html": render_about_subpage(
             "Quality / Compliance | Marine Consultants",
             "Quality / Compliance",
-            "This page is reserved for approved quality, audit, compliance, and approval information once it is verified by the business.",
-            "Compliance Information Placeholder",
-            "Add only confirmed approvals, audit programs, quality systems, and partner or authority references here. Unsupported claims have been intentionally removed from the final build.",
-            "What was removed",
-            "The duplicate Stitch variants contained unsupported dates, certifications, and authority claims. The final page keeps the structure without asserting anything unverified.",
+            "This page now uses verified quality and approval information published on the official MCL site.",
+            "Official quality reference",
+            "MCL publishes an ISO 9001:2015 certification route on its official website. The consolidated build now points to that verified quality reference instead of leaving the page as a generic compliance draft.",
+            "What still needs manual review",
+            "Specific product approvals, class references, workshop certificates, and service-station documents should still be confirmed case by case before being added to product or service pages.",
         ),
         "about/leadership.html": render_about_subpage(
             "Leadership | Marine Consultants",
             "Leadership / Team",
-            "This page is reserved for approved leadership names, roles, biographies, and team structure.",
-            "Leadership Placeholder",
-            "Insert approved leadership names, titles, professional summaries, and team imagery once the business confirms them for publication.",
-            "Why placeholders remain",
-            "The export included invented or unsupported executive framing. The final build keeps a clean leadership route but does not invent names, counts, or credentials.",
+            "This page now uses the verified official team-leader route as the source for names and roles.",
+            "Verified team snapshot",
+            "The official MCL team page highlights leadership roles across marine operations, HSQE, finance, sales, and service support. This consolidated build now treats that official route as the source of truth instead of using invented team copy.",
+            "Recommended next step",
+            "If a fuller leadership section is needed later, add approved biographies and portraits directly from the official team page or business-approved staff profiles.",
         ),
         "products/viking-braidline-nylon-super-hawser.html": render_product_detail(),
         "inquiries/product-inquiry.html": render_product_inquiry(),
         "inquiries/service-inquiry.html": render_service_inquiry(),
-        "privacy.html": render_legal_page("Privacy | Marine Consultants", "Privacy Policy Placeholder", "The Stitch export did not include approved privacy-policy content. Add the final legal copy here before public launch."),
-        "terms.html": render_legal_page("Terms | Marine Consultants", "Terms Placeholder", "The Stitch export did not include approved terms content. Add the final legal copy here before public launch."),
+        "privacy.html": render_legal_page("Privacy | Marine Consultants", "Privacy Policy Pending Approval", "The Stitch export did not include approved privacy-policy content. Add the final legal copy here before public launch."),
+        "terms.html": render_legal_page("Terms | Marine Consultants", "Terms Pending Approval", "The Stitch export did not include approved terms content. Add the final legal copy here before public launch."),
         "404.html": render_not_found(),
     }
     for slug in PRODUCT_CATEGORY_ORDER:

@@ -84,7 +84,6 @@ BANNED_PHRASES = [
     "global leaders",
     "world-leading",
     "since 1994",
-    "since 1971",
     "since 1985",
     "over five decades",
     "master mariner",
